@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+}
+body *, header *{
+    transition: all .3s ease;
+}
+.fade-in{
+    opacity: .3;
+    transform: translateX(-80px) scale(1.4);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    transition-delay: .3s;
+}
+.fade-animate{
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+.primarytext{
+    color: #b73235;
+}
+.secondarytext{
+    color: #323743;
+}
+.btn-primary, .btn-primary:hover{
+    background-color: #b73235;
+    color: white;
+    border: none;
+}
+.btn-secondary, .btn-secondary:hover{
+    background-color: #323743;
+    color: white;
+    border: none;
+}
+
+.navbar-brand img{
+    width: 200px;
+}
+.nav-link, a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    transition: all 0.3s ease;
+    margin: auto 10px;
+}
+.nav-link:hover, a:hover{
+    color: #b73235;
+}
+.dropdown-item:hover,  .nav-link.active, .dropdown-item.active{
+    background-color: transparent;
+    color: black;
+}
+
+.dropdown-menu {
+    display: none; /* Hide the menu by default */
+    position: absolute;
+    top: 100%; /* Position the menu below the link */
+    left: 0;
+    background-color: #ffffff; /* Background color */
+    border-radius: 0; /* Remove border radius */
+    padding: 10px; /* Add some padding to the menu */
+    box-shadow: 0 -3px 10px 4px rgba(0, 0, 0, 0.13);
+    border: none;
+    text-align: right;
+}
+
+.dropdown-item {
+    color: #333333;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+button:hover{
+    transition: all .3s ease;
+    transform: translateY(-3px);
+    box-shadow: 0 2px 5px 4px rgba(65, 65, 65, 0.13);
+
+}
+.dropdown-arrow {
+    position: absolute;
+    top: -10px; /* Adjust the vertical position of the arrow */
+    left: 50%; /* Position the arrow horizontally */
+    transform: translateX(-50%); /* Center the arrow horizontally */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+}
+
+header{
+    background-color: #ebebeb;
+}
+.carousel-indicators button{
+    background-color: #a3a3a3 !important;
+    width: 15px !important;
+}
+.carousel-indicators button.active, .carousel-indicators button.active:hover{
+    border-radius: 50%;
+    width: 20px !important;
+    height: 20px !important;
+    transform: translateY(-25%);
+    background-color: #b73235 !important;
+}
+.carousel-indicators button:hover{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    transform: translateY(-25%);
+    background-color: #b73235 !important;
+}
+.animated-text {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 0.6s ease, transform 0.7s ease;
+}
+
+.carousel-item.active .animated-text{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Style the first letter of navbar links and dropdown items */
+.navbar-nav .nav-link,
+.navbar-nav .dropdown-item ,
+.nav .nav-link{
+    position: relative;
+    overflow: hidden; /* Hide the line initially */
+}
+
+/* Add a small line to the first letter on hover and active */
+.navbar-nav .nav-link::before,
+.navbar-nav .dropdown-item::before,
+.nav .nav-link::before{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: -8px; /* Initially position it outside */
+    transform: translateY(-50%);
+    width: 8px; 
+    height: 2px; /* Adjust the height of the line */
+    background-color: #b73235; /* Color of the line */
+    transition: right 0.3s ease; /* Add a smooth transition for the 'right' property */
+}
+/* Move the line to the left on hover and active */
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before,
+.navbar-nav .dropdown-item:hover::before,
+.navbar-nav .dropdown-item.active::before,
+.nav .nav-link:hover::before,
+.nav .nav-link.active::before {
+    right: 0; /* Move the line to the left */
+}
+.carousel-item{
+    min-height: 800px;
+}
+.carousel-item div{
+    z-index: 1;
+    overflow: hidden;
+}
+.background-img{
+    z-index: 0;
+    
+}
+.carousel-item:nth-child(2) img {
+    transform: scaleX(-1);
+    bottom: 3px;
+}
+.carousel-content{
+    padding-top: 200px;
+}
+.icons span{
+    width: 100px;
+    height: 100px;
+}
+.peopleimg{
+    width: 250px;
+    transition: transform .6s ease;
+}
+.peopleimg:hover{
+    transform: scaleX(-1);
+}
+
+.logo-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.logos {
+    white-space: nowrap;
+    animation: moveLogos 20s linear infinite; 
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-right: 20px; /* Adjust the spacing between logos */
+    display: inline-block;
+}
+
+@keyframes moveLogos {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left */
+    }
+}
+
+.card-img-overlay{
+    background: linear-gradient(transparent,white);
+    transform: translateY(100%);
+    margin-top: 10px;
+    padding-bottom: 0;
+}
+.card{ 
+    overflow: hidden;
+    padding: 0;
+    max-width: 600px;
+    width: 400px;
+    height: min-content;
+}
+.card:hover .card-img-overlay{
+    transform: translateY(0);
+}
+
+/* Style for the social media icons */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.social-icon svg{
+    width: 40px;
+    height: 40px;
+}
+.social-icon {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #b73235;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #fff;
+    color: #b73235;
+    border: 2px solid #b73235;
+}
+
+#ratings img{
+    width: 150px;
+}
+#ratings .col{
+    max-width: 350px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
