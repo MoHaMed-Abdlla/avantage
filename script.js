@@ -16,8 +16,9 @@ $(document).ready(function() {
 
 
 const fadein = document.querySelectorAll(".fade-in");
+const slidediv = document.querySelectorAll('.slide-div')
 
-const obser = new IntersectionObserver((entries, observer) => {
+const fade = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-animate');
@@ -25,7 +26,18 @@ const obser = new IntersectionObserver((entries, observer) => {
         }
     });
 });
+const slide = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('slide-animate');
+            observer.unobserve(entry.target);
+        }
+    });
+});
 
 fadein.forEach((element) => {
-    obser.observe(element)
+    fade.observe(element)
+});
+slidediv.forEach((element) => {
+    slide.observe(element)
 });

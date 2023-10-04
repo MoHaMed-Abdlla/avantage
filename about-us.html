@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    
+    <link rel="stylesheet" href="./style.css">
+    <script src="../bootstrap_offline/js/code.jquery.com_jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header" class="p-5 pt-0" style="background-color: lightgray; background-image: url('./images/background/bgn-newsletter-curve.png');">
+        <nav class="navbar navbar-expand-lg p-0">
+            <a class="navbar-brand justify-content-start" href="#"><img src="./images/icons_and_logos/logo.png" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./index.html" id="navbarDropdown">الصفحة الرئيسية</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="#">مستشار الاعمال</a>
+                            <a class="dropdown-item" href="#">مستشار التسويق</a>
+                            <a class="dropdown-item" href="./index.html">مستشار الموارد البشرية</a>
+                            <a class="dropdown-item" href="#">المستشار المالي</a>
+                            <a class="dropdown-item" href="#">مستشار الضرائب / محاسب</a>
+                            <a class="dropdown-item" href="#">مستشار الاستراتيجية</a>
+                            <a class="dropdown-item" href="#">مستشار دولي</a>
+                            <a class="dropdown-item" href="#">مستشار إداري</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="./about-us.html" id="navbarDropdown">معلومات عنا</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item active" href="./about-us.html">عنّا</a>
+                            <a class="dropdown-item" href="./history.html">تاريخ الشركة</a>
+                            <a class="dropdown-item" href="./testimonials.html">التوصيات</a>
+                            <a class="dropdown-item" href="./contact.html">التواصل</a>
+                            <a class="dropdown-item" href="./clients.html">العملاء</a>
+                            <a class="dropdown-item" href="./404.html">404</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./services.html" id="navbarDropdown">الخدمات</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="#">خدمة واحدة</a>
+                            <a class="dropdown-item" href="#">عملياتنا</a>
+                            <a class="dropdown-item" href="#">الحلول</a>
+                            <a class="dropdown-item" href="#">حاسب التكلفة</a>
+                            <a class="dropdown-item" href="#">التسعير</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown">معرض الاعمال</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="#">قائمة المشاريع</a>
+                            <a class="dropdown-item" href="#">شبكة المشاريع</a>
+                            <a class="dropdown-item" href="#">المشاريع الواحدة</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown">المدونة</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="#">قائمة المدونة</a>
+                            <a class="dropdown-item" href="#">شبكة المدونة</a>
+                            <a class="dropdown-item" href="#">المنشورات الاخيرة</a>
+                            <a class="dropdown-item" href="#">المنشورات الواحدة</a>
+                        </div>
+                    </li>  
+                    <li><button class="btn-primary rounded-pill p-2 m-1">0 123 4567 890</button></li>       
+                </ul>
+                </div>
+            </nav>
+            <p>اهدافنا ورؤيتنا</p>
+            <h1 class="primarytext">رؤيتنا: </h1>
+            <h1 class="secondarytext">الاعمال الناجحة</h1>
+
+            <div class="row p-4">
+                <div class="col-md-4 p-2 fade-in">
+                    <p>رضا العملاء</p>
+                    <div class="progress" style="height: 1px;">
+                        <div class="progress-bar" role="progressbar" style="width: 95%; background-color: #b73235;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    <p>دقة الحسابات</p>
+                    <div class="progress" style="height: 1px;">
+                        <div class="progress-bar" role="progressbar" style="width: 90%; background-color: #b73235;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    <p>نجاح المشاريع</p>
+                    <div class="progress" style="height: 1px;">
+                        <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #b73235;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <p>إعادة هندسة الخدمات الوصفية الثورية والبنى المتميزة بشكل مميز. احتضان الفرص البديهية والإمكانات في الوقت الحقيقي بشكل جوهري. قم بتوصيل التكنولوجيا الفردية بشكل مناسب بعد شبكات التوصيل والتشغيل.</p>
+                      <p>قم بتجميع مستخدمي B2B والإمكانات العالمية بسرعة. انتحال التجارة الإلكترونية لتسوية الموارد تدريجيًا من خلال الكفاءات الأساسية لتسوية الموارد. قم بربط التحالفات منخفضة المخاطر وعالية الإنتاجية بشكل كبير قبل تجار التجزئة الإلكترونيين الشفافين</p>
+                      <p>التواصل بسرعة مع التكنولوجيا الممكّنة ومهارات القيادة الجاهزة. تمكين سلاسل التوريد الدقيقة بشكل فريد بدلاً من التكنولوجيا الخالية من الاحتكاك. المواد التي تركز على الشبكة العالمية مقابل المنتجات المصنعة الفعالة من حيث التكلفة.</p>
+                </div>
+                <div class="col-md-4 p-2 fade-in">
+                    <p>تمكين مهارات القيادة الديناميكية بشكل مناسب بعد بوابات الأعمال. سلاسل التوريد التفاعلية لعضلة القلب على مستوى العالم مع نواقل الجودة المميزة. إحداث ثورة عالمية في المصادر العالمية من خلال الخدمات القابلة للتشغيل البيني. ابتكار البنى التحتية مفتوحة المصدر بكفاءة عبر مواد غير مكلفة.</p>
+                    <p>ربط البنية التحتية عالية التأثير طويلة المدى بحماس مع خدمة العملاء الفعالة. احترافية أزياء القيادة اللاسلكية بدلاً من التجارب المرتقبة. إجراءات اختبار النقرات وقذائف الهاون التي تعمل على تنشيط عضلة القلب في حين أن المنتجات المصنعة من الجيل التالي.</p>
+                    <p>إعادة اختراع الفرص التي يحركها السوق والواجهات المنتشرة في كل مكان بشكل ديناميكي. تصنيع مجموعة واسعة من الأسواق المتخصصة بقوة من خلال منتجات قوية.</p>
+
+                </div>
+                <div class="col-md-4 p-2 fade-in">
+                    <p>احتضان الأعمال الإلكترونية الممكّنة بشكل مقنع بعد رأس المال الفكري سهل الاستخدام. تفعيل عمليات الواجهة الأمامية بشكل تفاعلي من خلال التقارب الفعال. مهمة موازية بكفاءة بحثت بشكل كامل عن البيانات وتحسينات عمليات المؤسسة.</p>
+                <div>
+                    <img src="./images/People/img-blog-34-1280x1280.jpg" class="img-fluid rounded-circle" alt="">
+                </div>
+                </div>
+            </div>
+    </header>
+
+    <div class="m-1 p-5">
+        <p>نحن هنا من اجلك</p>
+        <h1 class="primarytext">Avantage</h1>
+        <h1 class="secondarytext">المحترفون</h1>
+    </div>
+    <div class="row p-2 m-5 justify-content-center">
+        <div class="col p-2 fade-in">
+            <img class="peopleimg" src="./images/People/img-people-01.png" alt="">
+            <p>الرئيس التنفيذي</p>
+            <h1 class="primarytext">هانا ألبرتس</h1>
+            <p>القائدة الملهمة للشركة</p>
+            <a href="">اكتشف المزيد ></a>
+        </div>
+        <div class="col p-2 fade-in">
+            <img class="peopleimg" src="./images/People/img-people-02.png" alt="">
+            <p>مدير الموارد البشرية</p>
+            <h1 class="primarytext">ميليسا لوبلانك</h1>
+            <p>مديرة الموارد البشرية</p>
+            <a href="">اكتشف المزيد ></a>
+        </div>
+        <div class="col p-2 fade-in">
+            <img class="peopleimg" src="./images/People/img-people-03.png" alt="">
+            <p>مسؤول تنفيذي أول للموارد البشرية</p>
+            <h1 class="primarytext">كندريك هارت</h1>
+            <p>المسؤول التنفيذي</p>
+            <a href="">اكتشف المزيد ></a>
+        </div>
+        <div class="col p-2 fade-in">
+            <img class="img-fluid peopleimg" src="./images/People/img-people-04.png" alt="">
+            <p>محترف الموارد البشرية</p>
+            <h1 class="primarytext">بلير دين</h1>
+            <p>الموارد البشرية</p>
+            <a href="">اكتشف المزيد ></a>
+        </div>
+    </div>
+
+    <div class="logo-container fade-in">
+        <div class="logos">
+            <img src="./images/icons_and_logos/logo-addison.png" alt="Logo 1">
+            <img src="./images/icons_and_logos/logo-applauz.png" alt="Logo 2">
+            <img src="./images/icons_and_logos/logo-bello.png" alt="Logo 3">
+            <img src="./images/icons_and_logos/logo-bold-news.png" alt="Logo 4">
+            <img src="./images/icons_and_logos/logo-celeste.png" alt="Logo 5">
+            <img src="./images/icons_and_logos/logo-estato.png" alt="Logo 6">
+            <img src="./images/icons_and_logos/logo-hotel-berg.png" alt="Logo 1">
+            <img src="./images/icons_and_logos/logo-hotel-california.png" alt="Logo 2">
+            <img src="./images/icons_and_logos/logo-urbanist.png" alt="Logo 3">
+        </div>
+        </div>
+    
+        <div class="row backimg pt-2" style="background-image: url('./images/background/img-portfolio-04-1280x1280.jpg'); max-height: 700px;">
+            <div class="col-md-6 p-2 mx-4">
+                <p>انضم لفريق القيادة</p>
+                <h1 class="primarytext">ما هي</h1>
+                <h1 class="secondarytext">رسالتنا</h1>
+                <p>ن التطور في تقنية النانو على طول طريق المعلومات السريع سوف يغلق حلقة التركيز فقط على النتيجة النهائية.</p>
+                
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner icons">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-5 fade-in">
+                                    <div class="row">
+                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
+                                        <div class="col-8 col-md-8 col-lg-12">
+                                            <h3>اختيار الموظفين</h3>
+                                            <p>اختر الأشخاص المناسبين لفريقك، مع الفريق المثالي يأتي العم المثالي</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 fade-in">
+                                    <div class="row">
+                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
+                                        <div class="col-8 col-md-8 col-lg-12">
+                                            <h3>قيادة الفريق</h3>
+                                            <p>اختر القائد الحازم الذي سيقود شركتك للتفوق</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-5 fade-in">
+                                    <div class="row">
+                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
+                                        <div class="col-8 col-md-8 col-lg-12">
+                                            <h3>بناء الفريق</h3>
+                                            <p>ابن الفريق المناسب لشركتك</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 fade-in">
+                                    <div class="row">
+                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
+                                        <div class="col-8 col-md-8 col-lg-12">
+                                            <h3>الاستراتيجية</h3>
+                                            <p>توصل لأفضل استراتيجيات النجاح مبساعدة خبرائنا</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-5 fade-in">
+                                    <div class="row">
+                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
+                                        <div class="col-8 col-md-8 col-lg-12">
+                                            <h3>البحث عن الموظفين</h3>
+                                            <p>اعثر على افضل الموظفين لشركتك</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 fade-in">
+                                    <div class="row">
+                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
+                                        <div class="col-8 col-md-8 col-lg-12">
+                                            <h3>التواصل</h3>
+                                            <p>تواصل الفريق يعني النجاح الحتمي</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+                <div class="col-md-4 fade-in">
+                    <img src="./images/background/img-team.png" alt="" style="width: 600px;">
+                </div>
+        
+        </div>
+
+        <div class="p-4 my-2 fade-in">
+            <p>تجد في شركتنا موظفين رائعين</p>
+            <h1 class="secondarytext">موثوق بنا من قبل</h1>
+            <h1 class="primarytext">اكبر الشركات العالمية</h1>
+            <p>لقد وثق عملاؤنا دائمًا بخبرتنا ونصائحنا. وهنا ما لديهم ليقولوه عنا</p>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide w-100 fade-in" style="max-height: 500px;" data-bs-ride="carousel">
+            <div class="carousel-inner w-100" id="ratings">
+              <div class="carousel-item active">
+                <div class="row justify-content-center text-center p-2">
+                <div class="col-md-3">
+                <img src="./images/People/client-01.jpg" class="img-fluid rounded-circle" alt="...">
+                <h3 class="primarytext">افضل شركة على الاطلاق</h3>
+                <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                <p>&starf;&starf;&starf;&starf;&starf;</p>
+                <p>جاستن ايمرسون</p>
+                </div>
+                <div class="col-md-3">
+                <img src="./images/People/client-02-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                <h3 class="primarytext">أنقذت اعمالي</h3>
+                <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                <p>&starf;&starf;&starf;&starf;&starf;</p>
+                <p>مايكل ايمرسون</p>
+                </div>
+                <div class="col-md-3">
+                <img src="./images/People/client-03-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                <h3 class="primarytext">الاختيار الصحيح</h3>
+                <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                <p>&starf;&starf;&starf;&starf;&starf;</p>
+                <p>باتريك ايمرسون</p>
+                </div>
+                <div class="col-md-3">
+                <img src="./images/People/client-04-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                <h3 class="primarytext">افضل الناس بالنسبة لي</h3>
+                <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                <p>&starf;&starf;&starf;&starf;&starf;</p>
+                <p>توم ايمرسون</p>
+                </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center text-center p-2">
+                    <div class="col">
+                    <img src="./images/People/client-05-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                    <h3 class="primarytext">افضل شركة على الاطلاق</h3>
+                    <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                    <p>&starf;&starf;&starf;&starf;&starf;</p>
+                    <p>جاستن ايمرسون</p>
+                    </div>
+                    <div class="col">
+                    <img src="./images/People/client-06-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                    <h3 class="primarytext">أنقذت اعمالي</h3>
+                    <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                    <p>&starf;&starf;&starf;&starf;&starf;</p>
+                    </div>
+                  <div class="col">
+                      <img src="./images/People/client-01.jpg" class="img-fluid rounded-circle" alt="...">
+                      <h3 class="primarytext">الاختيار الصحيح</h3>
+                      <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                      <p>&starf;&starf;&starf;&starf;&starf;</p>
+                    </div>
+                    <div class="col">
+                        <img src="./images/People/client-02-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                        <h3 class="primarytext">افضل الناس بالنسبة لي</h3>
+                        <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                        <p>&starf;&starf;&starf;&starf;&starf;</p>
+                    </div>
+                    </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center text-center p-2">
+                  <div class="col">
+                  <img src="./images/People/client-03-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                  <h3 class="primarytext">افضل شركة على الاطلاق</h3>
+                  <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                  <p>&starf;&starf;&starf;&starf;&starf;</p>
+                  <p>جاستن ايمرسون</p>
+                  </div>
+                  <div class="col">
+                  <img src="./images/People/client-04-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                  <h3 class="primarytext">أنقذت اعمالي</h3>
+                  <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                  <p>&starf;&starf;&starf;&starf;&starf;</p>
+                  </div>
+                  <div class="col">
+                      <img src="./images/People/client-05-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                      <h3 class="primarytext">الاختيار الصحيح</h3>
+                      <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                      <p>&starf;&starf;&starf;&starf;&starf;</p>
+                    </div>
+                    <div class="col">
+                        <img src="./images/People/client-06-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                        <h3 class="primarytext">افضل الناس بالنسبة لي</h3>
+                        <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                        <p>&starf;&starf;&starf;&starf;&starf;</p>
+                    </div>
+                    </div>
+              </div>
+              
+            </div>
+          </div>
+
+    <div class="row p-4 mb-5">
+        <div class="col-md-6 p-2 fade-in icons">
+            <p><p> <strong class="fs-1 primarytext">تواصل </strong><strong class="fs-1 secondarytext">معنا</strong></p>
+            <p>تفضل بزيارة مقرنا أو ببساطة أرسل لنا بريدًا إلكترونيًا في أي وقت تريده. نحن منفتحون على جميع الاقتراحات من عملائنا.</p>
+            <hr>
+            <div class="row p-2 justify-content-center">
+                <div class="col p-2">
+                    <span class="col-md-4 p-2 btn-secondary">
+            
+                    </span>
+                        <h3>موقعنا</h3>
+                        <p>ساحة بلومزبري،
+                            لندن WC1B 4EA</p>
+                </div>
+                <div class="col p-2">
+                    <span class="col-md-4 p-2 btn-secondary">
+            
+                    </span>
+                        <h3>ارسل لنا عبر البريد الالكتروني</h3>
+                        <p>info@avantage.co.uk <br>
+                            office@avantage.co.uk
+                        </p>
+
+                </div>
+                <div class="col p-2">
+                    <span class="col-md-4 p-2 btn-secondary">
+            
+                    </span>
+                        <h2>اتصل بنا</h2>
+                        <p>020 7946 020 <br>
+                            020 7996 223</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-2 fade-in">
+            <div class="container">
+                <h3>ارسل لنا</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name"><span class="text-danger">*</span></label>
+                        <input type="text" class="form-control rounded-pill" placeholder="اكتب اسمك" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><span class="text-danger">*</span></label>
+                        <input type="email" class="form-control rounded-pill" placeholder="اكتب بريدك الالكتروني" id="email" name="email" required>
+                    </div>
+                    <div class="form-group py-2">
+                        <input type="text" class="form-control rounded-pill" placeholder="الموضوع" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message"><span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="message" name="message" placeholder="اكتب رسالتك" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary m-2 rounded-pill p-2 fw-bold">Submit</button>
+                </form>
+        </div>
+    </div>
+
+    <div class="mt-5 w-100">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13814.728643718801!2d31.2242988!3d30.0459751!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458409aa81d58a5%3A0x6ce6bf7cd258d6fe!2z2KjYsdisINin2YTZgtin2YfYsdip!5e0!3m2!1sar!2s!4v1696419482995!5m2!1sar!2s"  width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+    <footer class="mt-5">
+        <div class="row m-2 p-2">
+            <div class="col p-2">
+                <h2 class="primarytext">مقرنا</h2>
+                <p>تنمية الرؤية العالمية الشاملة للابتكار المدمر بشكل عضوي من خلال التمكين</p>
+                <p><a href="">020 7946 0200</a></p>
+                <p><a href="">info@mailus.oc.ul</a></p>
+                <p><a href="">avantage.co.uk</a></p>
+            </div>
+            <div class="col p-2">
+                <p>مواقعنا</p>
+                <h2>اين تجدنا</h2>
+                <div class="row">
+                    <div class="col-md-6"><img src="./images/background/img-footer-map.png" class="img-fluid" alt=""></div>
+                    <div class="col-md-6">
+                        <p><a href="">مدينة: 123 456 789</a></p>
+                        <p><a href="">مدينة: 123 456 789</a></p>
+                        <p><a href="">مدينة: 123 456 789</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-2">
+                <p>ابق على تواصل</p>
+                <h2>روابطنا الاجتماعية</h2>
+                <p>أخذ مؤشرات الأداء الرئيسية بسلاسة دون اتصال بالإنترنت لتحقيق أقصى قدر من الاطلاع الطويل</p>
+                <ul class="social-icons">
+                    <li class="social-icon">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        <hr>
+        <div class="m-1 p-2">
+            <ul class="nav text center justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">الصفحة الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about-us.html">عنا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./services.html">خدماتنا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">المدونة</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">معرضنا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" href="#header">^ العودة للاعلى ^</a>
+                </li>
+              </ul>
+    
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
