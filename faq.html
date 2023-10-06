@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script>
+  $(document).ready(function(){
+    // Add a click event listener to all collapse buttons
+    $('[data-bs-toggle="collapse"]').on('click', function(){
+      // Hide all other open collapses except the one being clicked
+      $('.collapse').not($(this).data('target')).collapse('hide');
+    });
+  });
+</script>
+<style>
+    .arrow::before {
+    content: '\25B2';
+    float: left;
+    font-weight: 600;
+}
+
+.collapsed .arrow::before {
+    content: '\25BC';
+}
+</style>
+</head>
+<body>
+    <header class="w-100 mb-5 p-5 pt-0 backimg" id="header" style="background-image: url('./images/background/img-portfolio-05-1280x1280.jpg');">
+        <nav class="navbar navbar-expand-lg p-0">
+            <a class="navbar-brand justify-content-start" href="#"><img loading="lazy" src="./images/icons_and_logos/logo.png"
+                    alt="Logo"></a>
+            <!-- Collapsible Navbar Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Items -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./index.html" id="navbarDropdown">الصفحة الرئيسية</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="#">مستشار الاعمال</a>
+                            <a class="dropdown-item" href="#">مستشار التسويق</a>
+                            <a class="dropdown-item" href="./index.html">مستشار الموارد البشرية</a>
+                            <a class="dropdown-item" href="#">المستشار المالي</a>
+                            <a class="dropdown-item" href="#">مستشار الضرائب / محاسب</a>
+                            <a class="dropdown-item" href="#">مستشار الاستراتيجية</a>
+                            <a class="dropdown-item" href="#">مستشار دولي</a>
+                            <a class="dropdown-item" href="#">مستشار إداري</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./about-us.html" id="navbarDropdown">معلومات عنا</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./about-us.html">عنّا</a>
+                            <a class="dropdown-item" href="./history.html">تاريخ الشركة</a>
+                            <a class="dropdown-item" href="./testimonials.html">التوصيات</a>
+                            <a class="dropdown-item" href="./contact.html">التواصل</a>
+                            <a class="dropdown-item" href="./clients.html">العملاء</a>
+                            <a class="dropdown-item" href="./404.html">404</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="./services.html" id="navbarDropdown">الخدمات</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./single-services.html">خدمة واحدة</a>
+                            <a class="dropdown-item" href="./our-process.html">عملياتنا</a>
+                            <a class="dropdown-item" href="./solutions.html">الحلول</a>
+                            <a class="dropdown-item active" href="./faq.html">الحقائق</a>
+                            <a class="dropdown-item" href="#">التسعير</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./portfolio.html" id="navbarDropdown">معرض الاعمال</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./hsbc-recruiting.html">المشاريع الواحدة</a>
+                            <a class="dropdown-item" href="#">قائمة المشاريع</a>
+                            <a class="dropdown-item" href="#">شبكة المشاريع</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./blog.html" id="navbarDropdown">المدونة</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./management-project.html">المنشورات الواحدة</a>
+                            <a class="dropdown-item" href="#">قائمة المدونة</a>
+                            <a class="dropdown-item" href="#">شبكة المدونة</a>
+                            <a class="dropdown-item" href="#">المنشورات الاخيرة</a>
+                        </div>
+                    </li>  
+                    <li><button class="btn-primary rounded-pill p-2 m-1">0 123 4567 890</button></li>       
+                </ul>
+            </div>
+        </nav>
+        <div class="pt-5 pb-3 topsection">
+            <p><a href="./index.html">الصفحة الرئيسية</a></p>
+            <h1>أسئلة وأجوبة</h1>
+            <p>أفكار خلفية موثوقة لإعادة الوساطة للنماذج متعددة المنصات. إعادة وساطة العمليات المتكاملة باستمرار من خلال رأس المال الفكري السليم من الناحية الفنية. تعزيز المنهجيات المتفوقة بشكل كلي دون أفضل الممارسات التي يحركها السوق</p>
+        </div>
+    </header>
+    <div class="row p-5 g-2">
+        <div class="col-md-6">
+            <h1 class="primarytext">ماذا تفعل</h1>
+            <h1 class="secondarytext">Avantage</h1>
+            <p>إدارة القنوات الجاهزة بشكل تعاوني من خلال الوكلاء الإلكترونيين الافتراضيين. الاستيلاء بشكل موضوعي على المقاييس القابلة للتطوير أثناء الخدمات الإلكترونية الاستباقية. تمكين استراتيجيات النمو المدروسة بالكامل بسلاسة.</p>
+                <ul class="">
+                  <li class="timeline-item slide-div m-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="arrow"></span>
+                    <h2 class="h5 mb-0" >لماذا Avantage؟</h2>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card-body text-dark">
+                          <p class="text-small mt-2 ">تساعد Avantage الشركات الصغيرة (أقل من 500 موظف) التي تحتاج إلى متخصص في الموارد البشرية على أساس دوام جزئي مما يريح المالك أو مدير المكتب المرهق من المهام اليومية المحيطة بالتوظيف أو الموارد البشرية أو المزايا أو كشوف المرتبات.</p>
+                            </div>
+                      </div>
+                  </li>
+                  <li class="timeline-item slide-div m-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="arrow"></span>
+                    <h2 class="h5 mb-0">متى احتاج الى خدمات الموارد البشرية؟</h2>
+                    <div class="collapse" id="collapseExample2">
+                        <div class="card-body">
+                          <p class="text-small mt-2 ">يعد توظيف متخصص في الموارد البشرية من ذوي الخبرة ضمن الموظفين أكثر تكلفة من تعيين مستشار.</p>
+                          <p>وفقا لمجلة بيزنس ويك، يمكن لأصحاب العمل توفير ما يصل إلى 30 في المائة عن طريق التعاقد مع مقاول مستقل لأنهم يتجنبون دفع ضرائب الرواتب، والتأمين ضد البطالة، وتعويضات العمال والعجز، فضلا عن المزايا التي تشمل المعاشات التقاعدية، والإجازات المرضية، والتأمين الصحي ووقت الإجازة.</p>
+                        </div>
+                      </div>
+                  </li>
+                  <li class="timeline-item slide-div m-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="dot"></div>
+                    <span class="arrow"></span>
+                    <h2 class="h5 mb-0">هل تحتاج الشركات الصغيرة إلى الامتثال؟</h2>
+                    <div class="collapse" id="collapseExample3">
+                        <div class="card-body">
+                          <p class="text-small mt-2 ">بغض النظر عن مدى صغر حجم شركتك، هناك بعض اللوائح الفيدرالية ولوائح الولاية التي تنطبق على شركتك. يتم تطبيق أكثر من 15 لائحة فيدرالية على الشركات التي يعمل بها أقل من 15 موظفًا، ولا يزيد حجم اللوائح إلا عند إضافة موظفين. تتغير اللوائح والتفسير القانوني باستمرار.</p>
+                           <p>يعد وجود متخصص متمرس في مجال الموارد البشرية إلى جانبك طريقة رائعة لتقليل المخاطر القانونية لانتهاكات اللوائح والدعاوى القضائية، خاصة في المجتمع الذي يعد رفع الدعاوى القضائية أمرًا شائعًا.</p>
+                           <p>تعتبر الدعاوى القضائية التافهة مشكلة شائعة جدًا بالنسبة للشركات الصغيرة. لا يوجد أي خطر تقريبًا على المحامين أو عملائهم في رفع القضايا السخيفة إلى المحكمة. في حين أن الشركات الكبيرة تستعين بشكل روتيني بمحامين ولديها الوسائل المالية لحماية نفسها من الدعاوى القضائية التافهة، فإن الشركات الصغيرة ليست مستعدة تمامًا. بغض النظر عما إذا كان هناك أي حقيقة لهذا الادعاء، سيتعين على أصحاب الأعمال الصغيرة تعيين محامين وسيتحملون عادةً رسومًا قانونية حتى لو فازوا بالقضية.</p>
+                        </div>
+                      </div>
+                  </li>
+                  <li class="timeline-item slide-div m-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="arrow"></span>
+                    <h2 class="h5 mb-0" >توظيف المواد البشرية مقابل شركات التوظيف</h2>
+                    <div class="collapse" id="collapseExample4">
+                        <div class="card-body">
+                          <p class="text-small mt-2 ">يعد العثور على الموظف المناسب لشغل هذا المنصب أمرًا حيويًا لمستقبل شركتك كما أنه عملية تستغرق وقتًا طويلاً. وفقاً لدراسة استقصائية للشركات الصغيرة، فإن 30% من فشل الشركات الصغيرة يُعزى إلى قرارات التوظيف السيئة. نتعرف على ثقافة شركتك، والتحديات، والفوائد، حتى نتمكن من أن نكون وجه شركتك ونقوم بتسويق فرص العمل الخاصة بك كامتداد شخصي لك وبسعر معقول.</p>
+                          <p>عادةً ما يتقاضى القائمون على التوظيف ما يتراوح بين 20 إلى 35 بالمائة من الراتب المبدئي بينما نتقاضى نحن أجرًا بالساعة. لدى القائمين على التوظيف اهتمامات متنافسة يحاولون إرضاءها (محاولة الوفاء بالمواعيد النهائية الخاصة بك، والمواعيد النهائية لوكالتهم، والعمل مع شركات متعددة ومناصب متعددة) ويكون الإغراء حقيقيًا جدًا للدفع بمرشح قد لا يكون مناسبًا لهذا الدور. ليس لديهم علاقة طويلة الأمد مع شركتك. نحن نحاول فقط إرضائك، ونحصل على أفضل مرشح لك.</p>
+                        </div>
+                    </div>
+                </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="./images/background/img-blog-01-1280x1280.jpg" class="rounded-circle img-fluid" alt="">
+        </div>
+    </div>
+
+    <div class="row p-2">
+        <div class="col-md-6">
+            <img src="./images/background/img-team-2.png" class="img img-fluid" alt="">
+        </div>
+        <div class="col-md-6">
+            <p> <strong class="fs-1 primarytext">ماذا تفعل </strong><strong class="fs-1 secondarytext">Avantage</strong>
+                <p>أفكار خلفية موثوقة لإعادة الوساطة للنماذج متعددة المنصات. إعادة وساطة العمليات المتكاملة باستمرار من خلال رأس المال الفكري السليم من الناحية الفنية.</p>
+                <ul class="">
+                    <li class="timeline-item slide-div m-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <span class="arrow"></span>
+                      <h2 class="h5 mb-0" >ما هي الخدمات التي نقدمها؟</h2>
+                      <div class="collapse" id="collapseExample">
+                          <div class="card-body text-dark">
+                            <h5>شريكك في مجال الموارد البشرية متكامل الخدمات،</h5>
+                            <p class="text-small mt-2 ">نحن قسم الموارد البشرية الخاص بك لكل ما يتعلق بالموارد البشرية وموردك الافتراضي عند الطلب للموظفين والإدارة.</p>
+                            <h5>موارد الموارد البشرية الخاصة بك تستعين بمصادر خارجية لوظيفة معينة للموارد البشرية</h5>
+                            <p>هل هناك مجال للموارد البشرية يأخذ الكثير من وقتك ويعوقك عن المبادرات المهمة الأخرى؟ إن الاستعانة بمصادر خارجية في مجال معين (مثل التوظيف، والتأهيل، والمزايا، والإدارة) لنا هي الطريقة المثالية لإعادتك إلى المسار الصحيح.</p>
+                              </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item slide-div m-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                      <span class="arrow"></span>
+                      <h2 class="h5 mb-0">كيف يمكنك مساعدتنا في التوظيف</h2>
+                      <div class="collapse" id="collapseExample2">
+                          <div class="card-body">
+                            <p class="text-small mt-2 ">كما هو الحال مع أي من الخدمات التي نقدمها، هناك خيارات. يمكننا ببساطة نشر فرص العمل الخاصة بك وإرسال السيرة الذاتية إليك. إذا كنت بحاجة إلى مزيد من المساعدة، يمكننا مساعدتك بالقليل أو بالقدر الذي تريده. يمكن للموارد البشرية البديلة فحص المرشحين وإجراء المقابلات والتحقق من المراجع وإكمال فحوصات الخلفية الجنائية و/أو الترتيب لاختبار ما قبل التوظيف، كل ذلك على أساس كل ساعة أو على أساس كل اختبار.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item slide-div m-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                      <div class="dot"></div>
+                        <span class="arrow"></span>
+                      <h2 class="h5 mb-0">ماذا يتضمن برنامج التجنيب الخاص بكم؟</h2>
+                      <div class="collapse" id="collapseExample3">
+                          <div class="card-body">
+                            <p class="text-small mt-2 ">استشارات غير محدودة عبر الهاتف أو البريد الإلكتروني لك ولموظفيك. تحديثات الملصقات الفيدرالية والولائية الإلزامية، ومنشورات الوظائف المجانية على موقعنا ومجمعات الوظائف، وأسعار مخفضة للوحات الوظائف الرئيسية، ونماذج الموارد البشرية، وسعر مخفض للساعة.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item slide-div m-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+                      <span class="arrow"></span>
+                      <h2 class="h5 mb-0" >مالفائدة من الاستعانة بالمصادر الخارجية للموارد البشرية</h2>
+                      <div class="collapse" id="collapseExample4">
+                          <div class="card-body">
+                            <p class="text-small mt-2 ">عادةً ما يكون لدى الكثير من المؤسسات الصغيرة والمتوسطة الحجم شخص يتولى منصبًا في مجال الموارد البشرية. بشكل عام، يكون لدى هذا الشخص العديد من الواجبات الأخرى ويرتدي قبعات متعددة، وفي بعض الحالات يمكن أن تقع واجبات الموارد البشرية على عاتق المالكين والمديرين التنفيذيين لهذه الشركات ذات الحجم الكبير. يمكن أن تكون استشارات الموارد البشرية موردًا فعالاً من حيث التكلفة للتأكد من التزامك بالامتثال والحفاظ على التواصل المستمر مع الموظفين والإدارة والمديرين التنفيذيين وتمنحك القدرة على تنفيذ عمليات وحلول الموارد البشرية الشائعة والممارسة. والأهم من ذلك أنه يوفر لمؤسستك الاتساق في هذه السياسات والإجراءات مما يقلل من مسؤوليتك القانونية ويحسن التواصل الثقافي/الأخلاقي والشامل داخل مؤسستك.</p>
+                            
+                          </div>
+                      </div>
+                    </li>
+                    <li class="timeline-item slide-div m-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+                      <span class="arrow"></span>
+                      <h2 class="h5 mb-0" >كيف نحسن تقدمنا في اعمالنا؟</h2>
+                      <div class="collapse" id="collapseExample5">
+                          <div class="card-body">
+                            <p class="text-small mt-2 ">قم بتوظيف الأشخاص المناسبين، ومنحهم الأدوات التي يحتاجونها للقيام بعملهم، واجعلهم يشعرون بالتقدير والتقدير. التواصل أمر بالغ الأهمية. الموظفون لا يغادرون من أجل المال - بل يغادرون لأنهم لا يشعرون بالالتزام أو الاحترام.</p>
+                            <a href="" role="button" class="btn btn-primary rounded-pill p-3 fw-bold">اكتشف المزيد</a>
+                          </div>
+                      </div>
+                    </li>
+                  </ul>
+        </div>
+    </div>
+
+    <div class="w-100 py-5 mx-0 px-3 backimg" style="background-image: url(./images/background/img-blog-31-640x427.jpg), url(./images/background/bgn-newsletter-curve.png); background-attachment: scroll;">
+        <div class="p-5" style="max-width: 800px;">
+        <p>ابقى على اطلاع بنا</p>
+        <h1 class="primarytext">اشترك في </h1>
+        <h1 class="secondarytext">نشرتنا الاخبارية</h1>
+        <p>قم بالتسجيل في النشرة الإخبارية لشركة Avantage لتلقي جميع العروض والخصومات الجديدة المتعلقة بمشاريع الموارد البشرية التي قد تكون لديك. ما عليك سوى كتابة عنوان بريدك الإلكتروني وسنقوم بإدراجك في التحديث القادم.</p>
+        <form>
+            <div class="form-group">
+                <label for="name"><span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-pill" placeholder="اكتب اسمك" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><span class="text-danger">*</span></label>
+                <input type="email" class="form-control rounded-pill" placeholder="اكتب بريدك الالكتروني" id="email" name="email" required>
+            </div>
+            <div class="form-group py-2">
+                <input type="text" class="form-control rounded-pill" placeholder="الموضوع" id="subject" name="subject">
+            </div>
+            <div class="form-group">
+                <label for="message"><span class="text-danger">*</span></label>
+                <textarea class="form-control" id="message" name="message" placeholder="اكتب رسالتك" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary m-2 rounded-pill p-2 fw-bold">Submit</button>
+        </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row m-2 p-2 justify-content-center">
+            <div class="col-md-4 p-2">
+                <h2 class="primarytext">مقرنا</h2>
+                <p>تنمية الرؤية العالمية الشاملة للابتكار المدمر بشكل عضوي من خلال التمكين</p>
+                <p><a href=""><i class="fa fa-phone"></i> 020 7946 0200</a></p>
+                <p><a href=""><i class="fa fa-envelope"></i> info@mailus.oc.ul</a></p>
+                <p><a href=""><i class="fa fa-globe"></i> avantage.co.uk</a></p>
+            </div>
+            <div class="g-0 col-md-4 p-2">
+                <p>مواقعنا</p>
+                <h2>اين تجدنا</h2>
+                <div class="row">
+                    <div class="col-md-6"><img loading="lazy" src="./images/background/img-footer-map.png"
+                            class="img-fluid" alt=""></div>
+                    <div class="col">
+                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <p>ابق على تواصل</p>
+                <h2>روابطنا الاجتماعية</h2>
+                <p>أخذ مؤشرات الأداء الرئيسية بسلاسة دون اتصال بالإنترنت لتحقيق أقصى قدر من الاطلاع الطويل</p>
+                <ul class="social-icons">
+                    <li class="social-icon">
+                        <a href="#"><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                    viewBox="0 0 48 48">
+                                    <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
+                                    <path fill="#fff"
+                                        d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z">
+                                    </path>
+                                </svg></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="100" height="100" viewBox="0 0 48 48">
+                                    <path fill="#03A9F4"
+                                        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+                                    </path>
+                                </svg></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="48" height="48" viewBox="0 0 48 48">
+                                    <path fill="#0288D1"
+                                        d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
+                                    </path>
+                                    <path fill="#FFF"
+                                        d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
+                                    </path>
+                                </svg></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="100" height="100" viewBox="0 0 48 48">
+                                    <circle cx="24" cy="24" r="20" fill="#E60023"></circle>
+                                    <path fill="#FFF"
+                                        d="M24.4439087,11.4161377c-8.6323242,0-13.2153931,5.7946167-13.2153931,12.1030884	c0,2.9338379,1.5615234,6.5853882,4.0599976,7.7484131c0.378418,0.1762085,0.581543,0.1000366,0.668457-0.2669067	c0.0668945-0.2784424,0.4038086-1.6369019,0.5553589-2.2684326c0.0484619-0.2015381,0.0246582-0.3746338-0.1384277-0.5731201	c-0.8269653-1.0030518-1.4884644-2.8461304-1.4884644-4.5645752c0-4.4115601,3.3399658-8.6799927,9.0299683-8.6799927	c4.9130859,0,8.3530884,3.3484497,8.3530884,8.1369019c0,5.4099731-2.7322998,9.1584473-6.2869263,9.1584473	c-1.9630737,0-3.4330444-1.6238403-2.9615479-3.6153564c0.5654297-2.3769531,1.6569214-4.9415283,1.6569214-6.6584473	c0-1.5354004-0.8230591-2.8169556-2.5299683-2.8169556c-2.006958,0-3.6184692,2.0753784-3.6184692,4.8569336	c0,1.7700195,0.5984497,2.9684448,0.5984497,2.9684448s-1.9822998,8.3815308-2.3453979,9.9415283	c-0.4019775,1.72229-0.2453003,4.1416016-0.0713501,5.7233887l0,0c0.4511108,0.1768799,0.9024048,0.3537598,1.3687744,0.4981079l0,0	c0.8168945-1.3278198,2.0349731-3.5056763,2.4864502-5.2422485c0.2438354-0.9361572,1.2468872-4.7546387,1.2468872-4.7546387	c0.6515503,1.2438965,2.5561523,2.296936,4.5831299,2.296936c6.0314941,0,10.378418-5.546936,10.378418-12.4400024	C36.7738647,16.3591919,31.3823242,11.4161377,24.4439087,11.4161377z">
+                                    </path>
+                                </svg></a>
+                    </li>
+                </ul>
+    
+            </div>
+        </div>
+        <hr>
+        <div class="m-1 p-1">
+            <ul class="nav text center justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">الصفحة الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about-us.html">عنا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./services.html">خدماتنا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">المدونة</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">معرضنا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" href="#header">^ العودة للاعلى ^</a>
+                </li>
+            </ul>
+    
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

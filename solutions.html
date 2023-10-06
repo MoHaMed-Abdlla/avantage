@@ -1,183 +1,152 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <style>
-        .list-group-item{
-            border: none;
-            background-color: transparent;
-        }
-        .progress {
-            width: 150px;
-            height: 150px;
-            background: none;
-            margin: 0 auto;
-            box-shadow: none;
-            position: relative;
-        }
+        .progress{
+  width: 150px;
+  height: 150px;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+}
+.progress:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 7px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress > span{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left{
+  left: 0;
+}
+.progress .progress-bar{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 7px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar{
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right{
+  right: 0;
+}
+.progress .progress-right .progress-bar{
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 24px;
+  color: #fff;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.progress .progress-bar{
+  border-color: #b73235;
+}
+.progress .progress-left .progress-bar{
+  animation: loading-2 1.5s linear forwards 1.8s;
+  animation-duration: .7s;
+}
 
-        .progress:after {
-            content: "";
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 7px solid #fff;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+@keyframes loading-1{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+  }
+}
+@keyframes loading-2{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(144deg);
+      transform: rotate(144deg);
+  }
+}
+@keyframes loading-3{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+  }
+}
+@keyframes loading-4{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(36deg);
+      transform: rotate(36deg);
+  }
+}
+@keyframes loading-5{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(126deg);
+      transform: rotate(126deg);
+  }
+}
+@media only screen and (max-width: 990px){
+  .progress{ margin-bottom: 20px; }
+}
 
-        .progress>span {
-            width: 50%;
-            height: 100%;
-            overflow: hidden;
-            position: absolute;
-            top: 0;
-            z-index: 1;
-        }
-
-        .progress .progress-left {
-            left: 0;
-        }
-
-        .progress .progress-bar {
-            width: 100%;
-            height: 100%;
-            background: none;
-            border-width: 7px;
-            border-style: solid;
-            position: absolute;
-            top: 0;
-        }
-
-        .progress .progress-left .progress-bar {
-            left: 100%;
-            border-top-right-radius: 80px;
-            border-bottom-right-radius: 80px;
-            border-left: 0;
-            -webkit-transform-origin: center left;
-            transform-origin: center left;
-        }
-
-        .progress .progress-right {
-            right: 0;
-        }
-
-        .progress .progress-right .progress-bar {
-            left: -100%;
-            border-top-left-radius: 80px;
-            border-bottom-left-radius: 80px;
-            border-right: 0;
-            -webkit-transform-origin: center right;
-            transform-origin: center right;
-            animation: loading-1 1.8s linear forwards;
-        }
-
-        .progress .progress-value {
-            width: 90%;
-            height: 90%;
-            border-radius: 50%;
-            background: transparent;
-            font-size: 24px;
-            color: #fff;
-            line-height: 135px;
-            text-align: center;
-            position: absolute;
-            top: 5%;
-            left: 5%;
-        }
-
-        .progress .progress-bar {
-            border-color: #b73235;
-        }
-
-        .progress .progress-left .progress-bar {
-            animation: loading-2 1.5s linear forwards 1.8s;
-            animation-duration: .7s;
-        }
-
-        @keyframes loading-1 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(180deg);
-                transform: rotate(180deg);
-            }
-        }
-
-        @keyframes loading-2 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(144deg);
-                transform: rotate(144deg);
-            }
-        }
-
-        @keyframes loading-3 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(90deg);
-                transform: rotate(90deg);
-            }
-        }
-
-        @keyframes loading-4 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(36deg);
-                transform: rotate(36deg);
-            }
-        }
-
-        @keyframes loading-5 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(126deg);
-                transform: rotate(126deg);
-            }
-        }
-
-        @media only screen and (max-width: 990px) {
-            .progress {
-                margin-bottom: 20px;
-            }
-        }
     </style>
-    
 </head>
-
 <body>
-    <header class="w-100 mb-5 p-5 pt-0" style="background-color: white;" id="header">
+    <header id="header" class="p-5 mb-4 pt-0" style="background-color: lightgray; background-image: url('./images/background/bgn-newsletter-curve.png');">
         <nav class="navbar navbar-expand-lg p-0">
             <a class="navbar-brand justify-content-start" href="#"><img loading="lazy" src="./images/icons_and_logos/logo.png"
                     alt="Logo"></a>
@@ -216,12 +185,12 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link active" href="./services.html" id="navbarDropdown">الخدمات</a>
+                        <a class="nav-link" href="./services.html" id="navbarDropdown">الخدمات</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <div class="dropdown-arrow"></div>
                             <a class="dropdown-item" href="./single-services.html">خدمة واحدة</a>
                             <a class="dropdown-item" href="./our-process.html">عملياتنا</a>
-                            <a class="dropdown-item" href="./solutions.html">الحلول</a>
+                            <a class="dropdown-item active" href="./solutions.html">الحلول</a>
                             <a class="dropdown-item" href="./faq.html">الحقائق</a>
                             <a class="dropdown-item" href="#">التسعير</a>
                         </div>
@@ -249,78 +218,105 @@
                 </ul>
             </div>
         </nav>
-
-        <div class="p-5 my-5 topsection">
-            <p>حلول الموارد البشرية الذكية</p>
-            <h1 class="primarytext">Avantage</h1>
-            <h1 class="secondarytext">لخدمات الموارد البشرية</h1>
-            <p>ضع على الطاولة استراتيجيات البقاء المربحة للجانبين لضمان الهيمنة الاستباقية. في نهاية المطاف، المضي
-                قدمًا، هو
-                أمر طبيعي جديد تطور من جيل إلى جيل.</p>
+        <div class="p-5 my-4">
+            <p>استشارات الموارد البشرية المبتكرة الناجحة</p>
+            <h1 class="primarytext">الابنكارات في</h1>
+            <h1 class="secondarytext">المواد البشرية</h1>
+            <p>بث إدارة التغيير التشغيلي داخل سير العمل لإنشاء أداء رئيسي لإطار العمل. ربط البنى التحتية عالية التأثير طويلة المدى بحماس مع خدمة العملاء الفعالة.</p>
         </div>
-        <div class="container my-5">
-            <div class="row justify-content-center icons">
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
-                    <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>بيئة إبداعية</h3>
-                            <p>بث إدارة التغيير التشغيلي داخل سير العمل لإنشاء إطار عمل.</p>
+
+            <div class="row p-4">
+                <div class="col-md-4 p-2 fade-in">
+                        <p>تمكين مهارات القيادة الديناميكية بشكل مناسب بعد بوابات الأعمال. سلاسل التوريد التفاعلية لعضلة القلب على مستوى العالم مع نواقل الجودة المميزة. إحداث ثورة عالمية في المصادر العالمية من خلال الخدمات القابلة للتشغيل البيني. ابتكار البنى التحتية مفتوحة المصدر بكفاءة عبر مواد غير مكلفة.</p>
+                      <p>إعادة هندسة الخدمات الوصفية الثورية والبنى المتميزة بشكل مميز. احتضان الفرص البديهية والإمكانات في الوقت الحقيقي بشكل جوهري. قم بتوصيل التكنولوجيا الفردية بشكل مناسب بعد شبكات التوصيل والتشغيل.</p>
+                </div>
+                <div class="col-md-4 p-2 fade-in">
+                    <p>تمكين مهارات القيادة الديناميكية بشكل مناسب بعد بوابات الأعمال. سلاسل التوريد التفاعلية لعضلة القلب على مستوى العالم مع نواقل الجودة المميزة. إحداث ثورة عالمية في المصادر العالمية من خلال الخدمات القابلة للتشغيل البيني. ابتكار البنى التحتية مفتوحة المصدر بكفاءة عبر مواد غير مكلفة.</p>
+                    <p>ربط البنية التحتية عالية التأثير طويلة المدى بحماس مع خدمة العملاء الفعالة. احترافية أزياء القيادة اللاسلكية بدلاً من التجارب المرتقبة. إجراءات اختبار النقرات وقذائف الهاون التي تعمل على تنشيط عضلة القلب في حين أن المنتجات المصنعة من الجيل التالي.</p>
+                </div>
+                <div class="col-md-4 p-2 fade-in">
+                    <p>تمكين مهارات القيادة الديناميكية بشكل مناسب بعد بوابات الأعمال. سلاسل التوريد التفاعلية لعضلة القلب على مستوى العالم مع نواقل الجودة المميزة. إحداث ثورة عالمية في المصادر العالمية من خلال الخدمات القابلة للتشغيل البيني. ابتكار البنى التحتية مفتوحة المصدر بكفاءة عبر مواد غير مكلفة.</p>
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner icons p-3">
+                                <div class="carousel-item active">
+                                                <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"><i>icon</i></span>
+                                                <div class="col-8 col-md-8 col-lg-12">
+                                                    <h3>اختيار الموظفين</h3>
+                                                    <p>اختر الأشخاص المناسبين لفريقك، مع الفريق المثالي يأتي العم المثالي</p>
+                                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                    
+                                                <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"><i>icon</i></span>
+                                                <div class="col-8 col-md-8 col-lg-12">
+                                                    <h3>بناء الفريق</h3>
+                                                    <p>ابن الفريق المناسب لشركتك</p>
+                                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                                <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"><i>icon</i></span>
+                                                <div class="col-8 col-md-8 col-lg-12">
+                                                    <h3>البحث عن الموظفين</h3>
+                                                    <p>اعثر على افضل الموظفين لشركتك</p>
+                                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                                <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"><i>icon</i></span>
+                                                <div class="col-8 col-md-8 col-lg-12">
+                                                    <h3>fkh hgk[hp</h3>
+                                                    <p>اعثر على افضل الموظفين لبناء النجاح</p>
+                                                </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </header>
+
+    <div class="row pt-4 backimg w-100" style="background-image: url(./images/background/img-portfolio-03-1280x1280.jpg); height: 650px;">
+        <div class="col-md-6 p-2 mx-3">
+            <p>اكثر من مجرد عمل</p>
+            <h1 class="primarytext">عملاء رائعون</h1>
+            <h1 class="secondarytext">تقييمات رائعة</h1>
+            <p>تعمل تقنية الفلورسنت على إشراك المنهجيات العالمية باستخدام التكنولوجيا الممكّنة على الويب. تنسيق التجارة
+                الإلكترونية الاستباقية بشكل تفاعلي من خلال التفكير خارج الصندوق الذي يركز على العمليات.</p>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+                <div class="carousel-inner icons">
+                    <div class="carousel-item active">
+                        <div class="p-2">
+                            <h6>تعمل تقنية الفلورسنت على إشراك المنهجيات العالمية باستخدام التكنولوجيا الممكّنة على
+                                الويب. تنسيق التجارة الإلكترونية الاستباقية بشكل تفاعلي من خلال التفكير خارج الصندوق
+                                الذي يركز على العمليات.</h6>
+                            <p>احمد</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
-                    <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>اختيار الموظفين</h3>
-                            <p>اختر الأشخاص المناسبين لفريقك، مع الفريق المثالي يأتي العم المثالي</p>
+                    <div class="carousel-item">
+                        <div class="p-2">
+                            <h6>تعمل تقنية الفلورسنت على إشراك المنهجيات العالمية باستخدام التكنولوجيا الممكّنة على
+                                الويب. تنسيق التجارة الإلكترونية الاستباقية بشكل تفاعلي من خلال التفكير خارج الصندوق
+                                الذي يركز على العمليات.</h6>
+                            <p>محمد</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
-                    <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>قيادة الفريق</h3>
-                            <p>اختر القائد الحازم الذي سيقود شركتك للتفوق</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
-                    <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>بناء الفريق</h3>
-                            <p>ابن الفريق المناسب لشركتك</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
-                    <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>الاستراتيجية</h3>
-                            <p>توصل لأفضل استراتيجيات النجاح مبساعدة خبرائنا</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
-                    <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>التواصل</h3>
-                            <p>تواصل الفريق يعني النجاح الحتمي</p>
+                    <div class="carousel-item">
+                        <div class="p-2">
+                            <h6>تعمل تقنية الفلورسنت على إشراك المنهجيات العالمية باستخدام التكنولوجيا الممكّنة على
+                                الويب. تنسيق التجارة الإلكترونية الاستباقية بشكل تفاعلي من خلال التفكير خارج الصندوق
+                                الذي يركز على العمليات.</h6>
+                            <p>سالم</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <hr class="mx-auto py-5" style="width: 500px;">
+        <div class="col-md-4 fade-in">
+            <img loading="lazy" src="./images/background/img-team.png" alt="" style="width: 600px;">
+        </div>
+    </div>
 
-    <div class="row">
-        <div class="col-md-3 text-center fade-in">
+    <div class="row my-4">
+        <div class="col-md-3 text-center">
             <div class="progress blue">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
@@ -333,7 +329,7 @@
             <h3>الأشخاص المناسبين</h3>
             <p>تنمية العمليات المثلى والبنى التكتيكية بسرعة. تكرار الموضوع الاستراتيجي التساهمي بالكامل</p>
         </div>
-        <div class="col-md-3 text-center fade-in">
+        <div class="col-md-3 text-center">
             <div class="progress blue">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
@@ -346,7 +342,7 @@
             <h3>الاختيار الصحيح</h3>
             <p>نشر التسليمات المتفوقة بدقة مع تصميمات التطبيقات الممكّنة على الويب.</p>
         </div>
-        <div class="col-md-3 text-center fade-in">
+        <div class="col-md-3 text-center">
             <div class="progress blue">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
@@ -359,7 +355,7 @@
             <h3>تعاون الفريق</h3>
             <p>إعادة وساطة العمليات المتكاملة باستمرار من خلال رأس المال الفكري السليم من الناحية الفنية.</p>
         </div>
-        <div class="col-md-3 text-center fade-in">
+        <div class="col-md-3 text-center">
             <div class="progress blue">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
@@ -374,89 +370,33 @@
         </div>
     </div>
 
-    <div class="my-5 w-100 backimg"
-        style="height: 500px; background-image: url(./images/background/img-blog-26-1280x1280.jpg);">
-        <div class="d-flex align-items-center justify-content-center h-100">
-            <div class="w-100 mx-auto text-center fade-in" style="padding-top: 200px; padding-bottom: 200px;">
-                <p>احصل على الحلول بسرعة</p>
-                <p> <strong class="fs-1 primarytext">بحاجة إلى </strong><strong class="fs-1 secondarytext">مستشاري
-                        الموارد البشرية </strong><strong class="fs-1 primarytext">من الدرجة الاولى</strong></p>
-                <a href="" role="button" class="btn btn-primary rounded-pill p-3 fw-bold">احصل على عرض الان!</a>
-            </div>
+    <div class="my-5 row py-3 w-100 backimg justify-content-center align-items-center" style="height: 750px; background-image: url(./images/background/img-blog-26-1280x1280.jpg);">
+        <div class="col-md-8 fade-in text-center">
+                <p>المواكبة معنا</p>
+                <h1 class="primarytext">اشترك في</h1>
+                <h1 class="secondarytext">نشرتنا الاخبارية</h1>
+                <p>قم بالتسجيل في النشرة الإخبارية لشركة Avantage لتلقي جميع العروض والخصومات الجديدة المتعلقة بمشاريع الموارد البشرية التي قد تكون لديك. ما عليك سوى كتابة عنوان بريدك الإلكتروني وسنقوم بإدراجك في التحديث القادم.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="name"><span class="text-danger">*</span></label>
+                        <input type="text" class="form-control rounded-pill" placeholder="اكتب اسمك" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><span class="text-danger">*</span></label>
+                        <input type="email" class="form-control rounded-pill" placeholder="اكتب بريدك الالكتروني" id="email" name="email" required>
+                    </div>
+                    <div class="form-group py-2">
+                        <input type="text" class="form-control rounded-pill" placeholder="الموضوع" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message"><span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="message" name="message" placeholder="اكتب رسالتك" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary m-2 rounded-pill p-2 fw-bold">Submit</button>
+                </form>
         </div>
     </div>
-    <div class="p-5 my-5 topsection">
-        <p>وفر مع حزم التسعير لدينا</p>
-        <h1 class="primarytext">استشارات الموارد البشرية</h1>
-        <h1 class="secondarytext">اصبحت سهلة التكلفة</h1>
-        <p>ابتكار مصادر داخلية أو عضوية دقيقة بمصداقية مع الالتزام بمعايير عالية في الاستعداد للويب. توسيع نطاق الكفاءات
-            الأساسية المقاومة للمستقبل بقوة في مواجهة التجارب المؤثرة.</p>
-    </div>
 
-    <div class="row p-2 my-2  gx-2 align-items-center">
-        <div class="p-2 col-md-4 fade-in">
-            <div class="card bg-light shadow">
-                <div class="card-body icon text-center justify-content-center">
-                    <span class="p-1 btn-secondary rounded-circle"></span>
-                    <hr>
-                    <h5 class="card-title">حزمة المبتدئين</h5>
-                    <p>الوصول الاساسي للموارد البشرية</p>
-                    <h2 class="secondarytext fw-bold">2999$</h2>
-                    <hr>
-                    <ul class="list-group list-group-flush text-end">
-                        <li class="list-group-item">&#10003; تحسين الموظفين الحاليين</li>
-                        <li class="list-group-item">&#10003; البحث عن موظفين جدد</li>
-                        <li class="list-group-item">&#10003; تحسين العمليات</li>
-                        <li class="list-group-item">&#10003; إسناد الأدوار</li>
-                    </ul>
-                    <a href="" role="button" class="btn btn-secondary rounded-pill p-2 my-2 fw-bold">اشترك</a>
-                </div>
-            </div>
-        </div>
-        <div class="p-2 col-md-4 fade-in">
-            <div class="card bg-white shadow">
-                <div class="card-body icon text-center justify-content-center">
-                    <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
-                    <hr>
-                    <h5 class="card-title">حزمة المحترفين</h5>
-                    <p>الوصول الشامل للموارد البشرية</p>
-                    <h2 class="primarytext fw-bold">4999$</h2>
-                    <hr>
-                    <ul class="list-group list-group-flush text-end">
-                        <li class="list-group-item">&#10003; تحسين الموظفين الحاليين</li>
-                        <li class="list-group-item">&#10003; البحث عن موظفين جدد</li>
-                        <li class="list-group-item">&#10003; تحسين العمليات</li>
-                        <li class="list-group-item">&#10003; توصيات الشركة</li>
-                        <li class="list-group-item">&#10003; إسناد الأدوار</li>
-                        <li class="list-group-item">&#10003; إسناد الأدوار</li>
-                        <li class="list-group-item">&#10003; المزيد من المزايا</li>
-                    </ul>
-                    <a href="" role="button" class="btn btn-primary rounded-pill p-2 my-2 fw-bold">اشترك</a>
-                </div>
-            </div>
-        </div>
-        <div class="p-2 col-md-4 fade-in">
-            <div class="card bg-light shadow">
-                <div class="card-body icon text-center justify-content-center">
-                    <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                    <hr>
-                    <h5 class="card-title"> الحزمة الاساسية</h5>
-                    <p>الوصول لمعظم للموارد البشرية</p>
-                    <h2 class="secondarytext fw-bold">3999$</h2>
-                    <hr>
-                    <ul class="list-group list-group-flush text-end">
-                        <li class="list-group-item">&#10003; تحسين الموظفين الحاليين</li>
-                        <li class="list-group-item">&#10003; البحث عن موظفين جدد</li>
-                        <li class="list-group-item">&#10003; تحسين العمليات</li>
-                        <li class="list-group-item">&#10003; إسناد الأدوار</li>
-                    </ul>
-                    <a href="" role="button" class="btn btn-secondary rounded-pill p-2 my-2 fw-bold">اشترك</a>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
     <footer>
         <div class="row m-2 p-2 justify-content-center">
             <div class="col-md-4 p-2">
@@ -554,7 +494,7 @@
     
         </div>
     </footer>
+
     <script src="./script.js"></script>
 </body>
-
 </html>

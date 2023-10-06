@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        header .fa, footer .fa{
+            color:#b73235;
+        }
+        main svg{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="w-100 mb-5 p-5 pt-0 backimg" id="header" style="background-image: url('./images/background/img-blog-19.jpg');">
+        <nav class="navbar navbar-expand-lg p-0">
+            <a class="navbar-brand justify-content-start" href="#"><img loading="lazy" src="./images/icons_and_logos/logo.png"
+                    alt="Logo"></a>
+            <!-- Collapsible Navbar Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Items -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./index.html" id="navbarDropdown">الصفحة الرئيسية</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="#">مستشار الاعمال</a>
+                            <a class="dropdown-item" href="#">مستشار التسويق</a>
+                            <a class="dropdown-item" href="./index.html">مستشار الموارد البشرية</a>
+                            <a class="dropdown-item" href="#">المستشار المالي</a>
+                            <a class="dropdown-item" href="#">مستشار الضرائب / محاسب</a>
+                            <a class="dropdown-item" href="#">مستشار الاستراتيجية</a>
+                            <a class="dropdown-item" href="#">مستشار دولي</a>
+                            <a class="dropdown-item" href="#">مستشار إداري</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./about-us.html" id="navbarDropdown">معلومات عنا</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./about-us.html">عنّا</a>
+                            <a class="dropdown-item" href="./history.html">تاريخ الشركة</a>
+                            <a class="dropdown-item" href="./testimonials.html">التوصيات</a>
+                            <a class="dropdown-item" href="./contact.html">التواصل</a>
+                            <a class="dropdown-item" href="./clients.html">العملاء</a>
+                            <a class="dropdown-item" href="./404.html">404</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./services.html" id="navbarDropdown">الخدمات</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./single-services.html">خدمة واحدة</a>
+                            <a class="dropdown-item" href="./our-process.html">عملياتنا</a>
+                            <a class="dropdown-item" href="./solutions.html">الحلول</a>
+                            <a class="dropdown-item" href="./faq.html">الحقائق</a>
+                            <a class="dropdown-item" href="#">التسعير</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="./portfolio.html" id="navbarDropdown">معرض الاعمال</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item active" href="./hsbc-recruiting.html">المشاريع الواحدة</a>
+                            <a class="dropdown-item" href="#">قائمة المشاريع</a>
+                            <a class="dropdown-item" href="#">شبكة المشاريع</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./blog.html" id="navbarDropdown">المدونة</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./management-project.html">المنشورات الواحدة</a>
+                            <a class="dropdown-item" href="#">قائمة المدونة</a>
+                            <a class="dropdown-item" href="#">شبكة المدونة</a>
+                            <a class="dropdown-item" href="#">المنشورات الاخيرة</a>
+                        </div>
+                    </li>  
+                    <li><button class="btn-primary rounded-pill p-2 m-1">0 123 4567 890</button></li>       
+                </ul>
+            </div>
+        </nav>
+        <div class="py-5 pb-3 topsection">
+            <a href="" class="m-2"> <i class="fa fa-link"></i> الاستراتيجية</a> <a href="" class="m-2"> <i class="fa fa-link"></i> المالية</a><br>
+            <h1>التوظيف في HSBS</h1>
+            <p>تطوير تقنيات 2.0 بشكل تآزري بدلاً من المبادرات في الوقت المناسب فقط. قم بنشر الشبكات الإستراتيجية بسرعة مع الأعمال الإلكترونية المقنعة. التبشير بمصداقية بالمنتجات المصنعة ذات الكفاءة العالية والبيانات الممكّنة.</p>
+        </div>
+</header>
+    <main class="row p-5">
+        <div class=" col-8">
+            <p>استفد من الثمار المنخفضة لتحديد نشاط ذو قيمة مضافة في الملعب للاختبار التجريبي. تجاوز الفجوة الرقمية من خلال النقرات الإضافية من DevOps. إن الانغماس في تقنية النانو على طول طريق المعلومات السريع سوف يغلق حلقة التركيز فقط على النتيجة النهائية.</p>
+            <p>بث إدارة التغيير التشغيلي داخل سير العمل لإنشاء إطار عمل. أخذ مؤشرات الأداء الرئيسية بسلاسة دون اتصال بالإنترنت لتحقيق أقصى قدر من الذيل الطويل. أبقِ عينك على الكرة أثناء إجراء بحث عميق في عقلية الشركة الناشئة لتحقيق التقارب في التكامل عبر الأنظمة الأساسية.</p>
+            <p>إدارة الأسواق الممكّنة بشكل تعاوني عبر شبكات التوصيل والتشغيل. مماطلة مستخدمي B2C ديناميكيًا بعد تثبيت المزايا الأساسية. تصور بشكل كبير التقارب الموجه للعملاء دون عائد استثمار ثوري.</p>
+            <br><br>
+            <h3>أطلق العنان لمعلومات الوسائط المتعددة بكفاءة دون الحاجة إلى قيمة الوسائط المتعددة. قم بتعظيم التسليمات في الوقت المناسب بسرعة لمخططات الوقت الفعلي.</h3>
+            <br><br>
+            <p>تضافر علاقات فرض الضرائب على الموارد بشكل كامل عبر الأسواق المتخصصة الرائدة. تنمية خدمة العملاء الفردية بشكل احترافي بأفكار قوية. ابتكار خدمة عملاء لتسوية الموارد ديناميكيًا للحصول على أحدث خدمة عملاء.</p>
+            <p>ابتكار المنتجات المصنعة الممكّنة بشكل موضوعي من خلال منصات متوازية. إجراءات الاختبار الموسعة السائدة بشكل كلي لسلاسل التوريد الموثوقة. قم بإشراك خدمات الويب عالية المستوى بشكل كبير مقابل التسليمات المتطورة.</p>
+            <ul>
+                <li>تصور استباقي للخبرة القائمة على الوسائط المتعددة واستراتيجيات النمو عبر الوسائط.</li>
+                <li>تصور رأس المال الفكري عالي الجودة بسلاسة دون التعاون الفائق ومشاركة الأفكار.</li>
+                <li>البوابات الأساسية المثبتة بشكل شمولي بعد المنتجات القابلة للصيانة.</li>
+            </ul>
+            <p>تعمل تقنية الفلورسنت على إشراك المنهجيات العالمية باستخدام التكنولوجيا الممكّنة على الويب. تنسيق التجارة الإلكترونية الاستباقية بشكل تفاعلي من خلال التفكير "خارج الصندوق" الذي يركز على العمليات. متابعة خدمة العملاء القابلة للتطوير بشكل كامل من خلال الإمكانات المستدامة.</p>
+        </div>
+        <div class="col-4 p-3">
+            <h5>العميل: HSBS</h5>
+            <h5>السنة: 2018</h5>
+            <h5>الفئة: المالية والاستراتيجية</h5>
+            <h5>الموقع: هونج كونج</h5>
+            <h5>عائد الاستثمار: 45%</h5>
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                <path fill="#03A9F4"
+                    d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+                </path>
+            </svg></a>
+        </div>
+
+
+        <h2>اترك تعليقا</h2>
+        <p>لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة مشار إليها *</p>
+
+        <form class="p-5"> 
+            <div class="form-group">
+                <label for="message"><span class="text-danger">التعليق*</span></label>
+                <textarea class="form-control" id="message" name="message" placeholder="اكتب رسالتك" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="name"><span class="text-danger">الاسم*</span></label>
+                <input type="text" class="form-control rounded-pill" placeholder="اكتب اسمك" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><span class="text-danger">البريد الالكتروني*</span></label>
+                <input type="email" class="form-control rounded-pill" placeholder="اكتب بريدك الالكتروني" id="email" name="email" required>
+            </div>
+            <div class="form-group py-2">
+                <input type="email" class="form-control rounded-pill" placeholder="موقع بريدك الالكتروني" id="subject" name="emailsite">
+            </div>
+            <div class="form-group">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    احفظ اسمي، بريدي الإلكتروني، والموقع الإلكتروني في هذا المتصفح لاستخدامها في المرة القادمة التي أقوم فيها بالتعليق.
+                </label>
+              </div>
+            <button type="submit" class="btn btn-primary m-2 rounded-pill p-3 fs-3fw-bold">  أضف تعليقا  <i class="fa fa-paper-plane"></i></button>
+        </form>
+        <hr>
+        <label href="#">
+        <button class= "btn-primary rounded-circle" type="button" style="width: 80px; height: 80px;">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        <p>السابق <strong> تكنولوجيا المعلومات: ذيادة الوافدين</strong></p>
+        </label>
+    </main>
+
+    <footer>
+        <div class="row m-2 p-2 justify-content-center">
+            <div class="col-md-4 p-2">
+                <h2 class="primarytext">مقرنا</h2>
+                <p>تنمية الرؤية العالمية الشاملة للابتكار المدمر بشكل عضوي من خلال التمكين</p>
+                <p><a href=""><i class="fa fa-phone"></i> 020 7946 0200</a></p>
+                <p><a href=""><i class="fa fa-envelope"></i> info@mailus.oc.ul</a></p>
+                <p><a href=""><i class="fa fa-globe"></i> avantage.co.uk</a></p>
+            </div>
+            <div class="g-0 col-md-4 p-2">
+                <p>مواقعنا</p>
+                <h2>اين تجدنا</h2>
+                <div class="row">
+                    <div class="col-md-6"><img loading="lazy" src="./images/background/img-footer-map.png"
+                            class="img-fluid" alt=""></div>
+                    <div class="col">
+                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <p>ابق على تواصل</p>
+                <h2>روابطنا الاجتماعية</h2>
+                <p>أخذ مؤشرات الأداء الرئيسية بسلاسة دون اتصال بالإنترنت لتحقيق أقصى قدر من الاطلاع الطويل</p>
+                <ul class="social-icons">
+                    <li class="social-icon">
+                        <a href="#"><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                    viewBox="0 0 48 48">
+                                    <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
+                                    <path fill="#fff"
+                                        d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z">
+                                    </path>
+                                </svg></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="100" height="100" viewBox="0 0 48 48">
+                                    <path fill="#03A9F4"
+                                        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+                                    </path>
+                                </svg></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="48" height="48" viewBox="0 0 48 48">
+                                    <path fill="#0288D1"
+                                        d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
+                                    </path>
+                                    <path fill="#FFF"
+                                        d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
+                                    </path>
+                                </svg></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="100" height="100" viewBox="0 0 48 48">
+                                    <circle cx="24" cy="24" r="20" fill="#E60023"></circle>
+                                    <path fill="#FFF"
+                                        d="M24.4439087,11.4161377c-8.6323242,0-13.2153931,5.7946167-13.2153931,12.1030884	c0,2.9338379,1.5615234,6.5853882,4.0599976,7.7484131c0.378418,0.1762085,0.581543,0.1000366,0.668457-0.2669067	c0.0668945-0.2784424,0.4038086-1.6369019,0.5553589-2.2684326c0.0484619-0.2015381,0.0246582-0.3746338-0.1384277-0.5731201	c-0.8269653-1.0030518-1.4884644-2.8461304-1.4884644-4.5645752c0-4.4115601,3.3399658-8.6799927,9.0299683-8.6799927	c4.9130859,0,8.3530884,3.3484497,8.3530884,8.1369019c0,5.4099731-2.7322998,9.1584473-6.2869263,9.1584473	c-1.9630737,0-3.4330444-1.6238403-2.9615479-3.6153564c0.5654297-2.3769531,1.6569214-4.9415283,1.6569214-6.6584473	c0-1.5354004-0.8230591-2.8169556-2.5299683-2.8169556c-2.006958,0-3.6184692,2.0753784-3.6184692,4.8569336	c0,1.7700195,0.5984497,2.9684448,0.5984497,2.9684448s-1.9822998,8.3815308-2.3453979,9.9415283	c-0.4019775,1.72229-0.2453003,4.1416016-0.0713501,5.7233887l0,0c0.4511108,0.1768799,0.9024048,0.3537598,1.3687744,0.4981079l0,0	c0.8168945-1.3278198,2.0349731-3.5056763,2.4864502-5.2422485c0.2438354-0.9361572,1.2468872-4.7546387,1.2468872-4.7546387	c0.6515503,1.2438965,2.5561523,2.296936,4.5831299,2.296936c6.0314941,0,10.378418-5.546936,10.378418-12.4400024	C36.7738647,16.3591919,31.3823242,11.4161377,24.4439087,11.4161377z">
+                                    </path>
+                                </svg></a>
+                    </li>
+                </ul>
+    
+            </div>
+        </div>
+        <hr>
+        <div class="m-1 p-1">
+            <ul class="nav text center justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">الصفحة الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about-us.html">عنا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./services.html">خدماتنا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">المدونة</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">معرضنا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" href="#header">^ العودة للاعلى ^</a>
+                </li>
+            </ul>
+    
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

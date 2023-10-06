@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <style>
+            .fa{
+                color:#b73235;
+            }
+            main svg{
+                width: 50px;
+                height: 50px;
+            }
+            .carousel-control-prev, .carousel-control-next{
+                width: 50px;
+                height: 50px;
+            }
+            .card-img-overlay a, .card-img-overlay h3{
+                margin: 25% auto;
+                color: white;
+            }
+        </style>
+</head>
+<body>
+    <header class="w-100 mb-5 p-5 pt-0 backimg" id="header" style="background-image: url('./images/background/img-blog-31-640x427.jpg');">
+        <nav class="navbar navbar-expand-lg p-0">
+            <a class="navbar-brand justify-content-start" href="#"><img loading="lazy" src="./images/icons_and_logos/logo.png"
+                    alt="Logo"></a>
+            <!-- Collapsible Navbar Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Items -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./index.html" id="navbarDropdown">الصفحة الرئيسية</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="#">مستشار الاعمال</a>
+                            <a class="dropdown-item" href="#">مستشار التسويق</a>
+                            <a class="dropdown-item" href="./index.html">مستشار الموارد البشرية</a>
+                            <a class="dropdown-item" href="#">المستشار المالي</a>
+                            <a class="dropdown-item" href="#">مستشار الضرائب / محاسب</a>
+                            <a class="dropdown-item" href="#">مستشار الاستراتيجية</a>
+                            <a class="dropdown-item" href="#">مستشار دولي</a>
+                            <a class="dropdown-item" href="#">مستشار إداري</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./about-us.html" id="navbarDropdown">معلومات عنا</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./about-us.html">عنّا</a>
+                            <a class="dropdown-item" href="./history.html">تاريخ الشركة</a>
+                            <a class="dropdown-item" href="./testimonials.html">التوصيات</a>
+                            <a class="dropdown-item" href="./contact.html">التواصل</a>
+                            <a class="dropdown-item" href="./clients.html">العملاء</a>
+                            <a class="dropdown-item" href="./404.html">404</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./services.html" id="navbarDropdown">الخدمات</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./single-services.html">خدمة واحدة</a>
+                            <a class="dropdown-item" href="./our-process.html">عملياتنا</a>
+                            <a class="dropdown-item" href="./solutions.html">الحلول</a>
+                            <a class="dropdown-item" href="./faq.html">الحقائق</a>
+                            <a class="dropdown-item" href="#">التسعير</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./portfolio.html" id="navbarDropdown">معرض الاعمال</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./hsbc-recruiting.html">المشاريع الواحدة</a>
+                            <a class="dropdown-item" href="#">قائمة المشاريع</a>
+                            <a class="dropdown-item" href="#">شبكة المشاريع</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="./blog.html" id="navbarDropdown">المدونة</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-arrow"></div>
+                            <a class="dropdown-item" href="./management-project.html">المنشورات الواحدة</a>
+                            <a class="dropdown-item" href="#">قائمة المدونة</a>
+                            <a class="dropdown-item" href="#">شبكة المدونة</a>
+                            <a class="dropdown-item" href="#">المنشورات الاخيرة</a>
+                        </div>
+                    </li>  
+                    <li><button class="btn-primary rounded-pill p-2 m-1">0 123 4567 890</button></li>       
+                </ul>
+            </div>
+        </nav>
+        <div class="py-5 pb-3 ">
+            <p><a href="./index.html">الصفحة الرئيسية</a></p>
+            <h1>المدونة</h1>
+        </div>
+        </header>
+        <main class="row p-5">
+            <div class="col-8 ">
+                <div class="row">
+                    <div class="col-2">
+                        <img class="img-fluid" src="./images/icons_and_logos/b257f0407f4e10bef1c961d3256bd0f3.png" alt="">
+                        <h6>من خلال</h6>
+                        <h5>محمد عبدالله, BoldThemes</h5>
+                        <p>5 اكتوبر 2023</p>
+                    </div>
+                    <div class="col-10">
+                        <img src="./images/background/img-blog-29.jpg" class="img-fluid " alt="">
+                        <a href="" class="m-2"> <i class="fa fa-tag"></i> الاخبار</a><a href="">المشاريع</a> <a href="" class="m-2"> <i class="fa fa-comment"></i> 0</a><br>
+                        <a href="" class="fs-1">الموارد البشرية</a><br>
+                        <p>تطوير تقنيات 2.0 بشكل تآزري بدلاً من المبادرات في الوقت المناسب فقط. قم بنشر الشبكات الإستراتيجية بسرعة مع الأعمال الإلكترونية المقنعة. التبشير بمصداقية بالمنتجات المصنعة ذات الكفاءة العالية والبيانات الممكّنة.</p>
+                        <a href="" class="btn btn-primary p-2 rounded-pill">أكمل القراءة  ></a>
+                        <a href="" class="float-start"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                        <path fill="#03A9F4"
+                        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+                        </path>
+                        </svg></a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-2">
+                        <img class="img-fluid" src="./images/icons_and_logos/b257f0407f4e10bef1c961d3256bd0f3.png" alt="">
+                        <h6>من خلال</h6>
+                        <h5>محمد عبدالله, BoldThemes</h5>
+                        <p>5 اكتوبر 2023</p>
+                    </div>
+                    <div class="col-10">
+                        <img src="./images/background/img-blog-12.jpg" class="img-fluid " alt="">
+                        <a href="" class="m-2"> <i class="fa fa-tag"></i> الاخبار</a><a href="">المشاريع</a> <a href="" class="m-2"> <i class="fa fa-comment"></i> 0</a><br>
+                        <a href="" class="fs-1">تكنولجيا المعلومات</a><br>
+          <p>الدمج الموضوعي لمجالات المواضيع الإستراتيجية على مستوى المؤسسة مع البنى التحتية الوظيفية. إنتاج التقنيات المتميزة بشكل تفاعلي مع ناقلات الجودة المترابطة. الاستفادة من تجارب المؤسسة بشكل جشع عبر الأسواق التي تعمل على مدار الساعة طوال أيام الأسبوع.</p>
+          <a href="" class="float-start"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#03A9F4"
+                d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+            </path>
+        </svg></a>
+        <a href="" class="btn btn-primary p-2 rounded-pill">أكمل القراءة</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-2">
+                        <img class="img-fluid" src="./images/icons_and_logos/b257f0407f4e10bef1c961d3256bd0f3.png" alt="">
+                        <h6>من خلال</h6>
+                        <h5>محمد عبدالله, BoldThemes</h5>
+                        <p>5 اكتوبر 2023</p>
+                    </div>
+                    <div class="col-10">
+                        <img src="./images/background/img-blog-22.jpg" class="img-fluid " alt="">
+                        <a href="" class="m-2"> <i class="fa fa-tag"></i> الاخبار</a><a href="">المشاريع</a> <a href="" class="m-2"> <i class="fa fa-comment"></i> 0</a><br>
+                        <a href="" class="fs-1">العلاقات المناسبة للموظفين</a><br>
+        <p>احتضان القنوات المتوافقة مع المعايير عالميًا قبل الحصول على فوائد قابلة للتطوير. قم بنشر النتائج المتفوقة بسرعة أثناء التطبيقات التي تدعم الويب. قم بسرعة بقيادة محفزات النقرات وقذائف الهاون للتغيير قبل البنى الرأسية.</p>
+          <a href="" class="float-start"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#03A9F4"
+                d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+            </path>
+        </svg></a>
+        <a href="" class="btn btn-primary p-2 rounded-pill">أكمل القراءة</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-2">
+                        <img class="img-fluid" src="./images/icons_and_logos/b257f0407f4e10bef1c961d3256bd0f3.png" alt="">
+                        <h6>من خلال</h6>
+                        <h5>محمد عبدالله, BoldThemes</h5>
+                        <p>5 اكتوبر 2023</p>
+                    </div>
+                    <div class="col-10">
+                        <img src="./images/background/img-blog-27.jpg" class="img-fluid " alt="">
+                        <a href="" class="m-2"> <i class="fa fa-tag"></i> الاخبار</a><a href="">الاعلانات</a> <a href="" class="m-2"> <i class="fa fa-comment"></i> 0</a><br>
+                        <a href="" class="fs-1">الموارد والموهبة</a><br>
+        <p>المماطلة التفاعلية للمحتوى عالي المردود بدون بيانات متوافقة مع الإصدارات السابقة. تنمية العمليات المثلى والبنى التكتيكية بسرعة. تكرار مجالات المواضيع الاستراتيجية التساهمية بشكل كامل عبر أسواق إلكترونية دقيقة.</p>
+         <a href="" class="float-start"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#03A9F4"
+                d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+            </path>
+        </svg></a>
+        <a href="" class="btn btn-primary p-2 rounded-pill">أكمل القراءة</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-2">
+                        <img class="img-fluid" src="./images/icons_and_logos/b257f0407f4e10bef1c961d3256bd0f3.png" alt="">
+                        <h6>من خلال</h6>
+                        <h5>محمد عبدالله, BoldThemes</h5>
+                        <p>5 اكتوبر 2023</p>
+                    </div>
+                    <div class="col-10">
+                        <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img loading="lazy" src="./images/background/img-blog-21.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img loading="lazy" src="./images/background/img-blog-12.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img loading="lazy" src="./images/background/img-blog-05.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img loading="lazy" src="./images/background/img-blog-28.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev btn-primary rounded-circle my-auto" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next btn-primary rounded-circle my-auto" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+                        </div>
+                        <a href="" class="m-2"> <i class="fa fa-tag"></i> الاخبار</a><a href="">الاعلانات</a> <a href="" class="m-2"> <i class="fa fa-comment"></i> 0</a><br>
+                        <a href="" class="fs-1">تصميم المنظمة</a><br>
+        <p>أفكار خلفية موثوقة لإعادة الوساطة للنماذج متعددة المنصات. إعادة وساطة العمليات المتكاملة باستمرار من خلال رأس المال الفكري السليم من الناحية الفنية. تعزيز المنهجيات المتفوقة بشكل كلي دون أفضل الممارسات التي يحركها السوق.</p>
+         <a href="" class="float-start"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#03A9F4"
+                d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+            </path>
+        </svg></a>
+        <a href="" class="btn btn-primary p-2 rounded-pill">أكمل القراءة</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-2">
+                        <img class="img-fluid" src="./images/icons_and_logos/b257f0407f4e10bef1c961d3256bd0f3.png" alt="">
+                        <h6>من خلال</h6>
+                        <h5>محمد عبدالله, BoldThemes</h5>
+                        <p>5 اكتوبر 2023</p>
+                    </div>
+                    <div class="col-10">
+                        <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img loading="lazy" src="./images/background/img-blog-29.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img loading="lazy" src="./images/background/img-blog-31-640x427.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img loading="lazy" src="./images/background/img-blog-21.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img loading="lazy" src="./images/background/img-blog-22.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+            <button class="carousel-control-prev btn-primary rounded-circle my-auto" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next btn-primary rounded-circle my-auto" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+                    </div>
+                        <a href="" class="m-2"> <i class="fa fa-tag"></i> الاخبار</a><a href=""></a>النصائح  <a href="" class="m-2"><a href="">المدونة </a> <i class="fa fa-comment"></i> 0</a><br>
+                        <a href="" class="fs-1">تخطيط الاعمال</a><br>
+            <p>استهدف ديناميكيًا رأس المال الفكري عالي المردود للتقنيات المخصصة. الدمج الموضوعي للكفاءات الأساسية الناشئة أمام المجتمعات التي تركز على العمليات. التخلص بشكل كبير من الابتكار الشامل بدلاً من البيانات التي تركز على العميل.</p>
+         <a href="" class="float-start"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#03A9F4"
+                d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+            </path>
+        </svg></a>
+        <a href="" class="btn btn-primary p-2 rounded-pill">أكمل القراءة</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-2">
+                        <img class="img-fluid" src="./images/icons_and_logos/b257f0407f4e10bef1c961d3256bd0f3.png" alt="">
+                        <h6>من خلال</h6>
+                        <h5>محمد عبدالله, BoldThemes</h5>
+                        <p>5 اكتوبر 2023</p>
+                    </div>
+                    <div class="col-10">
+                        <iframe src="https://youtu.be/embed/IruVbcxIix8" width="100%" height="500" frameborder="0"></iframe>
+                        <a href="" class="m-2"> <i class="fa fa-tag"></i> الاخبار</a><a href="">المشاريع</a> <a href="" class="m-2"> <i class="fa fa-comment"></i> 0</a><br>
+                        <a href="" class="fs-1">تكنولجيا المعلومات</a><br>
+          <p>الدمج الموضوعي لمجالات المواضيع الإستراتيجية على مستوى المؤسسة مع البنى التحتية الوظيفية. إنتاج التقنيات المتميزة بشكل تفاعلي مع ناقلات الجودة المترابطة. الاستفادة من تجارب المؤسسة بشكل جشع عبر الأسواق التي تعمل على مدار الساعة طوال أيام الأسبوع.</p>
+          <a href="" class="float-start"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#03A9F4"
+                d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+            </path>
+        </svg></a>
+        <a href="" class="btn btn-primary p-2 rounded-pill">أكمل القراءة</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">  
+                    <div class="col-2">
+                        <img class="img-fluid" src="./images/icons_and_logos/b257f0407f4e10bef1c961d3256bd0f3.png" alt="">
+                        <h6>من خلال</h6>
+                        <h5>محمد عبدالله, BoldThemes</h5>
+                        <p>5 اكتوبر 2023</p>
+                    </div>
+                    <div class="col-10">
+                        <div class="card bg-dark w-100 text-center">
+                            <img src="./images/background/img-blog-21.jpg" class="card-img" alt="...">
+                            <div style="background-color: #b7323485;" class="card-img-overlay text-white">
+                              <a href=""><h3 class="card-title">ركزعلى تنمية اعمالك وثق بنا في المحاسبة</h3></a>
+                            </div>
+                        </div>
+                        <a href="" class="m-2"> <i class="fa fa-tag"></i> الاخبار</a><a href="">الاعلانات</a> <a href="" class="m-2"> <i class="fa fa-comment"></i> 0</a><br>
+                        <a href="" class="fs-1">القوة ي الارقام</a><br>
+                <p>احتضان القنوات المتوافقة مع المعايير عالميًا قبل الحصول على فوائد قابلة للتطوير. قم بنشر النتائج المتفوقة بسرعة أثناء التطبيقات التي تدعم الويب. قم بسرعة بقيادة محفزات النقرات وقذائف الهاون للتغيير قبل البنى الرأسية.</p>
+         <a href="" class="float-start"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#03A9F4"
+                d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+            </path>
+        </svg></a>
+        <a href="" class="btn btn-primary p-2 rounded-pill">أكمل القراءة</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-2">
+                        <img class="img-fluid" src="./images/icons_and_logos/b257f0407f4e10bef1c961d3256bd0f3.png" alt="">
+                        <h6>من خلال</h6>
+                        <h5>محمد عبدالله, BoldThemes</h5>
+                        <p>5 اكتوبر 2023</p>
+                    </div>
+                    <div class="col-10">
+                        <div class="card bg-dark text-center w-100">
+                            <img src="./images/background/img-blog-21.jpg" class="card-img" alt="...">
+                            <div style="background-color: #b7323485;" class="card-img-overlay text-white my-auto">
+                              <a href=""><h3 class="card-title">هل انت حكيم ام غير كذلك؟</h3></a>
+                            </div>
+                        </div>
+                        <a href="" class="m-2"> <i class="fa fa-tag"></i> الاخبار</a><a href="">الاعلانات</a> <a href="" class="m-2"> <i class="fa fa-comment"></i> 0</a><br>
+                        <a href="" class="fs-1">المعرفة مدى الحياة</a><br>
+                <p>استغلال المحاذاة المثالية بشكل مميز لعرض النطاق الترددي البديهي. سرعة تنسيق تطبيقات الأعمال الإلكترونية من خلال المحفزات الثورية للتغيير. تطغى بسلاسة على إجراءات الاختبار المثالية أثناء عمليات الطوب والنقرات.</p>
+         <a href="" class="float-start"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#03A9F4"
+                d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+            </path>
+        </svg></a>
+        <a href="" class="btn btn-primary p-2 rounded-pill">أكمل القراءة</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex">
+                    <button class= "btn-primary rounded-circle" type="button" style="width: 80px; height: 80px;">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <p class="my-auto"><strong>مشاهدة المنشورات السابقة</strong></p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="input-group">
+                    <input type="text" class="form-control rounded-pill" placeholder="Search">
+                    <button class="btn btn-primary rounded-circle" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div><br>
+                <h1>المنشورات الحديثة</h1>
+                <div class="d-flex flex-row align-items-center">
+                    <img src="./images/icons_and_logos/img-blog-01-160x160.jpg" alt="Post Image" class="post-image">
+                    <div class="p-1">
+                        <div class="">4 ابريل 2023</div>
+                        <div class="fs-4">مشروع استشاري</div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <hr>
+                <div class="d-flex flex-row align-items-center">
+                    <img src="./images/icons_and_logos/img-blog-20-160x160.jpg" alt="Post Image" class="post-image">
+                    <div class="p-1">
+                        <div class="">3 مارس 2023</div>
+                        <div class="fs-4">الاستعداد لظيفة جديدة</div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <hr>
+                <div class="d-flex flex-row align-items-center">
+                    <img src="./images/icons_and_logos/img-blog-23-160x160.jpg" alt="Post Image" class="post-image">
+                    <div class="p-1">
+                        <div class="">2 فبراير 2023</div>
+                        <div class="fs-4">العميل الاخير</div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <hr>
+                <div class="d-flex flex-row align-items-center">
+                    <img src="./images/icons_and_logos/img-blog-29-160x160.jpg" alt="Post Image" class="post-image">
+                    <div class="p-1">
+                        <div class="">1 يناير 2023</div>
+                        <div class="fs-4">مشروع ادار</div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <hr>
+                <div class="d-flex flex-row align-items-center">
+                    <img src="./images/icons_and_logos/img-blog-31-160x160.jpg" alt="Post Image" class="post-image">
+                    <div class="p-1">
+                        <div class="">12 ديسمبر 2022</div>
+                        <div class="fs-4">الاعمال المناسبة لمسارك</div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <hr>
+
+                <h1>الارشيف</h1>
+                <a href="">ابريل</a><p class="float-start">(2)</p><br>
+                <hr>
+                <a href="">مارس</a><p class="float-start">(3)</p><br>
+                <hr>
+                <a href="">فبراير</a><p class="float-start">(1)</p><br>
+                <hr>
+                <a href="">يناير</a><p class="float-start">(2)</p><br>
+                <hr>
+                <a href="">ديسمبر</a><p class="float-start">(2)</p><br>
+                <hr>
+                <a href="">نوفمبر</a><p class="float-start">(2)</p><br>
+                <hr>
+
+                <h1>الإشارات</h1>
+                <a href="" class="btn btn-primary rounded-pill p-1 m-1">النصائح</a><a href="" class="btn btn-primary rounded-pill m-1">المدونة</a>
+                <a href="" class="btn btn-primary rounded-pill p-1 m-1">الإعلانات</a><a href="" class="btn btn-primary rounded-pill m-1">أعمال</a>
+                <a href="" class="btn btn-primary rounded-pill p-1 m-1">عملاء</a><a href="" class="btn btn-primary rounded-pill m-1">الاستشارات</a>
+                <a href="" class="btn btn-primary rounded-pill p-1 m-1">الاخبار</a><a href="" class="btn btn-primary rounded-pill m-1">الناس</a>
+                <a href="" class="btn btn-primary rounded-pill p-1 m-1">المشاريع</a><a href="" class="btn btn-primary rounded-pill m-1">المنهج</a>
+            </div>
+        </main>
+        <footer>
+            <div class="row m-2 p-2 justify-content-center">
+                <div class="col-md-4 p-2">
+                    <h2 class="primarytext">مقرنا</h2>
+                    <p>تنمية الرؤية العالمية الشاملة للابتكار المدمر بشكل عضوي من خلال التمكين</p>
+                    <p><a href=""><i class="fa fa-phone"></i> 020 7946 0200</a></p>
+                    <p><a href=""><i class="fa fa-envelope"></i> info@mailus.oc.ul</a></p>
+                    <p><a href=""><i class="fa fa-globe"></i> avantage.co.uk</a></p>
+                </div>
+                <div class="g-0 col-md-4 p-2">
+                    <p>مواقعنا</p>
+                    <h2>اين تجدنا</h2>
+                    <div class="row">
+                        <div class="col-md-6"><img loading="lazy" src="./images/background/img-footer-map.png"
+                                class="img-fluid" alt=""></div>
+                        <div class="col">
+                            <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                            <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                            <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-2">
+                    <p>ابق على تواصل</p>
+                    <h2>روابطنا الاجتماعية</h2>
+                    <p>أخذ مؤشرات الأداء الرئيسية بسلاسة دون اتصال بالإنترنت لتحقيق أقصى قدر من الاطلاع الطويل</p>
+                    <ul class="social-icons">
+                        <li class="social-icon">
+                            <a href="#"><svg
+                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                        viewBox="0 0 48 48">
+                                        <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
+                                        <path fill="#fff"
+                                            d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z">
+                                        </path>
+                                    </svg></a>
+                        </li>
+                        <li class="social-icon">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                        width="100" height="100" viewBox="0 0 48 48">
+                                        <path fill="#03A9F4"
+                                            d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+                                        </path>
+                                    </svg></a>
+                        </li>
+                        <li class="social-icon">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                        width="48" height="48" viewBox="0 0 48 48">
+                                        <path fill="#0288D1"
+                                            d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
+                                        </path>
+                                        <path fill="#FFF"
+                                            d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
+                                        </path>
+                                    </svg></a>
+                        </li>
+                        <li class="social-icon">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                        width="100" height="100" viewBox="0 0 48 48">
+                                        <circle cx="24" cy="24" r="20" fill="#E60023"></circle>
+                                        <path fill="#FFF"
+                                            d="M24.4439087,11.4161377c-8.6323242,0-13.2153931,5.7946167-13.2153931,12.1030884	c0,2.9338379,1.5615234,6.5853882,4.0599976,7.7484131c0.378418,0.1762085,0.581543,0.1000366,0.668457-0.2669067	c0.0668945-0.2784424,0.4038086-1.6369019,0.5553589-2.2684326c0.0484619-0.2015381,0.0246582-0.3746338-0.1384277-0.5731201	c-0.8269653-1.0030518-1.4884644-2.8461304-1.4884644-4.5645752c0-4.4115601,3.3399658-8.6799927,9.0299683-8.6799927	c4.9130859,0,8.3530884,3.3484497,8.3530884,8.1369019c0,5.4099731-2.7322998,9.1584473-6.2869263,9.1584473	c-1.9630737,0-3.4330444-1.6238403-2.9615479-3.6153564c0.5654297-2.3769531,1.6569214-4.9415283,1.6569214-6.6584473	c0-1.5354004-0.8230591-2.8169556-2.5299683-2.8169556c-2.006958,0-3.6184692,2.0753784-3.6184692,4.8569336	c0,1.7700195,0.5984497,2.9684448,0.5984497,2.9684448s-1.9822998,8.3815308-2.3453979,9.9415283	c-0.4019775,1.72229-0.2453003,4.1416016-0.0713501,5.7233887l0,0c0.4511108,0.1768799,0.9024048,0.3537598,1.3687744,0.4981079l0,0	c0.8168945-1.3278198,2.0349731-3.5056763,2.4864502-5.2422485c0.2438354-0.9361572,1.2468872-4.7546387,1.2468872-4.7546387	c0.6515503,1.2438965,2.5561523,2.296936,4.5831299,2.296936c6.0314941,0,10.378418-5.546936,10.378418-12.4400024	C36.7738647,16.3591919,31.3823242,11.4161377,24.4439087,11.4161377z">
+                                        </path>
+                                    </svg></a>
+                        </li>
+                    </ul>
+        
+                </div>
+            </div>
+            <hr>
+            <div class="m-1 p-1">
+                <ul class="nav text center justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about-us.html">عنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">معرضنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#header">^ العودة للاعلى ^</a>
+                    </li>
+                </ul>
+        
+            </div>
+        </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
