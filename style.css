@@ -250,7 +250,9 @@ option:hover::before, option.nav-link.active::before {
     color: #b73235;
     border: 2px solid #b73235;
 }
-
+.fa{
+    color:#b73235;
+}
 #ratings img{
     width: 150px;
 }
