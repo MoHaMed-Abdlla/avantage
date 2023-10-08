@@ -1,23 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Cairo', sans-serif;
 }
-html{
+html, body{
     overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
 body{
     box-sizing: border-box;
+    position: relative;
 }
 body *, header *{
     transition: all .3s ease;
+}
+header {
+    padding: 40px;
+    padding-top: 200px;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 .fade-in{
     opacity: .3;
     transform: translateX(-80px) scale(1.4);
     transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-    transition-delay: .3s;
 }
 .fade-animate{
     opacity: 1;
@@ -47,8 +55,10 @@ body *, header *{
     color: white;
     border: none;
 }
+@media screen and (min-width: 700px){
 .topsection{
     max-width: 700px;
+}
 }
 .navbar-brand img{
     width: 200px;
@@ -108,22 +118,38 @@ button:hover{
     border-right: 10px solid transparent;
     border-bottom: 10px solid #ffffff;
 }
+.slick-dots {
+    display: flex;
+    justify-content: center; /* Center the dots horizontally */
+    list-style: none;
+    align-items: center; 
+  }
+  
+  .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .slick-dots li button {
+    height: 6px; /* Set the height of the dots */
+    border: none;
+    opacity: .5; 
+    margin-top: calc(50% - 1px);
+  }
 
-header{
-    background-color: #ebebeb;
-}
-.carousel-indicators button{
+.carousel-indicators button, .slick-dots li button{
     background-color: #a3a3a3 !important;
     width: 15px !important;
 }
-.carousel-indicators button.active, .carousel-indicators button.active:hover{
+.carousel-indicators button.active, .carousel-indicators button.active:hover,
+.slick-dots li.slick-active button{
     border-radius: 50%;
     width: 20px !important;
     height: 20px !important;
     transform: translateY(-25%);
     background-color: #b73235 !important;
+    opacity: 1;
 }
-.carousel-indicators button:hover{
+.carousel-indicators button:hover, .slick-dots li button:hover{
     border-radius: 50%;
     width: 15px;
     height: 15px;
@@ -145,7 +171,10 @@ header{
     opacity: 1;
     transform: translateX(0);
 }
-
+.carousel-control-prev, .carousel-control-next{
+    width: 50px;
+    height: 50px;
+}
 
 /* Style the first letter of navbar links and dropdown items */
 .navbar-nav .nav-link,
@@ -180,50 +209,26 @@ option:hover::before, option.nav-link.active::before {
     right: 0; /* Move the line to the left */
 }
 
-
-.background-img{
-    z-index: 0;
+.icons span{
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
     
 }
-
-.icons span{
-    width: 100px;
-    height: 100px;
+.mapc .icons span svg{
+    width: 75px;
+    height: 75px;
 }
 .peopleimg{
     width: 250px;
-    transition: transform .6s ease;
+    transition: transform .7s ease;
 }
 .peopleimg:hover{
     transform: scaleX(-1);
 }
 
-.logo-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
 
-.logos {
-    white-space: nowrap;
-    animation: moveLogos 20s linear infinite; 
-}
-
-.logo {
-    width: 200px;
-    height: auto;
-    margin-right: 20px; /* Adjust the spacing between logos */
-    display: inline-block;
-}
-
-@keyframes moveLogos {
-    0% {
-        transform: translateX(100%); /* Start from the right */
-    }
-    100% {
-        transform: translateX(-100%); /* Move to the left */
-    }
-}
 /* Style for the social media icons */
 .social-icons {
     list-style: none;
@@ -250,9 +255,8 @@ option:hover::before, option.nav-link.active::before {
     color: #b73235;
     border: 2px solid #b73235;
 }
-.fa{
-    color:#b73235;
-}
+
+  
 #ratings img{
     width: 150px;
 }
@@ -270,3 +274,29 @@ footer{
 footer a{
     font-size: medium;
 }
+.fa{
+    color:#b73235 !important;
+}
+
+.fa-chevron-left, .fa-chevron-right{
+    color: #323743 !important;
+}
+.logo-container img {
+    width: 200px;
+    pointer-events: none;
+    user-select: none;
+}
+.logo-container {
+    overflow: hidden;
+}
+
+.quote-icon {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    font-size: 125px;
+    color: #686868; /* Adjust the icon color as needed */
+    opacity: .2;
+  }

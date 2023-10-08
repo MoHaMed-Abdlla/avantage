@@ -1,413 +1,729 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        .office svg path{
+            fill: #b73235;
+        }
+        .office svg{
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
-    <header id="header" class="p-5 pt-0" style="background-color: lightgray; background-image: url('./images/background/bgn-newsletter-curve.png');">
-        <nav class="navbar navbar-expand-lg p-0">
-            <a class="navbar-brand justify-content-start" href="#"><img loading="lazy" src="./images/icons_and_logos/logo.png" alt="Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./index.html" id="navbarDropdown">الصفحة الرئيسية</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="#">مستشار الاعمال</a>
-                            <a class="dropdown-item" href="#">مستشار التسويق</a>
-                            <a class="dropdown-item" href="./index.html">مستشار الموارد البشرية</a>
-                            <a class="dropdown-item" href="#">المستشار المالي</a>
-                            <a class="dropdown-item" href="#">مستشار الضرائب / محاسب</a>
-                            <a class="dropdown-item" href="#">مستشار الاستراتيجية</a>
-                            <a class="dropdown-item" href="#">مستشار دولي</a>
-                            <a class="dropdown-item" href="#">مستشار إداري</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active" href="./about-us.html" id="navbarDropdown">معلومات عنا</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item active" href="./about-us.html">عنّا</a>
-                            <a class="dropdown-item" href="./history.html">تاريخ الشركة</a>
-                            <a class="dropdown-item" href="./testimonials.html">التوصيات</a>
-                            <a class="dropdown-item" href="./contact.html">التواصل</a>
-                            <a class="dropdown-item" href="./clients.html">العملاء</a>
-                            <a class="dropdown-item" href="./404.html">404</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./services.html" id="navbarDropdown">الخدمات</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="./single-services.html">خدمة واحدة</a>
-                            <a class="dropdown-item" href="./our-process.html">عملياتنا</a>
-                            <a class="dropdown-item" href="./solutions.html">الحلول</a>
-                            <a class="dropdown-item" href="./faq.html">الحقائق</a>
-                            <a class="dropdown-item" href="#">التسعير</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./portfolio.html" id="navbarDropdown">معرض الاعمال</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="./hsbc-recruiting.html">المشاريع الواحدة</a>
-                            <a class="dropdown-item" href="#">قائمة المشاريع</a>
-                            <a class="dropdown-item" href="#">شبكة المشاريع</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./blog.html" id="navbarDropdown">المدونة</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="./management-project.html">المنشورات الواحدة</a>
-                            <a class="dropdown-item" href="#">قائمة المدونة</a>
-                            <a class="dropdown-item" href="#">شبكة المدونة</a>
-                            <a class="dropdown-item" href="#">المنشورات الاخيرة</a>
-                        </div>
-                    </li>  
-                    <li><button class="btn-primary rounded-pill p-2 m-1">0 123 4567 890</button></li>       
-                </ul>
-                </div>
-            </nav>
-            <p>اهدافنا ورؤيتنا</p>
-            <h1 class="primarytext">رؤيتنا: </h1>
-            <h1 class="secondarytext">الاعمال الناجحة</h1>
+    <nav class="navbar navbar-expand-md position-absolute w-100 top-0 end-0 p-0">
+        <a class="navbar-brand justify-content-start" href="#"><img loading="lazy"
+                src="./images/icons_and_logos/logo.png" alt="Logo"></a>
+        <!-- Collapsible Navbar Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Items -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h4 class="offcanvas-title primarytext" id="offcanvasNavbarLabel">Avantage</h4>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body justify-content-end">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="./index.html" id="navbarDropdown">الصفحة الرئيسية</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-arrow"></div>
+                        <a class="dropdown-item" href="#">مستشار الاعمال</a>
+                        <a class="dropdown-item" href="#">مستشار التسويق</a>
+                        <a class="dropdown-item" href="./index.html">مستشار الموارد البشرية</a>
+                        <a class="dropdown-item" href="#">المستشار المالي</a>
+                        <a class="dropdown-item" href="#">مستشار الضرائب / محاسب</a>
+                        <a class="dropdown-item" href="#">مستشار الاستراتيجية</a>
+                        <a class="dropdown-item" href="#">مستشار دولي</a>
+                        <a class="dropdown-item" href="#">مستشار إداري</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" href="./about-us.html" id="navbarDropdown">معلومات عنا</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-arrow"></div>
+                        <a class="dropdown-item active" href="./about-us.html">عنّا</a>
+                        <a class="dropdown-item" href="./history.html">تاريخ الشركة</a>
+                        <a class="dropdown-item" href="./testimonials.html">التوصيات</a>
+                        <a class="dropdown-item" href="./contact.html">التواصل</a>
+                        <a class="dropdown-item" href="./clients.html">العملاء</a>
+                        <a class="dropdown-item" href="./404.html">404</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="./services.html" id="navbarDropdown">الخدمات</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-arrow"></div>
+                        <a class="dropdown-item" href="./single-services.html">خدمة واحدة</a>
+                        <a class="dropdown-item" href="./our-process.html">عملياتنا</a>
+                        <a class="dropdown-item" href="./solutions.html">الحلول</a>
+                        <a class="dropdown-item" href="./faq.html">الحقائق</a>
+                        <a class="dropdown-item" href="#">التسعير</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="./portfolio.html" id="navbarDropdown">معرض الاعمال</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-arrow"></div>
+                        <a class="dropdown-item" href="./hsbc-recruiting.html">المشاريع الواحدة</a>
+                        <a class="dropdown-item" href="#">قائمة المشاريع</a>
+                        <a class="dropdown-item" href="#">شبكة المشاريع</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="./blog.html" id="navbarDropdown">المدونة</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-arrow"></div>
+                        <a class="dropdown-item" href="./management-project.html">المنشورات الواحدة</a>
+                        <a class="dropdown-item" href="#">قائمة المدونة</a>
+                        <a class="dropdown-item" href="#">شبكة المدونة</a>
+                        <a class="dropdown-item" href="#">المنشورات الاخيرة</a>
+                    </div>
+                </li>
+                <li><button class="btn-primary rounded-pill p-2 m-1">0 123 4567 890</button></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <header id="header" class=""
+        style="background-color: rgb(221, 221, 221); background-image: url('./images/background/bgn-newsletter-curve.png');">
+        <p class="pt-5">اهدافنا ورؤيتنا</p>
+        <h1 class="primarytext">رؤيتنا: </h1>
+        <h1 class="secondarytext">الاعمال الناجحة</h1>
 
-            <div class="row p-4">
-                <div class="col-md-4 p-2 fade-in">
-                    <p>رضا العملاء</p>
-                    <div class="progress" style="height: 1px;">
-                        <div class="progress-bar" role="progressbar" style="width: 95%; background-color: #b73235;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    <p>دقة الحسابات</p>
-                    <div class="progress" style="height: 1px;">
-                        <div class="progress-bar" role="progressbar" style="width: 90%; background-color: #b73235;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    <p>نجاح المشاريع</p>
-                    <div class="progress" style="height: 1px;">
-                        <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #b73235;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p>إعادة هندسة الخدمات الوصفية الثورية والبنى المتميزة بشكل مميز. احتضان الفرص البديهية والإمكانات في الوقت الحقيقي بشكل جوهري. قم بتوصيل التكنولوجيا الفردية بشكل مناسب بعد شبكات التوصيل والتشغيل.</p>
-                      <p>قم بتجميع مستخدمي B2B والإمكانات العالمية بسرعة. انتحال التجارة الإلكترونية لتسوية الموارد تدريجيًا من خلال الكفاءات الأساسية لتسوية الموارد. قم بربط التحالفات منخفضة المخاطر وعالية الإنتاجية بشكل كبير قبل تجار التجزئة الإلكترونيين الشفافين</p>
-                      <p>التواصل بسرعة مع التكنولوجيا الممكّنة ومهارات القيادة الجاهزة. تمكين سلاسل التوريد الدقيقة بشكل فريد بدلاً من التكنولوجيا الخالية من الاحتكاك. المواد التي تركز على الشبكة العالمية مقابل المنتجات المصنعة الفعالة من حيث التكلفة.</p>
+        <!-- header paragraphs -->
+        <div class="row p-4">
+            <div class="col-md-4 p-2 fade-in">
+                <!-- percentage lines can be changed with style width -->
+                <p>رضا العملاء</p>
+                <div class="progress" style="height: 1px;">
+                    <div class="progress-bar" role="progressbar" style="width: 95%; background-color: #b73235;"
+                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <div class="col-md-4 p-2 fade-in">
-                    <p>تمكين مهارات القيادة الديناميكية بشكل مناسب بعد بوابات الأعمال. سلاسل التوريد التفاعلية لعضلة القلب على مستوى العالم مع نواقل الجودة المميزة. إحداث ثورة عالمية في المصادر العالمية من خلال الخدمات القابلة للتشغيل البيني. ابتكار البنى التحتية مفتوحة المصدر بكفاءة عبر مواد غير مكلفة.</p>
-                    <p>ربط البنية التحتية عالية التأثير طويلة المدى بحماس مع خدمة العملاء الفعالة. احترافية أزياء القيادة اللاسلكية بدلاً من التجارب المرتقبة. إجراءات اختبار النقرات وقذائف الهاون التي تعمل على تنشيط عضلة القلب في حين أن المنتجات المصنعة من الجيل التالي.</p>
-                    <p>إعادة اختراع الفرص التي يحركها السوق والواجهات المنتشرة في كل مكان بشكل ديناميكي. تصنيع مجموعة واسعة من الأسواق المتخصصة بقوة من خلال منتجات قوية.</p>
+                <p>دقة الحسابات</p>
+                <div class="progress" style="height: 1px;">
+                    <div class="progress-bar" role="progressbar" style="width: 90%; background-color: #b73235;"
+                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p>نجاح المشاريع</p>
+                <div class="progress" style="height: 1px;">
+                    <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #b73235;"
+                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p>إعادة هندسة الخدمات الوصفية الثورية والبنى المتميزة بشكل مميز. احتضان الفرص البديهية والإمكانات في
+                    الوقت الحقيقي بشكل جوهري. قم بتوصيل التكنولوجيا الفردية بشكل مناسب بعد شبكات التوصيل والتشغيل.</p>
+                <p>قم بتجميع مستخدمي B2B والإمكانات العالمية بسرعة. انتحال التجارة الإلكترونية لتسوية الموارد تدريجيًا
+                    من خلال الكفاءات الأساسية لتسوية الموارد. قم بربط التحالفات منخفضة المخاطر وعالية الإنتاجية بشكل
+                    كبير قبل تجار التجزئة الإلكترونيين الشفافين</p>
+                <p>التواصل بسرعة مع التكنولوجيا الممكّنة ومهارات القيادة الجاهزة. تمكين سلاسل التوريد الدقيقة بشكل فريد
+                    بدلاً من التكنولوجيا الخالية من الاحتكاك. المواد التي تركز على الشبكة العالمية مقابل المنتجات
+                    المصنعة الفعالة من حيث التكلفة.</p>
+            </div>
+            <div class="col-md-4 p-2 fade-in">
+                <p>تمكين مهارات القيادة الديناميكية بشكل مناسب بعد بوابات الأعمال. سلاسل التوريد التفاعلية لعضلة القلب
+                    على مستوى العالم مع نواقل الجودة المميزة. إحداث ثورة عالمية في المصادر العالمية من خلال الخدمات
+                    القابلة للتشغيل البيني. ابتكار البنى التحتية مفتوحة المصدر بكفاءة عبر مواد غير مكلفة.</p>
+                <p>ربط البنية التحتية عالية التأثير طويلة المدى بحماس مع خدمة العملاء الفعالة. احترافية أزياء القيادة
+                    اللاسلكية بدلاً من التجارب المرتقبة. إجراءات اختبار النقرات وقذائف الهاون التي تعمل على تنشيط عضلة
+                    القلب في حين أن المنتجات المصنعة من الجيل التالي.</p>
+                <p>إعادة اختراع الفرص التي يحركها السوق والواجهات المنتشرة في كل مكان بشكل ديناميكي. تصنيع مجموعة واسعة
+                    من الأسواق المتخصصة بقوة من خلال منتجات قوية.</p>
 
-                </div>
-                <div class="col-md-4 p-2 fade-in">
-                    <p>احتضان الأعمال الإلكترونية الممكّنة بشكل مقنع بعد رأس المال الفكري سهل الاستخدام. تفعيل عمليات الواجهة الأمامية بشكل تفاعلي من خلال التقارب الفعال. مهمة موازية بكفاءة بحثت بشكل كامل عن البيانات وتحسينات عمليات المؤسسة.</p>
+            </div>
+            <div class="col-md-4 p-2 fade-in">
+                <p>احتضان الأعمال الإلكترونية الممكّنة بشكل مقنع بعد رأس المال الفكري سهل الاستخدام. تفعيل عمليات
+                    الواجهة الأمامية بشكل تفاعلي من خلال التقارب الفعال. مهمة موازية بكفاءة بحثت بشكل كامل عن البيانات
+                    وتحسينات عمليات المؤسسة.</p>
                 <div>
-                    <img loading="lazy" src="./images/People/img-blog-34-1280x1280.jpg" class="img-fluid rounded-circle" alt="">
-                </div>
+                    <!-- circle image -->
+                    <img loading="lazy" src="./images/People/img-blog-34-1280x1280.jpg" class="img-fluid rounded-circle"
+                        alt="">
                 </div>
             </div>
+        </div>
     </header>
 
+    <div class="my-3 p-2" style="background-image: url('./images/background/bacjgroundcover.png'); background-size: cover;">
     <div class="m-1 p-5">
         <p>نحن هنا من اجلك</p>
         <h1 class="primarytext">Avantage</h1>
         <h1 class="secondarytext">المحترفون</h1>
     </div>
-    <div class="row p-2 m-5 justify-content-center">
+
+    <!-- office people cards -->
+    <div class="row p-4 my-5 justify-content-center">
         <div class="col p-2 fade-in">
             <img loading="lazy" class="peopleimg" src="./images/People/img-people-01.png" alt="">
-            <p>الرئيس التنفيذي</p>
-            <h1 class="primarytext">هانا ألبرتس</h1>
+            <br><p>الرئيس التنفيذي</p>
+            <h2 class="primarytext">هانا ألبرتس</h2>
             <p>القائدة الملهمة للشركة</p>
             <a href="">اكتشف المزيد ></a>
         </div>
         <div class="col p-2 fade-in">
             <img loading="lazy" class="peopleimg" src="./images/People/img-people-02.png" alt="">
-            <p>مدير الموارد البشرية</p>
-            <h1 class="primarytext">ميليسا لوبلانك</h1>
+            <br><p>مدير الموارد البشرية</p>
+            <h2 class="primarytext">ميليسا لوبلانك</h2>
             <p>مديرة الموارد البشرية</p>
             <a href="">اكتشف المزيد ></a>
         </div>
         <div class="col p-2 fade-in">
             <img loading="lazy" class="peopleimg" src="./images/People/img-people-03.png" alt="">
-            <p>مسؤول تنفيذي أول للموارد البشرية</p>
-            <h1 class="primarytext">كندريك هارت</h1>
+            <br><p>مسؤول تنفيذي أول للموارد البشرية</p>
+            <h2 class="primarytext">كندريك هارت</h2>
             <p>المسؤول التنفيذي</p>
             <a href="">اكتشف المزيد ></a>
         </div>
         <div class="col p-2 fade-in">
             <img loading="lazy" class="img-fluid peopleimg" src="./images/People/img-people-04.png" alt="">
-            <p>محترف الموارد البشرية</p>
-            <h1 class="primarytext">بلير دين</h1>
+            <br><p>محترف الموارد البشرية</p>
+            <h2 class="primarytext">بلير دين</h2>
             <p>الموارد البشرية</p>
             <a href="">اكتشف المزيد ></a>
         </div>
     </div>
+    </div>
+    <!-- logo carousel -->
+    <div class="col-12 w-100 slider position-relative">
+        <div class="logo-container px-5">
+        <img loading="lazy" src="./images/icons_and_logos/logo-addison.png" alt="Logo 1">
+        <img loading="lazy" src="./images/icons_and_logos/logo-applauz.png" alt="Logo 2">
+        <img loading="lazy" src="./images/icons_and_logos/logo-bello.png" alt="Logo 3">
+        <img loading="lazy" src="./images/icons_and_logos/logo-bold-news.png" alt="Logo 4">
+        <img loading="lazy" src="./images/icons_and_logos/logo-celeste.png" alt="Logo 5">
+        <img loading="lazy" src="./images/icons_and_logos/logo-estato.png" alt="Logo 6">
+        <img loading="lazy" src="./images/icons_and_logos/logo-hotel-berg.png" alt="Logo 1">
+        <img loading="lazy" src="./images/icons_and_logos/logo-hotel-california.png" alt="Logo 2">
+        <img loading="lazy" src="./images/icons_and_logos/logo-urbanist.png" alt="Logo 3">
+    </div>
+    <button class="carousel-control-prev logoleft rounded-circle  my-auto" type="button">
+        <span class="fa fa-chevron-left fs-1" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next logoright rounded-circle my-auto" type="button">
+        <span class="fa fa-chevron-right fs-1" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
-    <div class="logo-container fade-in">
-        <div class="logos">
-            <img loading="lazy" src="./images/icons_and_logos/logo-addison.png" alt="Logo 1">
-            <img loading="lazy" src="./images/icons_and_logos/logo-applauz.png" alt="Logo 2">
-            <img loading="lazy" src="./images/icons_and_logos/logo-bello.png" alt="Logo 3">
-            <img loading="lazy" src="./images/icons_and_logos/logo-bold-news.png" alt="Logo 4">
-            <img loading="lazy" src="./images/icons_and_logos/logo-celeste.png" alt="Logo 5">
-            <img loading="lazy" src="./images/icons_and_logos/logo-estato.png" alt="Logo 6">
-            <img loading="lazy" src="./images/icons_and_logos/logo-hotel-berg.png" alt="Logo 1">
-            <img loading="lazy" src="./images/icons_and_logos/logo-hotel-california.png" alt="Logo 2">
-            <img loading="lazy" src="./images/icons_and_logos/logo-urbanist.png" alt="Logo 3">
-        </div>
-        </div>
-    
-        <div class="row backimg pt-2" style="background-image: url('./images/background/img-portfolio-04-1280x1280.jpg'); max-height: 700px;">
-            <div class="col-md-6 p-2 mx-4">
-                <p>انضم لفريق القيادة</p>
-                <h1 class="primarytext">ما هي</h1>
-                <h1 class="secondarytext">رسالتنا</h1>
-                <p>ن التطور في تقنية النانو على طول طريق المعلومات السريع سوف يغلق حلقة التركيز فقط على النتيجة النهائية.</p>
-                
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner icons">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-5 fade-in">
-                                    <div class="row">
-                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                                        <div class="col-8 col-md-8 col-lg-12">
-                                            <h3>اختيار الموظفين</h3>
-                                            <p>اختر الأشخاص المناسبين لفريقك، مع الفريق المثالي يأتي العم المثالي</p>
-                                        </div>
+    <!-- our message: part on right of text and carousel for advantages, and img on the left  -->
+    <div class="row g-2 pe-5 pt-2"
+        style=" max-height: 700px;">
+        <div class="col-md-6 p-2">
+            <p>انضم لفريق القيادة</p>
+            <h1 class="primarytext">ما هي</h1>
+            <h1 class="secondarytext">رسالتنا</h1>
+            <p>ن التطور في تقنية النانو على طول طريق المعلومات السريع سوف يغلق حلقة التركيز فقط على النتيجة النهائية.
+            </p>
+            <!-- carousel for icons and text (sections) -->
+            <!-- each item will show two cards of icon and text -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner icons">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-5 fade-in">
+                                <div class="row justify-content-center text-center">
+                                    <span class="col-4 col-md-4 col-lg-12 p-3 btn-secondary rounded-circle">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                                            <defs>
+                                                <style>
+                                                    .cls-1 {
+                                                        fill: #ffffff;
+                                                    }
+                                                    
+                                                    .cls-2 {
+                                                        fill: #ffffff;
+                                                    }
+                                                </style>
+                                            </defs>	
+                                            <title>Office-And-Business</title>
+                                            <path class="cls-2" d="M338.318,306.418v779.612h1323.398V306.418H338.318z M1367.349,844.557l-212.034-212.065L950.049,837.726
+                                            l-52.664-52.645L792.08,890.393L669.5,767.813L486.025,951.279l-50.848-50.859L669.5,666.129L792.08,788.67l105.305-105.292
+                                            l52.664,52.645l205.266-205.234l212.034,212.077l146.606-146.59l50.859,50.867L1367.349,844.557z"/>
+                                            <rect x="424.64" y="385.521" class="cls-1" width="339.864" height="71.916"/>
+                                            <rect x="424.64" y="525.749" class="cls-1" width="169.929" height="71.916"/>
+                                            <path class="cls-1" d="M1890.387,0H109.613v227.283h77.666v1009.783h582.584v155.327h156.824l-436.535,563.234l56.858,44.067
+                                                l416.986-538.012v516.064h71.916v-516.225l417.052,538.408l56.857-44.041l-436.485-563.497h156.78v-155.327h582.576h0.012V227.283
+                                                h77.682V0z M1158.213,1320.489H841.787v-83.423h316.426V1320.489z M1740.777,1165.142h-510.66H769.863H259.211V227.283h1481.566
+                                                V1165.142z M1818.463,155.367h-5.758H187.279h-5.761V71.936h1636.945V155.367z"/>
+                                        </svg>
+                                    </span>
+                                    <div class="col-8 col-md-8 col-lg-12">
+                                        <h3>اختيار الموظفين</h3>
+                                        <p>اختر الأشخاص المناسبين لفريقك، مع الفريق المثالي يأتي العم المثالي</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 fade-in">
-                                    <div class="row">
-                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
-                                        <div class="col-8 col-md-8 col-lg-12">
-                                            <h3>قيادة الفريق</h3>
-                                            <p>اختر القائد الحازم الذي سيقود شركتك للتفوق</p>
-                                        </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 mb-4 fade-in">
+                                <div class="row justify-content-center text-center">
+                                    <span class="col-4 col-md-4 col-lg-12 p-3 btn-primary rounded-circle">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                                            <title>Business-Collection</title>
+                                                <path class="cls-2" d="M1787.848,1132.979c-145.254-145.254-380.933-145.254-526.187,0
+                                                    c-139.935,139.525-144.845,363.339-15.548,509.411c-13.503,31.097-37.644,75.286-78.561,95.335
+                                                    c-12.684,6.547-9.819,25.369,4.092,27.415c42.963,6.546,108.02-4.092,164.895-48.282
+                                                    c142.389,83.879,328.969,64.648,451.309-57.692C1933.102,1513.912,1933.102,1278.232,1787.848,1132.979z M1412.644,1422.259
+                                                    c-6.956,6.956-16.367,11.048-26.187,11.048c-9.82,0-19.23-4.092-26.187-11.048s-11.048-16.366-11.048-26.187
+                                                    s4.092-19.23,11.048-26.187c6.955-6.956,16.366-11.048,26.187-11.048c9.819,0,19.64,3.683,25.777,11.048
+                                                    c6.955,6.956,11.047,16.366,11.047,26.187S1419.6,1415.303,1412.644,1422.259z M1550.941,1422.259
+                                                    c-6.956,6.956-16.367,11.048-26.187,11.048c-9.82,0-19.231-4.092-26.187-11.048c-6.956-6.956-11.048-16.366-11.048-26.187
+                                                    s4.092-19.23,11.048-26.187c6.955-6.956,16.366-11.048,26.187-11.048c9.819,0,19.23,3.683,25.777,11.048
+                                                    c6.956,6.956,11.047,16.366,11.047,26.187S1557.896,1415.303,1550.941,1422.259z M1688.83,1422.259
+                                                    c-6.956,6.956-16.367,11.048-26.187,11.048c-9.82,0-19.231-4.092-26.187-11.048c-6.956-6.956-11.048-16.366-11.048-26.187
+                                                    s4.092-19.23,11.048-26.187c6.955-6.956,16.366-11.048,26.187-11.048c9.819,0,19.23,3.683,26.187,11.048
+                                                    c6.955,6.956,11.047,16.366,11.047,26.187S1695.785,1415.303,1688.83,1422.259z"/>
+                                                <path class="cls-1" d="M1053.396,689.034c-10.229,6.956-16.367,18.413-16.367,30.688v289.28
+                                                    c0,20.458,16.776,37.233,37.234,37.233s37.234-16.775,37.234-37.233V738.134c38.052-32.732,60.557-80.196,60.557-130.933V307.283
+                                                    C1172.055,137.889,1034.165,0,864.771,0h-64.647C630.729,0,492.84,137.889,492.84,307.283v299.918
+                                                    c0,50.736,22.095,98.609,60.557,130.933v256.547c-60.557,30.278-247.545,129.296-421.032,272.095
+                                                    c-42.144,34.779-66.285,85.925-66.285,141.162v205.811c0,20.458,16.776,37.234,37.234,37.234
+                                                    c20.458,0,37.234-16.776,37.234-37.234v-205.811c0-32.732,14.321-63.011,39.28-83.879
+                                                    c183.306-150.572,381.751-250.818,419.804-269.23c17.594-8.593,28.232-25.777,28.232-45.417v-289.28
+                                                    c0-12.274-6.138-24.141-16.367-30.688c-27.414-18.412-43.78-48.69-43.78-81.833V307.283
+                                                    c0-128.478,104.746-233.224,233.225-233.224h64.647c128.479,0,233.225,104.746,233.225,233.224v299.918
+                                                    C1097.177,640.344,1080.811,670.622,1053.396,689.034z"/>
+                                                <path class="cls-1" d="M931.056,1055.646c-20.458,0-37.234,16.775-37.234,37.234c0,18.003-7.773,34.369-20.458,45.826
+                                                    c-2.455,1.637-4.91,3.273-6.956,5.729c-9.819,6.956-22.095,10.639-34.778,10.639c-34.37,0-62.193-27.823-62.193-62.193
+                                                    c0-20.459-16.776-37.234-37.234-37.234s-37.234,16.775-37.234,37.234c0,32.733,11.457,63.012,31.097,86.334l-29.869,696.399
+                                                    c-0.409,11.047,4.092,21.686,12.275,29.051l95.335,85.925c6.956,6.546,15.958,9.41,24.96,9.41c9.001,0,18.003-3.273,24.959-9.41
+                                                    l96.972-87.562c8.184-7.365,12.685-18.003,12.275-29.051l-31.097-688.216c22.913-24.551,36.825-57.283,36.825-93.29
+                                                    C968.29,1072.014,951.514,1055.646,931.056,1055.646z M828.355,1913.257l-57.692-51.964l27.414-636.661
+                                                    c10.638,2.864,21.686,4.092,33.142,4.092c9.411,0,18.413-0.818,27.006-2.864l28.641,633.388L828.355,1913.257z"/>
+                                                <path class="cls-1" d="M1933.92,1395.663c0-109.247-42.553-211.948-119.886-289.28
+                                                    c-77.332-77.332-180.032-119.885-289.279-119.885s-211.948,42.553-289.28,119.885
+                                                    c-146.891,146.891-159.574,380.115-33.143,541.326c-15.139,28.642-32.324,47.463-51.146,56.874
+                                                    c-20.458,9.819-31.506,31.506-28.232,54.01s20.868,39.688,42.962,43.371c9.411,1.637,19.641,2.046,30.279,2.046
+                                                    c48.281,0,99.427-15.548,142.798-43.371c57.283,29.051,121.113,44.599,186.171,44.599c109.247,0,211.947-42.553,289.279-119.885
+                                                    C1891.367,1608.02,1933.92,1505.319,1933.92,1395.663z M1524.755,1730.77c-59.738,0-118.658-15.958-169.804-45.827
+                                                    c-5.729-3.272-12.275-5.318-18.822-5.318c-8.183,0-15.957,2.455-22.913,7.773c-25.368,19.641-51.146,30.278-72.422,36.007
+                                                    c14.32-18.003,27.414-40.098,38.87-66.285c5.729-13.093,3.273-28.642-6.137-39.279c-117.021-132.16-110.885-333.879,14.32-458.675
+                                                    c63.421-63.421,147.3-98.199,236.906-98.199c89.607,0,173.486,34.778,236.907,98.199s98.2,147.3,98.2,236.907
+                                                    c0,89.606-34.779,173.485-98.2,236.906C1698.65,1695.99,1614.361,1730.77,1524.755,1730.77z"/>
+                                        </svg>
+                                    </span>
+                                    <div class="col-8 col-md-8 col-lg-12">
+                                        <h3>قيادة الفريق</h3>
+                                        <p>اختر القائد الحازم الذي سيقود شركتك للتفوق</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-5 fade-in">
-                                    <div class="row">
-                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                                        <div class="col-8 col-md-8 col-lg-12">
-                                            <h3>بناء الفريق</h3>
-                                            <p>ابن الفريق المناسب لشركتك</p>
-                                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-5 fade-in">
+                                <div class="row justify-content-center text-center">
+                                    <span class="col-4 col-md-4 col-lg-12 p-3 btn-secondary rounded-circle">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                                            <title>Startup-And-New-Business</title>
+                                            <polygon class="cls-2" points="999.996,1273.359 678.555,1487.711 413.734,1311.109 413.734,1566.672 999.996,1957.539 
+                                                1586.246,1566.672 1586.246,1311.109 1321.406,1487.711 	"/>
+                                            <polygon class="cls-2" points="999.996,491.641 413.734,882.551 999.996,1273.359 1586.246,882.551 	"/>
+                                            <path class="cls-1" d="M1971.445,1096.695l-321.451-214.104l321.439-214.361L1321.375,235l-213.25,141.98l39.16,58.82
+                                                l174.059-115.902l522.703,348.34l-257.75,171.902l-439.012-292.762l-39.191,58.801l414.469,276.389L1352.7,995.797
+                                                l-352.716,235.031l-522.52-348.227l414.34-276.281l-0.065-0.098l0.065-0.043l-39.199-58.801L413.664,840.141l-257.73-171.902
+                                                l522.633-348.316l174.039,116l39.199-58.762L678.566,235L28.574,668.23l321.384,214.351l-321.403,214.11l349.84,233.327v255.552
+                                                L999.996,2000l621.57-414.43v-255.56L1971.445,1096.695z M1321.395,1445.25l-257.719-171.878l0.02-0.013l-0.02-0.013
+                                                l231.397-154.243l291.21-194.042l0.014,0.009l0.022-0.015l257.716,171.656L1321.395,1445.25z M413.633,925.049l0.031,0.021
+                                                l0.051-0.034l522.578,348.331l-257.809,171.891l-522.551-348.539L413.633,925.049z M449.055,1377.146l229.441,153.026
+                                                l286.199-190.81v552.191l-515.641-343.792V1377.146z M1550.926,1547.762l-515.629,343.792v-552.206l286.109,190.824l229.52-153.055
+                                                V1547.762z"/>
+                                            <polygon class="cls-1" points="964.695,135.203 964.695,775.063 1035.297,775.063 1035.297,135.2 1116.516,216.422 
+                                                1166.477,166.461 999.996,0 833.535,166.461 883.484,216.422 	"/>
+                                        </svg>
+                                    </span>
+                                    <div class="col-8 col-md-8 col-lg-12">
+                                        <h3>بناء الفريق</h3>
+                                        <p>ابن الفريق المناسب لشركتك</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 fade-in">
-                                    <div class="row">
-                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
-                                        <div class="col-8 col-md-8 col-lg-12">
-                                            <h3>الاستراتيجية</h3>
-                                            <p>توصل لأفضل استراتيجيات النجاح مبساعدة خبرائنا</p>
-                                        </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 mb-4 fade-in">
+                                <div class="row justify-content-center text-center">
+                                    <span class="col-4 col-md-4 col-lg-12 p-3 btn-primary rounded-circle">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                                            <title>Startup-And-New-Business</title>
+                                            <polygon class="cls-2" points="1314.129,1173.586 883.148,1604.637 703.801,1425.285 269.672,1859.414 2000,1859.414 	"/>
+                                            <polygon class="cls-2" points="1243.199,245.426 1372.961,115.656 1012.449,115.656 1012.449,375.215 1372.961,375.215 	"/>
+                                            
+                                                <rect x="1664.17" y="951.58" transform="matrix(0.707 -0.7072 0.7072 0.707 -431.4399 1586.8611)" class="cls-1" width="70.499" height="725.087"/>
+                                            <polygon class="cls-1" points="374.379,1315.195 1012.5,677.074 1160.352,824.906 1210.219,775.047 1047.699,612.534 
+                                                1047.699,115.656 977.199,115.656 977.199,612.636 324.512,1265.305 	"/>
+                                            <polygon class="cls-1" points="1580.629,843.414 1651.172,843.414 1651.172,591.863 1399.641,591.863 1399.641,662.395 
+                                                1530.771,662.395 883.148,1310.023 703.77,1130.637 0,1834.453 49.859,1884.344 703.77,1230.395 883.148,1409.766 
+                                                1580.629,712.285 	"/>
+                                        </svg>
+                                        
+                                    </span>
+                                    <div class="col-8 col-md-8 col-lg-12">
+                                        <h3>الاستراتيجية</h3>
+                                        <p>توصل لأفضل استراتيجيات النجاح مبساعدة خبرائنا</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-5 fade-in">
-                                    <div class="row">
-                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                                        <div class="col-8 col-md-8 col-lg-12">
-                                            <h3>البحث عن الموظفين</h3>
-                                            <p>اعثر على افضل الموظفين لشركتك</p>
-                                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-5 fade-in">
+                                <div class="row justify-content-center text-center">
+                                    <span class="col-4 col-md-4 col-lg-12 p-3 btn-secondary rounded-circle">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                                            <title>Business-Collection</title>
+                                                <circle id="XMLID_2136_" class="cls-2" cx="998.722" cy="1000.205" r="436.558"/>
+                                                <path class="cls-1" d="M251.386,1036.55c1.225,24.911-6.125,49.823-21.236,70.65l-194.797,271.98
+                                                    c-53.906,75.142-45.33,176.829,20.011,242.17l323.437,323.437c35.529,35.529,82.901,55.131,133.132,55.131
+                                                    c39.205,0,77.184-12.251,109.038-35.12L893.768,1770c20.828-14.701,45.331-22.461,70.242-21.235
+                                                    c12.251,0.408,24.502,0.816,36.754,0.816l0,0c200.106,0,388.369-78,529.669-219.3
+                                                    c149.059-149.059,228.692-355.699,218.483-566.423c-1.226-24.503,6.125-49.414,21.235-70.241l194.798-272.798
+                                                    c53.498-75.143,44.922-176.829-20.011-242.17L1621.501,55.213c-35.528-35.529-82.901-55.131-133.132-55.131
+                                                    c-39.612,0-77.184,12.251-109.445,35.121L1106.942,230c-20.827,15.11-45.738,22.461-70.649,21.236
+                                                    c-12.66-0.817-25.729-0.817-38.388-0.817c-199.29,0-386.736,77.592-528.035,218.892
+                                                    C319.994,619.186,240.36,825.826,251.386,1036.55z M325.303,1032.875c-9.801-189.897,61.666-376.118,196.432-510.476
+                                                    C649.148,394.985,817.81,325.152,997.496,325.152c11.436,0,23.278,0.408,34.713,0.816c42.063,2.042,82.9-10.209,117.613-34.712
+                                                    l271.981-194.797c19.602-13.885,42.472-21.236,66.157-21.236c30.629,0,59.215,11.843,80.451,33.487l323.437,323.437
+                                                    c39.613,39.613,44.514,101.278,12.252,146.608l-194.798,272.798c-24.502,34.304-36.754,75.551-34.712,116.797
+                                                    c9.393,189.896-62.482,376.118-196.839,510.475c-127.415,127.415-296.893,197.656-477.396,197.656
+                                                    c-11.026,0-22.053-0.408-33.079-0.816c-41.654-2.042-82.084,10.209-116.797,34.712l-272.798,194.797
+                                                    c-19.602,13.886-42.471,21.236-66.157,21.236c-30.629,0-59.215-11.843-80.451-33.487l-323.437-323.437
+                                                    c-39.613-39.613-44.514-101.278-12.251-147.018l194.797-271.98C315.094,1115.775,327.345,1074.121,325.303,1032.875z"/>
+                                                <path class="cls-1" d="M1203.729,656.349c5.717,3.675,12.252,5.309,18.785,5.309c12.66,0,24.912-6.534,31.854-17.969
+                                                    c10.618-17.561,4.492-40.43-13.068-50.639c-17.56-10.618-40.021-4.492-50.639,13.067
+                                                    C1180.451,623.27,1186.168,646.139,1203.729,656.349z"/>
+                                                <path class="cls-1" d="M1204.545,1344.469L1204.545,1344.469c-17.56,10.209-23.277,33.078-13.068,50.639
+                                                    c6.943,11.844,19.194,17.969,31.854,17.969c6.535,0,13.068-1.633,18.786-5.309c17.561-10.618,23.277-33.079,12.659-50.639
+                                                    C1244.566,1339.568,1222.105,1333.851,1204.545,1344.469z"/>
+                                                <path class="cls-1" d="M618.929,1217.871c-16.744,11.435-21.236,34.712-9.394,51.455c7.352,10.618,18.786,15.928,30.629,15.928
+                                                    c7.351,0,14.293-2.042,20.827-6.534c16.744-11.435,21.236-34.713,9.394-51.456C658.949,1210.52,635.672,1206.437,618.929,1217.871
+                                                    z"/>
+                                                <path class="cls-1" d="M571.965,906.686c3.676,1.225,7.351,1.633,11.026,1.633c15.927,0,30.628-10.209,35.528-26.136
+                                                    c6.126-19.603-4.9-40.43-24.502-46.147c-19.603-6.125-40.43,4.9-46.147,24.503C541.336,880.141,552.362,900.56,571.965,906.686z"
+                                                    />
+                                                <path class="cls-1" d="M563.389,1037.775c20.419,0,37.162-16.744,37.162-37.163s-16.743-37.162-37.162-36.754
+                                                    c-20.419,0-37.162,16.743-36.754,37.163C526.635,1021.44,542.97,1037.775,563.389,1037.775z"/>
+                                                <path class="cls-1" d="M842.721,629.804c4.492,0,8.984-0.816,13.068-2.45c19.193-7.352,28.586-28.587,21.235-47.78
+                                                    c-7.351-19.194-28.587-28.587-47.78-21.236s-28.587,28.587-21.236,47.78C813.726,620.819,828.02,629.804,842.721,629.804z"/>
+                                                <path class="cls-1" d="M752.469,1315.065c-15.927-12.66-39.205-9.802-51.864,6.126c-12.66,15.926-9.801,39.204,6.126,51.863
+                                                    c6.942,5.31,14.701,8.168,22.869,8.168c11.026,0,21.645-4.9,28.995-14.293C771.254,1351.003,768.396,1327.725,752.469,1315.065z"
+                                                    />
+                                                <path class="cls-1" d="M728.782,694.736c8.168,0,16.336-2.45,22.87-8.168l0,0c15.927-12.66,18.785-35.938,6.125-51.864
+                                                    c-12.659-15.927-35.938-18.785-51.864-6.126c-15.927,12.66-18.785,35.938-6.126,51.864
+                                                    C707.139,689.836,718.165,694.736,728.782,694.736z"/>
+                                                <path class="cls-1" d="M618.52,783.763c6.535,4.492,13.477,6.534,20.828,6.534c11.843,0,23.277-5.717,30.628-15.927
+                                                    c11.435-16.743,7.352-40.021-9.393-51.456c-16.743-11.435-40.021-7.351-51.456,9.801
+                                                    C597.284,749.051,601.776,772.328,618.52,783.763z"/>
+                                                <path class="cls-1" d="M1093.466,1389.391c-20.011,4.9-32.262,24.911-27.361,44.514c4.084,17.151,19.194,28.586,35.938,28.586
+                                                    c2.858,0,5.717-0.408,8.575-0.816c20.012-4.9,32.263-24.911,27.362-44.514C1133.079,1397.149,1113.068,1384.49,1093.466,1389.391z
+                                                    "/>
+                                                <path class="cls-1" d="M1092.649,611.427c2.858,0.816,5.717,1.225,8.575,1.225c16.744,0,31.854-11.435,35.938-28.586
+                                                    c4.492-20.011-7.759-39.613-27.361-44.514c-20.01-4.9-40.021,7.759-44.514,27.361S1073.047,606.935,1092.649,611.427z"/>
+                                                <path class="cls-1" d="M618.111,1119.451c-6.125-19.603-26.545-30.629-46.146-24.503c-19.603,6.126-30.629,26.545-24.503,46.147
+                                                    c4.9,15.927,19.603,26.136,35.529,26.136c3.675,0,7.351-0.408,11.026-1.634C613.211,1159.881,624.237,1139.054,618.111,1119.451z"
+                                                    />
+                                                <path class="cls-1" d="M856.605,1373.872c-19.193-7.351-40.43,2.45-47.78,21.235c-7.351,19.194,2.45,40.43,21.235,47.781
+                                                    c4.492,1.633,8.984,2.45,13.068,2.45c15.11,0,28.995-8.984,34.713-23.687C885.192,1402.867,875.799,1381.223,856.605,1373.872z"/>
+                                                <path class="cls-1" d="M973.811,1399.6L973.811,1399.6c-20.419-1.225-37.979,14.294-39.204,34.713
+                                                    c-1.226,20.419,14.293,37.979,34.712,39.204c0.816,0,1.634,0,2.45,0c19.194,0,35.529-15.11,36.755-34.712
+                                                    C1009.748,1418.386,994.229,1400.825,973.811,1399.6z"/>
+                                                <path class="cls-1" d="M970.543,601.625c0.817,0,1.634,0,2.451,0c20.419-1.225,35.938-19.193,34.304-39.204
+                                                    c-1.226-20.419-19.194-35.938-39.204-34.304c-20.42,1.225-35.938,19.193-34.305,39.204
+                                                    C935.015,586.516,951.35,601.625,970.543,601.625z"/>
+                                                <path class="cls-1" d="M1299.697,1320.374c6.943,6.534,15.928,9.393,24.912,9.393c10.209,0,20.01-4.083,27.361-12.251
+                                                    c160.493-178.054,160.493-456.569,0-634.623c-13.885-15.109-37.163-16.335-52.272-2.858c-15.11,13.885-16.335,37.163-2.859,52.272
+                                                    c135.583,149.876,135.583,385.103,0,535.387C1283.362,1283.212,1284.588,1306.897,1299.697,1320.374z"/>
+                                        </svg>
+                                    </span>
+                                    <div class="col-8 col-md-8 col-lg-12">
+                                        <h3>البحث عن الموظفين</h3>
+                                        <p>اعثر على افضل الموظفين لشركتك</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 fade-in">
-                                    <div class="row">
-                                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                                        <div class="col-8 col-md-8 col-lg-12">
-                                            <h3>التواصل</h3>
-                                            <p>تواصل الفريق يعني النجاح الحتمي</p>
-                                        </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 mb-4 fade-in">
+                                <div class="row justify-content-center text-center">
+                                    <span class="col-4 col-md-4 col-lg-12 p-3 btn-primary rounded-circle">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                                            <title>Business-Collection</title>
+                                                <path id="XMLID_2161_" class="cls-2" d="M1491.921,1886.685l76.089-76.089l76.09,76.089l76.089,76.089l76.089-76.089V623.031
+                                                        c0-72.816-58.907-132.133-132.133-132.133H600.123c72.816,0,132.133,58.907,132.133,132.133v1263.244l76.09,76.089l76.089-76.089
+                                                        l76.089-76.09l76.09,76.09l76.089,76.089l76.089-76.089l76.09-76.09l76.089,76.09l76.089,76.089L1491.921,1886.685z"/>
+                                                <path class="cls-1" d="M921.252,814.072h692.166c20.454,0,37.227-16.772,37.227-37.227s-16.772-37.227-37.227-37.227H921.252
+                                                    c-20.454,0-37.227,16.772-37.227,37.227S900.798,814.072,921.252,814.072z"/>
+                                                <path class="cls-1" d="M921.252,1011.659h502.762c20.453,0,37.226-16.772,37.226-37.227s-16.772-37.227-37.226-37.227H921.252
+                                                    c-20.454,0-37.227,16.772-37.227,37.227C884.025,995.296,900.798,1011.659,921.252,1011.659z"/>
+                                                <path class="cls-1" d="M921.252,1192.882h692.166c20.454,0,37.227-16.772,37.227-37.227s-16.772-37.227-37.227-37.227H921.252
+                                                    c-20.454,0-37.227,16.772-37.227,37.227C884.025,1176.519,900.798,1192.882,921.252,1192.882z"/>
+                                                <path class="cls-1" d="M987.114,1325.016h-65.862c-20.454,0-37.227,16.771-37.227,37.227c0,20.453,16.772,37.226,37.227,37.226
+                                                    h65.862c20.454,0,37.226-16.772,37.226-37.226C1024.34,1341.787,1007.568,1325.016,987.114,1325.016z"/>
+                                                <path class="cls-1" d="M987.114,1506.238h-65.862c-20.454,0-37.227,16.772-37.227,37.227s16.772,37.227,37.227,37.227h65.862
+                                                    c20.454,0,37.226-16.772,37.226-37.227C1023.932,1522.602,1007.568,1506.238,987.114,1506.238z"/>
+                                                <path class="cls-1" d="M1613.418,1325.016h-478.217c-20.454,0-37.227,16.771-37.227,37.227c0,20.453,16.772,37.226,37.227,37.226
+                                                    h478.217c20.454,0,37.227-16.772,37.227-37.226C1650.645,1341.787,1633.872,1325.016,1613.418,1325.016z"/>
+                                                <path class="cls-1" d="M1460.83,1543.056c0-20.454-16.771-37.227-37.227-37.227h-288.402c-20.454,0-37.227,16.772-37.227,37.227
+                                                    s16.772,37.227,37.227,37.227h288.402C1444.059,1580.282,1460.83,1563.51,1460.83,1543.056z"/>
+                                                <path class="cls-1" d="M1389.65,1988.955c14.318,14.317,38.045,14.317,52.362,0l125.997-125.997l125.997,125.997
+                                                    c7.363,7.363,16.772,11.045,26.181,11.045c9.409,0,18.818-3.682,26.182-11.045l76.09-76.09
+                                                    c6.954-6.954,11.045-16.363,11.045-26.181V623.031c0-93.271-75.68-168.951-168.951-168.951h-284.312V37.227
+                                                    c0-20.454-16.772-37.227-37.227-37.227H203.723c-20.454,0-37.227,16.772-37.227,37.227v1263.244
+                                                    c0,93.271,75.68,168.95,168.951,168.95h214.358c20.454,0,37.227-16.772,37.227-37.227s-16.772-37.227-37.227-37.227h-74.453
+                                                    c18.409-26.999,29.454-59.726,29.454-94.906v-677.03c0-52.362,42.545-94.907,94.907-94.907s94.907,42.545,94.907,94.907v1263.244
+                                                    c0,2.454,0.408,4.909,0.817,7.363c0.409,1.637,0.818,2.863,1.228,4.5c0.409,0.818,0.409,1.636,0.818,2.454
+                                                    c0.818,1.637,1.636,3.272,2.454,4.5c0.409,0.409,0.409,1.228,0.818,1.637c1.228,2.045,2.863,4.091,4.5,5.727l76.089,76.09
+                                                    c14.318,14.317,38.045,14.317,52.362,0l125.997-125.997l125.998,125.997c14.317,14.317,38.044,14.317,52.361,0l125.998-125.997
+                                                    L1389.65,1988.955z M430.763,623.031v677.439c0,52.362-42.544,94.906-94.906,94.906c-52.363,0-94.907-42.544-94.907-94.906V74.044
+                                                    h1065.248V454.08H599.714C506.443,454.08,430.763,529.761,430.763,623.031z M1111.884,1910.002l-125.997-125.997
+                                                    c-7.363-7.363-16.772-11.045-26.182-11.045c-9.408,0-18.817,3.682-26.181,11.045l-125.997,125.997l-38.863-38.862V623.031
+                                                    c0-5.318-0.408-10.636-0.818-15.545c0-1.637-0.408-2.863-0.408-4.5c-0.409-3.682-0.818-7.363-1.637-11.045
+                                                    c-0.409-1.637-0.409-2.864-0.818-4.5c-0.818-4.5-2.045-9.409-3.682-13.909c0-0.409,0-0.409-0.409-0.818
+                                                    c-1.636-4.908-3.272-9.408-5.317-13.908c-0.409-1.228-1.228-2.455-1.637-4.091c-1.637-3.272-2.863-6.546-4.909-9.818
+                                                    c-0.817-1.227-1.228-2.454-2.045-4.091c-2.046-3.682-4.5-7.772-6.954-11.454c-0.41-0.409-0.41-0.818-0.818-1.228c0,0,0,0,0-0.409
+                                                    h924.115c52.362,0,94.906,42.545,94.906,94.907V1871.14l-38.862,38.862l-125.997-125.997c-14.318-14.317-38.045-14.317-52.362,0
+                                                    l-125.997,125.997l-124.77-125.588c-14.318-14.318-38.045-14.318-52.363,0L1111.884,1910.002z"/>
+                                        </svg>
+                                    </span>
+                                    <div class="col-8 col-md-8 col-lg-12">
+                                        <h3>التواصل</h3>
+                                        <p>تواصل الفريق يعني النجاح الحتمي</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-
             </div>
-                <div class="col-md-4 fade-in">
-                    <img loading="lazy" src="./images/background/img-team.png" alt="" style="width: 600px;">
-                </div>
-        
+        </div>
+        <div class="col-md-6 fade-in">
+            <!-- image on the right -->
+            <img loading="lazy" src="./images/background/img-team.png" alt="" style="width: 600px;">
         </div>
 
-        <div class="p-4 my-2 fade-in">
-            <p>تجد في شركتنا موظفين رائعين</p>
-            <h1 class="secondarytext">موثوق بنا من قبل</h1>
-            <h1 class="primarytext">اكبر الشركات العالمية</h1>
-            <p>لقد وثق عملاؤنا دائمًا بخبرتنا ونصائحنا. وهنا ما لديهم ليقولوه عنا</p>
-        </div>
+    </div>
 
-        <div id="carouselExampleIndicators" class="carousel slide w-100 fade-in" style="max-height: 500px;" data-bs-ride="carousel">
-            <div class="carousel-inner w-100" id="ratings">
-              <div class="carousel-item active">
-                <div class="row justify-content-center text-center p-2">
-                <div class="col-md-3">
-                <img loading="lazy" src="./images/People/client-01.jpg" class="img-fluid rounded-circle" alt="...">
-                <h3 class="primarytext">افضل شركة على الاطلاق</h3>
-                <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
-                <p>&starf;&starf;&starf;&starf;&starf;</p>
-                <p>جاستن ايمرسون</p>
-                </div>
-                <div class="col-md-3">
-                <img loading="lazy" src="./images/People/client-02-160x160.jpg" class="img-fluid rounded-circle" alt="...">
-                <h3 class="primarytext">أنقذت اعمالي</h3>
-                <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
-                <p>&starf;&starf;&starf;&starf;&starf;</p>
-                <p>مايكل ايمرسون</p>
-                </div>
-                <div class="col-md-3">
-                <img loading="lazy" src="./images/People/client-03-160x160.jpg" class="img-fluid rounded-circle" alt="...">
-                <h3 class="primarytext">الاختيار الصحيح</h3>
-                <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
-                <p>&starf;&starf;&starf;&starf;&starf;</p>
-                <p>باتريك ايمرسون</p>
-                </div>
-                <div class="col-md-3">
-                <img loading="lazy" src="./images/People/client-04-160x160.jpg" class="img-fluid rounded-circle" alt="...">
-                <h3 class="primarytext">افضل الناس بالنسبة لي</h3>
-                <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
-                <p>&starf;&starf;&starf;&starf;&starf;</p>
-                <p>توم ايمرسون</p>
-                </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row justify-content-center text-center p-2">
-                    <div class="col">
-                    <img loading="lazy" src="./images/People/client-05-160x160.jpg" class="img-fluid rounded-circle" alt="...">
-                    <h3 class="primarytext">افضل شركة على الاطلاق</h3>
-                    <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
-                    <p>&starf;&starf;&starf;&starf;&starf;</p>
-                    <p>جاستن ايمرسون</p>
+    <div class="p-4 my-2 fade-in">
+        <p>تجد في شركتنا موظفين رائعين</p>
+        <h1 class="secondarytext">موثوق بنا من قبل</h1>
+        <h1 class="primarytext">اكبر الشركات العالمية</h1>
+        <p>لقد وثق عملاؤنا دائمًا بخبرتنا ونصائحنا. وهنا ما لديهم ليقولوه عنا</p>
+    </div>
+
+    <!-- clients ratings and reviews carousel -->
+    <div class="w-100 fade-in position-relative" >
+        <div class="w-100 row justify-content-center px-5" id="ratings">
+                    <div class="col-md-4 align-items-center justify-content-center text-center">
+                        <img loading="lazy" src="./images/People/client-02-160x160.jpg" class="img-fluid mx-auto rounded-circle"
+                            alt="...">
+                        <h3 class="primarytext">أنقذت اعمالي</h3>
+                        <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات
+                            المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                        <p>&starf;&starf;&starf;&starf;&starf;</p>
+                        <p>مايكل ايمرسون</p>
                     </div>
-                    <div class="col">
-                    <img loading="lazy" src="./images/People/client-06-160x160.jpg" class="img-fluid rounded-circle" alt="...">
-                    <h3 class="primarytext">أنقذت اعمالي</h3>
-                    <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
-                    <p>&starf;&starf;&starf;&starf;&starf;</p>
+                    <div class="col-md-4 justify-content-center text-center">
+                        <img loading="lazy" src="./images/People/client-03-160x160.jpg" class="img-fluid mx-auto mx-auto rounded-circle"
+                            alt="...">
+                        <h3 class="primarytext">الاختيار الصحيح</h3>
+                        <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات
+                            المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                        <p>&starf;&starf;&starf;&starf;&starf;</p>
+                        <p>باتريك ايمرسون</p>
                     </div>
-                  <div class="col">
-                      <img loading="lazy" src="./images/People/client-01.jpg" class="img-fluid rounded-circle" alt="...">
-                      <h3 class="primarytext">الاختيار الصحيح</h3>
-                      <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
-                      <p>&starf;&starf;&starf;&starf;&starf;</p>
-                    </div>
-                    <div class="col">
-                        <img loading="lazy" src="./images/People/client-02-160x160.jpg" class="img-fluid rounded-circle" alt="...">
+                    <div class="col-md-4 justify-content-center text-center">
+                        <img loading="lazy" src="./images/People/client-04-160x160.jpg" class="img-fluid mx-auto rounded-circle"
+                            alt="...">
                         <h3 class="primarytext">افضل الناس بالنسبة لي</h3>
-                        <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                        <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات
+                            المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                        <p>&starf;&starf;&starf;&starf;&starf;</p>
+                        <p>توم ايمرسون</p>
+                    </div>
+                    <div class="col-md-4 justify-content-center text-center">
+                        <img loading="lazy" src="./images/People/client-06-160x160.jpg" class="img-fluid mx-auto rounded-circle"
+                            alt="...">
+                        <h3 class="primarytext">أنقذت اعمالي</h3>
+                        <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات
+                            المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
                         <p>&starf;&starf;&starf;&starf;&starf;</p>
                     </div>
-                    </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row justify-content-center text-center p-2">
-                  <div class="col">
-                  <img loading="lazy" src="./images/People/client-03-160x160.jpg" class="img-fluid rounded-circle" alt="...">
-                  <h3 class="primarytext">افضل شركة على الاطلاق</h3>
-                  <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
-                  <p>&starf;&starf;&starf;&starf;&starf;</p>
-                  <p>جاستن ايمرسون</p>
-                  </div>
-                  <div class="col">
-                  <img loading="lazy" src="./images/People/client-04-160x160.jpg" class="img-fluid rounded-circle" alt="...">
-                  <h3 class="primarytext">أنقذت اعمالي</h3>
-                  <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
-                  <p>&starf;&starf;&starf;&starf;&starf;</p>
-                  </div>
-                  <div class="col">
-                      <img loading="lazy" src="./images/People/client-05-160x160.jpg" class="img-fluid rounded-circle" alt="...">
-                      <h3 class="primarytext">الاختيار الصحيح</h3>
-                      <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
-                      <p>&starf;&starf;&starf;&starf;&starf;</p>
-                    </div>
-                    <div class="col">
-                        <img loading="lazy" src="./images/People/client-06-160x160.jpg" class="img-fluid rounded-circle" alt="...">
-                        <h3 class="primarytext">افضل الناس بالنسبة لي</h3>
-                        <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                    <div class="col-md-4 justify-content-center text-center">
+                        <img loading="lazy" src="./images/People/client-01.jpg" class="img-fluid mx-auto rounded-circle"
+                            alt="...">
+                        <h3 class="primarytext">الاختيار الصحيح</h3>
+                        <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات
+                            المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
                         <p>&starf;&starf;&starf;&starf;&starf;</p>
                     </div>
+                    <div class="col-md-4 justify-content-center text-center">
+                        <img loading="lazy" src="./images/People/client-05-160x160.jpg" class="img-fluid mx-auto rounded-circle"
+                            alt="...">
+                        <h3 class="primarytext">افضل الناس بالنسبة لي</h3>
+                        <p>تمكين المصادر الممكنة والمنتجات الفعالة من حيث التكلفة بكفاءة. التحدث بمصداقية عن المنتجات
+                            المصنعة عالية الكفاءة والبيانات الممكّنة.</p>
+                        <p>&starf;&starf;&starf;&starf;&starf;</p>
                     </div>
-              </div>
-              
-            </div>
-          </div>
+        </div>
+        <button class="carousel-control-prev ratingsleft rounded-circle  my-auto" type="button">
+            <span class="fa fa-chevron-left fs-1" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next ratingsright rounded-circle my-auto" type="button">
+            <span class="fa fa-chevron-right fs-1" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
+    <!-- contact us and email form -->
     <div class="row p-4 mb-5">
-        <div class="col-md-6 p-2 fade-in icons">
-            <p><p> <strong class="fs-1 primarytext">تواصل </strong><strong class="fs-1 secondarytext">معنا</strong></p>
-            <p>تفضل بزيارة مقرنا أو ببساطة أرسل لنا بريدًا إلكترونيًا في أي وقت تريده. نحن منفتحون على جميع الاقتراحات من عملائنا.</p>
+        <div class="col-md-6 p-2 office icons">
+            <p>مكاتبنا</p>
+            <p> <strong class="fs-1 primarytext">تواصل </strong><strong class="fs-1 secondarytext">معنا</strong></p>
+            <p>تفضل بزيارة مقرنا أو ببساطة أرسل لنا بريدًا إلكترونيًا في أي وقت تريده. نحن منفتحون على جميع الاقتراحات
+                من عملائنا.</p>
             <hr>
             <div class="row p-2 justify-content-center">
-                <div class="col p-2">
-                    <span class="col-md-4 p-2 btn-secondary">
-            
+                <div class="col p-2 fade-in justify-content-centers">
+                    <span class="col-md-4 p-3 rounded-circle">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                            <title>Office-And-Business</title>
+                            <path class="cls-2" d="M1566.27,357.477c-75.031,0-135.852,60.82-135.852,135.852c0,98.57-80.211,178.77-178.781,178.77V251.68
+                            c0-64.43-24.543-128.828-73.684-177.969C1128.793,24.578,1064.406,0,999.996,0S871.195,24.578,822.035,73.711
+                            c-49.16,49.148-73.738,113.539-73.738,177.98V363.25c-0.005,0-0.01,0-0.016,0c-98.52,0-178.719-80.172-178.719-178.711
+                            c0-75.031-60.797-135.852-135.828-135.852c-75.043,0-135.852,60.82-135.852,135.852c0,248.359,202.07,450.41,450.41,450.41
+                            c0.001,0,0.002,0,0.004,0v481.852h503.34v-173c248.398,0,450.477-202.102,450.484-450.473
+                            C1702.121,418.297,1641.301,357.477,1566.27,357.477z M999.984,158.496c-24.879,0-48.301,9.691-65.91,27.289
+                            c-17.59,17.602-27.289,40.988-27.289,65.891v105.102h0.008v0.004h-75.469V251.68c0-45.039,17.539-87.422,49.391-119.262
+                            c31.871-31.871,74.211-49.41,119.27-49.41V158.496z"/>
+                            <path class="cls-1" d="M840.797,1879.25h159.176v-75.469h-159.18c-50.109,0-97.219-19.508-132.648-54.93
+                                c-35.41-35.422-54.922-82.531-54.922-132.621h-75.469c0,70.27,27.359,136.309,77.031,185.98
+                                C704.457,1851.879,770.535,1879.25,840.797,1879.25z"/>
+                            <path class="cls-1" d="M1621.574,1079.066H378.336v232.762h78.648v304.398c0,102.512,39.941,198.883,112.43,271.352
+                                C641.902,1960.078,738.293,2000,840.793,2000h318.41c102.512,0,198.883-39.922,271.301-112.395
+                                c72.5-72.418,112.422-168.801,112.422-271.379v-304.398h78.648V1079.066z M1467.469,1616.227c0,82.398-32.051,159.828-90.301,218
+                                c-58.199,58.23-135.609,90.301-217.961,90.301h-318.41c-82.352,0-159.781-32.07-218.012-90.32
+                                c-58.242-58.211-90.32-135.652-90.32-217.98v-304.398h935.004V1616.227z M1546.105,1236.359h-3.18v-0.004H456.984v0.004h-3.18
+                                v-81.828h1092.301V1236.359z"/>
+                        </svg>
                     </span>
-                        <h3>موقعنا</h3>
-                        <p>ساحة بلومزبري،
-                            لندن WC1B 4EA</p>
+                    <h3>موقعنا</h3>
+                    <p>ساحة بلومزبري،
+                        لندن WC1B 4EA</p>
                 </div>
-                <div class="col p-2">
-                    <span class="col-md-4 p-2 btn-secondary">
-            
+                <div class="col fade-in p-2 justify-content-center">
+                    <span class="col-md-4 p-3">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                            <title>Business-Collection</title>
+                                <path id="XMLID_308_" class="cls-2" d="M1216.56,1522.863c-288.95,119.749-620.406-17.574-740.155-306.524
+                                        c-119.748-288.95,17.574-620.406,306.525-740.155c288.95-119.749,620.405,17.574,740.154,306.525
+                                        C1642.833,1071.659,1505.51,1403.114,1216.56,1522.863z"/>
+                                <path class="cls-1" d="M1769.121,404.662c6.948-6.948,10.627-16.349,10.627-26.157l-2.453-201.489
+                                    c-0.408-20.435-17.165-36.783-37.6-36.783c-20.436,0.409-36.783,17.166-36.783,37.601l1.227,111.983l-5.313-5.313
+                                    C1304.43-100.9,670.129-93.543,284.725,300.852C151.08,437.767,59.94,608.603,21.113,794.97
+                                    c-37.6,181.463-24.931,369.464,37.601,543.161c5.313,15.122,19.618,24.522,34.739,24.522c4.087,0,8.583-0.817,12.67-2.044
+                                    c19.209-6.947,29.426-28.2,22.479-47.408C7.626,976.433,88.14,608.194,337.855,352.757
+                                    C694.65-12.212,1281.951-19.16,1646.92,337.635l5.723,5.722l-111.984,1.227c-20.435,0.408-36.783,17.165-36.783,37.6
+                                    c0.409,20.435,16.757,36.783,37.192,36.783h0.408l201.489-2.452C1752.773,415.696,1762.174,412.019,1769.121,404.662z"/>
+                                <path class="cls-1" d="M1941.184,660.916c-6.947-19.209-28.199-29.426-47.408-22.479c-19.209,6.948-29.427,28.2-22.479,47.409
+                                    c120.975,336.769,40.461,705.007-209.255,960.444c-172.88,176.967-404.204,275.872-651.467,278.733
+                                    c-247.672,3.27-481.04-90.731-657.598-263.203l-5.722-5.722l111.983-1.226c20.435-0.409,36.783-17.166,36.783-37.601
+                                    c-0.409-20.436-16.757-37.191-37.601-36.783l-201.489,2.452c-20.435,0.409-36.783,17.166-36.783,37.601l2.452,201.489
+                                    c0.409,20.435,16.756,36.782,37.191,36.782h0.409c20.435-0.408,36.783-17.165,36.783-37.6l-1.226-111.984l5.722,5.722
+                                    c188.41,183.915,435.674,284.864,698.468,284.864c4.087,0,7.765,0,11.852,0c266.881-3.27,517.006-109.94,703.781-300.803
+                                    c133.645-136.915,224.785-307.751,263.611-494.118C2016.385,1023.024,2003.715,835.022,1941.184,660.916z"/>
+                                <path class="cls-1" d="M999.54,396.079c-79.288,0-156.94,15.53-230.507,46.183c-148.766,61.714-264.837,177.784-326.551,326.551
+                                    c-61.713,148.767-61.713,313.064,0,461.831c93.593,226.419,312.655,372.733,557.875,372.733c79.288,0,156.94-15.53,230.507-46.183
+                                    c307.342-127.105,454.065-481.039,326.551-788.381C1463.822,542.394,1244.76,396.079,999.54,396.079z M1464.641,745.926h-122.201
+                                    c-24.113-88.279-60.488-163.479-105.854-220.289C1331.813,573.046,1411.918,649.473,1464.641,745.926z M502.152,1178.738
+                                    c-42.096-116.479-42.096-242.358,0-358.838h168.385c-10.218,55.992-15.53,116.479-15.53,179.419
+                                    c0,62.531,6.13,122.61,16.757,179.419H502.152z M728.981,999.319c0-63.349,6.13-123.836,16.757-179.419h231.732v358.838H747.781
+                                    C735.929,1122.338,728.981,1061.851,728.981,999.319z M1051.854,484.767c93.184,20.844,170.837,120.158,213.342,261.567h-213.342
+                                    V484.767z M977.879,484.767v261.159H764.538C807.043,604.925,884.695,505.61,977.879,484.767z M977.879,1253.122v260.75
+                                    c-87.461-22.887-165.114-123.836-209.662-260.75H977.879z M1051.854,1513.872v-260.75h209.663
+                                    C1216.969,1390.036,1139.315,1490.985,1051.854,1513.872z M1051.854,1178.738V819.9h231.732
+                                    c11.035,55.583,16.758,116.07,16.758,179.419c0,62.531-6.948,123.019-19.209,179.419H1051.854z M1359.195,819.9h138.959
+                                    c43.321,119.749,40.461,246.445-0.409,358.838h-140.185c11.035-56.809,16.758-116.888,16.758-179.419
+                                    C1374.317,936.38,1369.005,876.301,1359.195,819.9z M797.643,510.515c4.087-1.635,8.583-3.27,12.67-4.904
+                                    c-53.54,58.853-96.045,141.818-123.019,240.724H535.258C592.884,640.072,684.433,557.106,797.643,510.515z M535.258,1253.122
+                                    h154.079c28.609,100.131,73.975,184.323,129.967,244.402C699.146,1453.793,597.789,1367.967,535.258,1253.122z M1227.595,1477.498
+                                    c47.817-58.035,86.645-135.279,112.393-224.376h124.244C1412.327,1347.94,1331.404,1428.045,1227.595,1477.498z"/>
+                        </svg>
                     </span>
-                        <h3>ارسل لنا عبر البريد الالكتروني</h3>
-                        <p>info@avantage.co.uk <br>
-                            office@avantage.co.uk
-                        </p>
+                    <h3>ارسل لنا عبر البريد الالكتروني</h3>
+                    <p>info@avantage.co.uk <br>
+                        office@avantage.co.uk
+                    </p>
 
                 </div>
-                <div class="col p-2">
-                    <span class="col-md-4 p-2 btn-secondary">
-            
+                <div class="col fade-in p-2 justify-content-center">
+                    <span class="col-md-4 p-3">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                            <title>Icons-Business-And-Finance</title>
+                            <path class="cls-2" d="M1361.371,246.02c-216.25,0.031-392.172,175.949-392.172,392.148c0,216.238,175.922,392.191,392.18,392.219
+                                c216.211,0,392.129-175.941,392.129-392.191S1577.594,246.02,1361.371,246.02z"/>
+                            <path class="cls-2" d="M1361.371,0C1008.93,0.031,723.18,285.75,723.18,638.172c0,0.206,0.004,0.411,0.004,0.617v588.91
+                                l163.24-163.251c116.833,130.098,286.329,211.945,474.947,211.962c352.422,0,638.152-285.789,638.148-638.211
+                                C1999.52,285.719,1713.793,0,1361.371,0z M1361.371,1108.832h-0.02c-259.48-0.039-470.578-211.18-470.578-470.66
+                                c0-259.449,211.102-470.559,470.578-470.59c259.5,0,470.59,211.121,470.59,470.621S1620.852,1108.832,1361.371,1108.832z"/>
+                            <path class="cls-1" d="M1178.164,1469.73c-17.52-17.461-40.852-27.051-65.66-27.051c-24.859,0-48.219,9.59-65.879,27.121
+                                l-76.039,76.16c-9.973,9.949-25.73,14.98-46.852,14.98c-66.641,0.02-187.934-54.02-308.672-174.789
+                                c-72.461-72.457-127.949-152.387-156.211-225.059c-23.52-60.449-24.852-109.219-3.57-130.488l75.98-76.109
+                                c17.59-17.5,27.27-40.867,27.27-65.809c0-25-9.711-48.379-27.211-65.66l-232.949-232.93c-17.512-17.699-40.91-27.449-65.91-27.449
+                                c-24.98,0-48.391,9.75-65.73,27.289l-76.129,76.051c-191.59,191.652-68.32,615.051,280.641,963.941
+                                C599.523,1858.172,875.965,2000,1092.703,2000c100.148,0,183.988-30.918,242.441-89.379l76.121-76.09
+                                c17.559-17.5,27.219-40.883,27.219-65.781c0-24.941-9.66-48.32-27.191-65.781L1178.164,1469.73z M1355.844,1779.055l-76.172,76.129
+                                c-44.051,44.063-106.949,66.391-186.969,66.391c-196.691,0-451.902-132.992-666.012-347.082
+                                C119.434,1267.281-9.066,876.641,146.063,721.461l76.27-76.211c1.551-1.551,4.922-4.172,10.141-4.172
+                                c4.988,0,8.27,2.262,10.301,4.32l233.262,233.266c1.531,1.5,4.07,4.813,4.07,10.051c0,5.297-2.598,8.68-4.238,10.309l-76.031,76.16
+                                c-45.25,45.211-50.25,121.34-14.078,214.359c32.121,82.598,93.852,172.117,173.852,252.078
+                                c121.961,122,261.48,197.793,364.09,197.762c0.02,0,0.031,0,0.031,0c42.09,0,77.48-13.109,102.32-37.988l75.961-76.039
+                                c1.941-1.93,5.32-4.219,10.48-4.219c5.32,0,8.762,2.629,10.262,4.129l233.121,233.211c1.559,1.559,4.18,4.957,4.18,10.289
+                                C1360.055,1774.066,1357.434,1777.465,1355.844,1779.055z"/>
+                            <rect x="1165.301" y="598.98" class="cls-1" width="78.43" height="78.43"/>
+                            <rect x="1322.102" y="598.98" class="cls-1" width="78.43" height="78.43"/>
+                            <rect x="1479.004" y="598.98" class="cls-1" width="78.441" height="78.43"/>
+                        </svg>
                     </span>
-                        <h2>اتصل بنا</h2>
-                        <p>020 7946 020 <br>
-                            020 7996 223</p>
+                    <h2>اتصل بنا</h2>
+                    <p>020 7946 020 <br>
+                        020 7996 223</p>
 
                 </div>
             </div>
         </div>
         <div class="col-md-6 p-2 fade-in">
             <div class="container">
-                <h3>ارسل لنا</h3>
                 <form>
                     <div class="form-group">
                         <label for="name"><span class="text-danger">*</span></label>
-                        <input type="text" class="form-control rounded-pill" placeholder="اكتب اسمك" id="name" name="name" required>
+                        <input type="text" class="form-control rounded-pill p-2" placeholder="اكتب اسمك" id="name"
+                            name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email"><span class="text-danger">*</span></label>
-                        <input type="email" class="form-control rounded-pill" placeholder="اكتب بريدك الالكتروني" id="email" name="email" required>
+                        <input type="email" class="form-control rounded-pill p-2" placeholder="اكتب بريدك الالكتروني"
+                            id="email" name="email" required>
                     </div>
                     <div class="form-group py-2">
-                        <input type="text" class="form-control rounded-pill" placeholder="الموضوع" id="subject" name="subject">
+                        <input type="text" class="form-control rounded-pill p-2 my-2" placeholder="الموضوع" id="subject"
+                            name="subject">
                     </div>
                     <div class="form-group">
                         <label for="message"><span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="message" name="message" placeholder="اكتب رسالتك" rows="5" required></textarea>
+                        <textarea class="form-control" id="message" name="message" placeholder="اكتب رسالتك" rows="5"
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary m-2 rounded-pill p-2 fw-bold">Submit</button>
                 </form>
@@ -415,78 +731,87 @@
         </div>
     </div>
 
-    <div class="mt-5 w-100">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13814.728643718801!2d31.2242988!3d30.0459751!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458409aa81d58a5%3A0x6ce6bf7cd258d6fe!2z2KjYsdisINin2YTZgtin2YfYsdip!5e0!3m2!1sar!2s!4v1696419482995!5m2!1sar!2s"  width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- map -->
+    <div class="mt-5 w-100 position-relative">
+        <img src="./images/background/bgn-map-bottom.png" style="position: absolute;" class="bottom-0 start-0" alt="">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13814.728643718801!2d31.2242988!3d30.0459751!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458409aa81d58a5%3A0x6ce6bf7cd258d6fe!2z2KjYsdisINin2YTZgtin2YfYsdip!5e0!3m2!1sar!2s!4v1696419482995!5m2!1sar!2s"
+            width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </div>
 
     <footer>
+        <!-- top part of footer -->
         <div class="row m-2 p-2 justify-content-center">
-            <div class="col-md-4 p-2">
+            <!-- contact information -->
+            <div class="col-md-3 p-2">
                 <h2 class="primarytext">مقرنا</h2>
                 <p>تنمية الرؤية العالمية الشاملة للابتكار المدمر بشكل عضوي من خلال التمكين</p>
                 <p><a href=""><i class="fa fa-phone"></i> 020 7946 0200</a></p>
                 <p><a href=""><i class="fa fa-envelope"></i> info@mailus.oc.ul</a></p>
                 <p><a href=""><i class="fa fa-globe"></i> avantage.co.uk</a></p>
             </div>
-            <div class="g-0 col-md-4 p-2">
+            <!-- location information -->
+            <div class="g-0 col-md-6 p-2">
                 <p>مواقعنا</p>
                 <h2>اين تجدنا</h2>
                 <div class="row">
                     <div class="col-md-6"><img loading="lazy" src="./images/background/img-footer-map.png"
                             class="img-fluid" alt=""></div>
                     <div class="col">
-                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
-                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
-                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                        <p><a href=""><i class="fa fa-map-marker"></i> مدينة: 123 456 789</a></p>
+                        <p><a href=""><i class="fa fa-map-marker"></i> مدينة: 123 456 789</a></p>
+                        <p><a href=""><i class="fa fa-map-marker"></i> مدينة: 123 456 789</a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 p-2">
+            <!--  contact information -->
+            <div class="col-md-3 p-2">
                 <p>ابق على تواصل</p>
                 <h2>روابطنا الاجتماعية</h2>
                 <p>أخذ مؤشرات الأداء الرئيسية بسلاسة دون اتصال بالإنترنت لتحقيق أقصى قدر من الاطلاع الطويل</p>
+                <!-- social icons -->
                 <ul class="social-icons">
                     <li class="social-icon">
-                        <a href="#"><svg
-                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                                    viewBox="0 0 48 48">
-                                    <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
-                                    <path fill="#fff"
-                                        d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z">
-                                    </path>
-                                </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
+                                <path fill="#fff"
+                                    d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z">
+                                </path>
+                            </svg></a>
                     </li>
                     <li class="social-icon">
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                    width="100" height="100" viewBox="0 0 48 48">
-                                    <path fill="#03A9F4"
-                                        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
-                                    </path>
-                                </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <path fill="#03A9F4"
+                                    d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+                                </path>
+                            </svg></a>
                     </li>
                     <li class="social-icon">
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                    width="48" height="48" viewBox="0 0 48 48">
-                                    <path fill="#0288D1"
-                                        d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
-                                    </path>
-                                    <path fill="#FFF"
-                                        d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
-                                    </path>
-                                </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
+                                viewBox="0 0 48 48">
+                                <path fill="#0288D1"
+                                    d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
+                                </path>
+                                <path fill="#FFF"
+                                    d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
+                                </path>
+                            </svg></a>
                     </li>
                     <li class="social-icon">
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                    width="100" height="100" viewBox="0 0 48 48">
-                                    <circle cx="24" cy="24" r="20" fill="#E60023"></circle>
-                                    <path fill="#FFF"
-                                        d="M24.4439087,11.4161377c-8.6323242,0-13.2153931,5.7946167-13.2153931,12.1030884	c0,2.9338379,1.5615234,6.5853882,4.0599976,7.7484131c0.378418,0.1762085,0.581543,0.1000366,0.668457-0.2669067	c0.0668945-0.2784424,0.4038086-1.6369019,0.5553589-2.2684326c0.0484619-0.2015381,0.0246582-0.3746338-0.1384277-0.5731201	c-0.8269653-1.0030518-1.4884644-2.8461304-1.4884644-4.5645752c0-4.4115601,3.3399658-8.6799927,9.0299683-8.6799927	c4.9130859,0,8.3530884,3.3484497,8.3530884,8.1369019c0,5.4099731-2.7322998,9.1584473-6.2869263,9.1584473	c-1.9630737,0-3.4330444-1.6238403-2.9615479-3.6153564c0.5654297-2.3769531,1.6569214-4.9415283,1.6569214-6.6584473	c0-1.5354004-0.8230591-2.8169556-2.5299683-2.8169556c-2.006958,0-3.6184692,2.0753784-3.6184692,4.8569336	c0,1.7700195,0.5984497,2.9684448,0.5984497,2.9684448s-1.9822998,8.3815308-2.3453979,9.9415283	c-0.4019775,1.72229-0.2453003,4.1416016-0.0713501,5.7233887l0,0c0.4511108,0.1768799,0.9024048,0.3537598,1.3687744,0.4981079l0,0	c0.8168945-1.3278198,2.0349731-3.5056763,2.4864502-5.2422485c0.2438354-0.9361572,1.2468872-4.7546387,1.2468872-4.7546387	c0.6515503,1.2438965,2.5561523,2.296936,4.5831299,2.296936c6.0314941,0,10.378418-5.546936,10.378418-12.4400024	C36.7738647,16.3591919,31.3823242,11.4161377,24.4439087,11.4161377z">
-                                    </path>
-                                </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <circle cx="24" cy="24" r="20" fill="#E60023"></circle>
+                                <path fill="#FFF"
+                                    d="M24.4439087,11.4161377c-8.6323242,0-13.2153931,5.7946167-13.2153931,12.1030884	c0,2.9338379,1.5615234,6.5853882,4.0599976,7.7484131c0.378418,0.1762085,0.581543,0.1000366,0.668457-0.2669067	c0.0668945-0.2784424,0.4038086-1.6369019,0.5553589-2.2684326c0.0484619-0.2015381,0.0246582-0.3746338-0.1384277-0.5731201	c-0.8269653-1.0030518-1.4884644-2.8461304-1.4884644-4.5645752c0-4.4115601,3.3399658-8.6799927,9.0299683-8.6799927	c4.9130859,0,8.3530884,3.3484497,8.3530884,8.1369019c0,5.4099731-2.7322998,9.1584473-6.2869263,9.1584473	c-1.9630737,0-3.4330444-1.6238403-2.9615479-3.6153564c0.5654297-2.3769531,1.6569214-4.9415283,1.6569214-6.6584473	c0-1.5354004-0.8230591-2.8169556-2.5299683-2.8169556c-2.006958,0-3.6184692,2.0753784-3.6184692,4.8569336	c0,1.7700195,0.5984497,2.9684448,0.5984497,2.9684448s-1.9822998,8.3815308-2.3453979,9.9415283	c-0.4019775,1.72229-0.2453003,4.1416016-0.0713501,5.7233887l0,0c0.4511108,0.1768799,0.9024048,0.3537598,1.3687744,0.4981079l0,0	c0.8168945-1.3278198,2.0349731-3.5056763,2.4864502-5.2422485c0.2438354-0.9361572,1.2468872-4.7546387,1.2468872-4.7546387	c0.6515503,1.2438965,2.5561523,2.296936,4.5831299,2.296936c6.0314941,0,10.378418-5.546936,10.378418-12.4400024	C36.7738647,16.3591919,31.3823242,11.4161377,24.4439087,11.4161377z">
+                                </path>
+                            </svg></a>
                     </li>
                 </ul>
-    
+
             </div>
         </div>
         <hr>
@@ -505,7 +830,7 @@
                     <a class="nav-link" href="./services.html">خدماتنا</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">المدونة</a>
+                    <a class="nav-link" href="./blog.html">المدونة</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">معرضنا</a>
@@ -514,9 +839,11 @@
                     <a class="nav-link fw-bold" href="#header">^ العودة للاعلى ^</a>
                 </li>
             </ul>
-    
+
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"> </script>
     <script src="./script.js"></script>
 </body>
+
 </html>

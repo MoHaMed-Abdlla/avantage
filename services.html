@@ -14,10 +14,24 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <style>
-        .list-group-item{
+         svg{
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+        }
+        .card span svg path{
+            fill: white;
+        }
+        .card span{
+            height: 90px;
+            width: 90px;
+            text-align: center;
+        }
+        .list-group-item {
             border: none;
             background-color: transparent;
         }
+
         .progress {
             width: 150px;
             height: 150px;
@@ -173,143 +187,153 @@
             }
         }
     </style>
-    
+
 </head>
 
 <body>
-    <header class="w-100 mb-5 p-5 pt-0" style="background-color: white;" id="header">
-        <nav class="navbar navbar-expand-lg p-0">
-            <a class="navbar-brand justify-content-start" href="#"><img loading="lazy" src="./images/icons_and_logos/logo.png"
-                    alt="Logo"></a>
+    <header class="w-100 mb-5 p-5" id="header" style="background-image: url('./images/background/bacjgroundcover.png'); background-size: cover;">
+        <nav class="navbar navbar-expand-md position-absolute w-100 top-0 end-0 p-0">
+            <a class="navbar-brand justify-content-start" href="#"><img loading="lazy"
+                    src="./images/icons_and_logos/logo.png" alt="Logo"></a>
             <!-- Collapsible Navbar Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Navbar Items -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./index.html" id="navbarDropdown">الصفحة الرئيسية</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="#">مستشار الاعمال</a>
-                            <a class="dropdown-item" href="#">مستشار التسويق</a>
-                            <a class="dropdown-item" href="./index.html">مستشار الموارد البشرية</a>
-                            <a class="dropdown-item" href="#">المستشار المالي</a>
-                            <a class="dropdown-item" href="#">مستشار الضرائب / محاسب</a>
-                            <a class="dropdown-item" href="#">مستشار الاستراتيجية</a>
-                            <a class="dropdown-item" href="#">مستشار دولي</a>
-                            <a class="dropdown-item" href="#">مستشار إداري</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./about-us.html" id="navbarDropdown">معلومات عنا</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="./about-us.html">عنّا</a>
-                            <a class="dropdown-item" href="./history.html">تاريخ الشركة</a>
-                            <a class="dropdown-item" href="./testimonials.html">التوصيات</a>
-                            <a class="dropdown-item" href="./contact.html">التواصل</a>
-                            <a class="dropdown-item" href="./clients.html">العملاء</a>
-                            <a class="dropdown-item" href="./404.html">404</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active" href="./services.html" id="navbarDropdown">الخدمات</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="./single-services.html">خدمة واحدة</a>
-                            <a class="dropdown-item" href="./our-process.html">عملياتنا</a>
-                            <a class="dropdown-item" href="./solutions.html">الحلول</a>
-                            <a class="dropdown-item" href="./faq.html">الحقائق</a>
-                            <a class="dropdown-item" href="#">التسعير</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./portfolio.html" id="navbarDropdown">معرض الاعمال</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="./hsbc-recruiting.html">المشاريع الواحدة</a>
-                            <a class="dropdown-item" href="#">قائمة المشاريع</a>
-                            <a class="dropdown-item" href="#">شبكة المشاريع</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./blog.html" id="navbarDropdown">المدونة</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="./management-project.html">المنشورات الواحدة</a>
-                            <a class="dropdown-item" href="#">قائمة المدونة</a>
-                            <a class="dropdown-item" href="#">شبكة المدونة</a>
-                            <a class="dropdown-item" href="#">المنشورات الاخيرة</a>
-                        </div>
-                    </li>  
-                    <li><button class="btn-primary rounded-pill p-2 m-1">0 123 4567 890</button></li>       
-                </ul>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title primarytext" id="offcanvasNavbarLabel">Avantage</h4>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body justify-content-end">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="./index.html" id="navbarDropdown">الصفحة الرئيسية</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-arrow"></div>
+                                <a class="dropdown-item" href="#">مستشار الاعمال</a>
+                                <a class="dropdown-item" href="#">مستشار التسويق</a>
+                                <a class="dropdown-item" href="./index.html">مستشار الموارد البشرية</a>
+                                <a class="dropdown-item" href="#">المستشار المالي</a>
+                                <a class="dropdown-item" href="#">مستشار الضرائب / محاسب</a>
+                                <a class="dropdown-item" href="#">مستشار الاستراتيجية</a>
+                                <a class="dropdown-item" href="#">مستشار دولي</a>
+                                <a class="dropdown-item" href="#">مستشار إداري</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="./about-us.html" id="navbarDropdown">معلومات عنا</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-arrow"></div>
+                                <a class="dropdown-item" href="./about-us.html">عنّا</a>
+                                <a class="dropdown-item" href="./history.html">تاريخ الشركة</a>
+                                <a class="dropdown-item" href="./testimonials.html">التوصيات</a>
+                                <a class="dropdown-item" href="./contact.html">التواصل</a>
+                                <a class="dropdown-item" href="./clients.html">العملاء</a>
+                                <a class="dropdown-item" href="./404.html">404</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" href="./services.html" id="navbarDropdown">الخدمات</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-arrow"></div>
+                                <a class="dropdown-item" href="./single-services.html">خدمة واحدة</a>
+                                <a class="dropdown-item" href="./our-process.html">عملياتنا</a>
+                                <a class="dropdown-item" href="./solutions.html">الحلول</a>
+                                <a class="dropdown-item" href="./faq.html">الحقائق</a>
+                                <a class="dropdown-item" href="#">التسعير</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="./portfolio.html" id="navbarDropdown">معرض الاعمال</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-arrow"></div>
+                                <a class="dropdown-item" href="./hsbc-recruiting.html">المشاريع الواحدة</a>
+                                <a class="dropdown-item" href="#">قائمة المشاريع</a>
+                                <a class="dropdown-item" href="#">شبكة المشاريع</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="./blog.html" id="navbarDropdown">المدونة</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-arrow"></div>
+                                <a class="dropdown-item" href="./management-project.html">المنشورات الواحدة</a>
+                                <a class="dropdown-item" href="#">قائمة المدونة</a>
+                                <a class="dropdown-item" href="#">شبكة المدونة</a>
+                                <a class="dropdown-item" href="#">المنشورات الاخيرة</a>
+                            </div>
+                        </li>
+                        <li><button class="btn-primary rounded-pill p-2 m-1">0 123 4567 890</button></li>
+                    </ul>
+                </div>
             </div>
         </nav>
-
-        <div class="p-5 my-5 topsection">
+        <!-- header title -->
+        <div class="p-5 my-5 topsection slide-div">
             <p>حلول الموارد البشرية الذكية</p>
-            <h1 class="primarytext">Avantage</h1>
-            <h1 class="secondarytext">لخدمات الموارد البشرية</h1>
+            <h2 class="primarytext fw-bold fs-1">Avantage</h2>
+            <h2 class="secondarytext fw-bold fs-1">لخدمات الموارد البشرية</h2>
             <p>ضع على الطاولة استراتيجيات البقاء المربحة للجانبين لضمان الهيمنة الاستباقية. في نهاية المطاف، المضي
                 قدمًا، هو
                 أمر طبيعي جديد تطور من جيل إلى جيل.</p>
         </div>
-        <div class="container my-5">
-            <div class="row justify-content-center icons">
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
+        <!-- advantages icons and text -->
+        <div class="w-100 my-3">
+        <!-- advantages icons and text -->
+            <div class="row g-3 w-100 pe-5 justify-content-center icons">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-5 fade-in">
                     <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>بيئة إبداعية</h3>
+                        <span class="col-4 col-md-4  p-1 btn-primary rounded-circle"></span>
+                        <div class="col-8 col-md-8 ">
+                            <h3 class="fw-bold">بيئة إبداعية</h3>
                             <p>بث إدارة التغيير التشغيلي داخل سير العمل لإنشاء إطار عمل.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-5 fade-in">
                     <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>اختيار الموظفين</h3>
+                        <span class="col-4 col-md-4  p-1 btn-secondary rounded-circle"></span>
+                        <div class="col-8 col-md-8 ">
+                            <h3 class="fw-bold">اختيار الموظفين</h3>
                             <p>اختر الأشخاص المناسبين لفريقك، مع الفريق المثالي يأتي العم المثالي</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-5  fade-in">
                     <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>قيادة الفريق</h3>
+                        <span class="col-4 col-md-4  p-1 btn-primary rounded-circle"></span>
+                        <div class="col-8 col-md-8 ">
+                            <h3 class="fw-bold">قيادة الفريق</h3>
                             <p>اختر القائد الحازم الذي سيقود شركتك للتفوق</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-5  fade-in">
                     <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>بناء الفريق</h3>
+                        <span class="col-4 col-md-4  p-1 btn-secondary rounded-circle"></span>
+                        <div class="col-8 col-md-8 ">
+                            <h3 class="fw-bold">بناء الفريق</h3>
                             <p>ابن الفريق المناسب لشركتك</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-5  fade-in">
                     <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>الاستراتيجية</h3>
+                        <span class="col-4 col-md-4  p-1 btn-primary rounded-circle"></span>
+                        <div class="col-8 col-md-8 ">
+                            <h3 class="fw-bold">الاستراتيجية</h3>
                             <p>توصل لأفضل استراتيجيات النجاح مبساعدة خبرائنا</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 fade-in">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-5  fade-in">
                     <div class="row">
-                        <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
-                        <div class="col-8 col-md-8 col-lg-12">
-                            <h3>التواصل</h3>
+                        <span class="col-4 col-md-4  p-1 btn-secondary rounded-circle"></span>
+                        <div class="col-8 col-md-8 ">
+                            <h3 class="fw-bold">التواصل</h3>
                             <p>تواصل الفريق يعني النجاح الحتمي</p>
                         </div>
                     </div>
@@ -319,65 +343,200 @@
     </header>
     <hr class="mx-auto py-5" style="width: 500px;">
 
-    <div class="row">
+    <!-- circle percentage progress -->
+    <div class="row w-100 align-items-center circle justify-content-center">
         <div class="col-md-3 text-center fade-in">
-            <div class="progress blue">
+            <div class="progress first">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
                 </span>
                 <span class="progress-right">
                     <span class="progress-bar"></span>
                 </span>
-                <div class="progress-value">THE BEST</div>
+                <div class="progress-value p-3 justify-content-center align-items-center d-flex"><svg id="Layer_1"
+                        data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                        <title>Business-Collection</title>
+                        <path class="cls-1"
+                            d="M269.326,1650.593c20.433,0,37.188-16.756,37.188-37.188v-205.558c0-32.693,14.304-63.343,39.232-83.776
+                      c183.49-150.797,382.101-250.92,420.105-269.31c17.573-8.582,28.198-25.745,28.198-45.361V720.065
+                      c0-12.26-6.13-24.111-16.347-30.649c-27.381-18.391-43.727-49.04-43.727-81.733V307.315
+                      c0-128.729,104.617-233.347,233.347-233.347h64.569c128.729,0,233.347,104.618,233.347,233.347v299.959
+                      c0,32.692-16.347,63.343-43.728,81.732c-10.217,6.947-16.347,18.39-16.347,30.649v289.334c0,19.616,10.626,36.78,28.198,45.362
+                      c38.006,18.39,236.616,118.921,420.105,269.309c24.93,20.434,39.232,51.083,39.232,83.776v205.558
+                      c0,20.434,16.755,37.188,37.188,37.188c20.433,0,37.188-16.755,37.188-37.188v-205.558c0-54.761-24.111-106.252-66.612-140.989
+                      c-173.683-142.623-360.851-241.929-421.332-272.17V738.455c38.005-32.693,60.481-80.098,60.481-130.772V307.315
+                      C1339.615,137.72,1201.896,0,1032.301,0h-64.569C798.137,0,660.417,137.72,660.417,307.315v299.959
+                      c0,50.674,22.067,98.487,60.481,130.772v256.641c-60.481,30.241-247.241,129.138-421.332,272.17
+                      c-42.092,34.736-66.612,86.228-66.612,140.989v205.558C232.137,1634.246,248.893,1650.593,269.326,1650.593z" />
+                        <path class="cls-1"
+                            d="M1098.5,1055.578c-20.433,0-37.188,16.755-37.188,37.188c0,18.39-7.765,34.736-20.433,46.179
+                      c-2.452,1.635-4.904,3.27-6.947,5.722c-9.809,6.947-22.068,10.625-35.146,10.625c-34.327,0-62.525-27.789-62.525-62.525
+                      c0-20.434-16.755-37.188-37.188-37.188s-37.188,16.755-37.188,37.188c0,32.693,11.852,62.935,31.059,86.637l-30.241,696.362
+                      c-0.408,11.034,4.087,21.66,12.26,29.016l95.219,85.819c6.947,6.539,15.938,9.399,24.929,9.399c8.99,0,17.981-3.27,24.929-9.399
+                      l97.67-87.454c8.174-7.355,12.669-17.98,12.261-29.015l-31.059-688.189c22.885-24.521,36.779-57.214,36.779-93.176
+                      C1135.692,1071.925,1118.934,1055.578,1098.5,1055.578z M995.93,1913.363l-57.621-51.9l27.38-636.698
+                      c10.625,2.861,21.659,4.087,33.102,4.087c9.399,0,18.39-0.817,26.972-2.86l28.607,633.837L995.93,1913.363z" />
+                    </svg>
+                </div>
             </div>
-            <h3>الأشخاص المناسبين</h3>
+            <h3 class="fw-bold">الأشخاص المناسبين</h3>
             <p>تنمية العمليات المثلى والبنى التكتيكية بسرعة. تكرار الموضوع الاستراتيجي التساهمي بالكامل</p>
         </div>
         <div class="col-md-3 text-center fade-in">
-            <div class="progress blue">
+            <div class="progress  sec">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
                 </span>
                 <span class="progress-right">
                     <span class="progress-bar"></span>
                 </span>
-                <div class="progress-value">THE BEST</div>
+                <div class="progress-value p-3 d-flex align-items-center justify-content-center"><svg id="Layer_1"
+                        data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                        <title>Business-Collection</title>
+                        <path class="cls-2" d="M1843.08,1968.081l124.795-124.794c16.475-16.475,16.475-42.834,0-59.309l-614.498-614.497
+                      l-184.102,184.102l614.497,614.498C1800.247,1984.555,1826.606,1984.555,1843.08,1968.081z" />
+                        <path class="cls-1" d="M672.982,276.153c-219.111,0-397.447,178.336-397.447,397.446c0,20.593,16.887,37.479,37.479,37.479
+                      s37.479-16.887,37.479-37.479c0-177.924,144.563-322.487,322.488-322.487c20.593,0,37.479-16.887,37.479-37.479
+                      C710.461,292.628,693.575,276.153,672.982,276.153z" />
+                        <path class="cls-1" d="M1379.736,1143.122c-14.415-14.415-38.303-14.415-52.718,0l-65.486,65.485l-86.903-86.902
+                      c106.673-119.028,171.747-276.359,171.747-448.518c0-371.087-301.895-672.981-672.982-672.981C302.307,0.206,0,302.101,0,673.188
+                      c0,371.088,301.895,672.982,672.982,672.982c172.157,0,329.077-65.074,448.517-171.747l86.903,86.903l-65.486,65.486
+                      c-7.002,7.001-11.12,16.474-11.12,26.358s4.118,19.357,11.12,26.359l584.432,584.432c23.064,23.064,53.542,35.832,86.079,35.832
+                      s63.015-12.768,86.079-35.832l64.662-64.662c23.064-23.064,35.832-53.542,35.832-86.079s-12.768-63.015-35.832-86.079
+                      L1379.736,1143.122z M74.959,673.188c0-329.901,268.533-598.435,598.435-598.435s598.435,268.534,598.435,598.435
+                      c0,329.901-268.533,598.436-598.435,598.436S74.959,1003.089,74.959,673.188z M1911.449,1846.993l-64.662,64.663
+                      c-9.061,9.061-20.593,14.003-33.36,14.003s-24.3-4.942-33.36-14.003l-558.073-558.073l131.384-131.384l558.072,558.072
+                      c9.062,9.062,14.004,20.594,14.004,33.361S1920.099,1838.345,1911.449,1846.993z" />
+                    </svg></div>
             </div>
-            <h3>الاختيار الصحيح</h3>
+            <h3 class="fw-bold">الاختيار الصحيح</h3>
             <p>نشر التسليمات المتفوقة بدقة مع تصميمات التطبيقات الممكّنة على الويب.</p>
         </div>
         <div class="col-md-3 text-center fade-in">
-            <div class="progress blue">
+            <div class="progress third">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
                 </span>
                 <span class="progress-right">
                     <span class="progress-bar"></span>
                 </span>
-                <div class="progress-value">THE BEST</div>
+                <div class="progress-value p-3 d-flex align-items-center justify-content-center"><svg id="Layer_1"
+                        data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.658 290.658">
+                        <title>Icons-Business</title>
+                        <circle class="cls-2" cx="145.313" cy="173.438" r="84.375" />
+                        <path class="cls-1"
+                            d="M276.563,65.625h-37.509c-0.042-6.08-3.947-11.213-9.366-13.172V42.347
+                      c0-18.178-14.794-32.972-32.972-32.972H94.003c-18.183,0-33.066,14.794-33.066,32.972V52.42
+                      c-4.688,1.936-9.323,7.092-9.366,13.205H14.063C6.309,65.625,0,71.935,0,79.688v187.5c0,7.753,6.309,14.063,14.063,14.063h262.5
+                      c7.753,0,14.063-6.309,14.063-14.063v-187.5C290.625,71.935,284.316,65.625,276.563,65.625z M98.428,65.625
+                      c-0.042-6.08-3.947-11.213-9.366-13.172v-6.609c0-4.598,3.745-8.344,8.344-8.344h95.813c4.598,0,8.344,3.745,8.344,8.344v6.605
+                      c-5.419,1.959-9.323,7.097-9.366,13.172H98.428V65.625z M206.344,60.938h18.563c2.606,0,4.73,2.095,4.781,4.688h-28.125
+                      C201.614,63.033,203.738,60.938,206.344,60.938z M70.313,42.347c0-13.013,10.678-23.597,23.691-23.597h102.713
+                      c13.013,0,23.597,10.584,23.597,23.597v9.216h-9.375v-5.719c0-9.769-7.95-17.719-17.719-17.719H97.406
+                      c-9.769,0-17.719,7.95-17.719,17.719v5.719h-9.375v-9.216H70.313z M65.719,60.938h18.563c2.606,0,4.73,2.095,4.781,4.688H60.938
+                      C60.989,63.033,63.113,60.938,65.719,60.938z M14.063,75h37.5h46.875h93.75h46.875h37.5c2.583,0,4.688,2.105,4.688,4.688v56.836
+                      l-52.172,6.956c-12.342-34.392-45.178-59.105-83.766-59.105s-71.424,24.712-83.766,59.105l-52.172-6.956V79.688
+                      C9.375,77.105,11.48,75,14.063,75z M194.893,168.75c-0.047-1.448-0.131-2.873-0.225-4.298c4.298-2.156,7.284-6.563,7.284-11.691
+                      c0-6.712-5.081-12.197-11.588-12.97c-0.9-3.089-1.894-6.028-2.991-8.813c5.85-3.15,11.334-7.017,16.43-11.475
+                      c12.113,13.13,19.847,30.291,20.958,49.247H194.893z M150,97.327c6.722,4.683,17.227,13.809,25.097,29.1
+                      c-7.931,3.202-16.397,5.03-25.097,5.536V97.327z M123.614,110.55c0,2.067-1.683,3.75-3.75,3.75s-3.75-1.683-3.75-3.75
+                      s1.683-3.75,3.75-3.75S123.614,108.483,123.614,110.55z M117.216,123.408c0.853,0.173,1.739,0.267,2.648,0.267
+                      c7.238,0,13.125-5.888,13.125-13.125c0-2.077-0.53-4.017-1.392-5.766c3.328-3.192,6.445-5.644,9.028-7.444v34.622
+                      c-8.7-0.506-17.161-2.334-25.092-5.531C116.063,125.405,116.649,124.411,117.216,123.408z M140.625,141.338v27.412h-35.489
+                      c0.45-12.239,2.658-23.517,6.595-33.731C120.849,138.732,130.603,140.817,140.625,141.338z M140.625,178.125v27.328
+                      c-0.342,0.019-0.68,0.052-1.022,0.075c-2.245-4.012-6.492-6.764-11.409-6.764c-6.792,0-12.328,5.203-12.994,11.817
+                      c-1.158,0.417-2.306,0.858-3.445,1.327c-3.609-9.319-6.056-20.55-6.558-33.778h35.428V178.125z M131.944,211.885
+                      c0,2.067-1.683,3.75-3.75,3.75s-3.75-1.683-3.75-3.75s1.683-3.75,3.75-3.75S131.944,209.817,131.944,211.885z M117.741,219.736
+                      c2.395,3.183,6.169,5.273,10.453,5.273c5.827,0,10.725-3.844,12.431-9.112v33.647c-6.684-4.673-17.081-13.842-24.942-29.02
+                      C116.367,220.252,117.052,219.989,117.741,219.736z M150,249.614v-34.669c8.672,0.516,17.109,2.419,25.059,5.625
+                      C167.185,235.908,156.732,245.002,150,249.614z M150,205.463v-27.338h35.428c-0.492,13.261-2.906,24.488-6.469,33.792
+                      C169.796,208.177,160.013,205.988,150,205.463z M150,168.75v-27.412c10.022-0.52,19.767-2.606,28.884-6.319
+                      c0.867,2.241,1.659,4.589,2.386,7.045c-3.356,2.381-5.569,6.277-5.569,10.692c0,5.991,4.059,11.002,9.553,12.567
+                      c0.075,1.13,0.112,2.273,0.155,3.422H150V168.75z M188.827,156.511c-2.067,0-3.75-1.683-3.75-3.75s1.683-3.75,3.75-3.75
+                      s3.75,1.683,3.75,3.75S190.899,156.511,188.827,156.511z M183.558,122.358c-6.089-11.962-13.641-20.555-20.302-26.494
+                      c12.694,2.939,24.23,8.888,33.806,17.1C192.853,116.578,188.344,119.728,183.558,122.358z M124.739,98.391
+                      c-1.148-0.464-2.386-0.722-3.67-0.839c2.091-0.67,4.233-1.214,6.394-1.711C126.567,96.638,125.667,97.491,124.739,98.391z
+                       M109.336,118.313c-0.769,1.341-1.542,2.681-2.245,4.059c-4.791-2.63-9.309-5.789-13.528-9.408
+                      c4.936-4.233,10.402-7.838,16.27-10.772c-1.903,2.278-3.094,5.17-3.094,8.363C106.739,113.466,107.724,116.133,109.336,118.313z
+                       M86.822,119.503c5.091,4.453,10.575,8.325,16.425,11.475c-4.514,11.452-7.017,24.084-7.481,37.772H65.864
+                      C66.975,149.794,74.705,132.633,86.822,119.503z M95.728,178.125c0.502,14.897,3.338,27.413,7.416,37.842
+                      c-5.85,3.159-11.363,6.956-16.383,11.339c-12.08-13.12-19.791-30.258-20.897-49.181H95.728z M107.03,224.625
+                      c6.042,11.85,13.556,20.428,20.198,26.348c-12.623-2.944-24.094-8.864-33.633-17.03
+                      C97.758,230.391,102.249,227.264,107.03,224.625z M183.596,224.625c4.762,2.616,9.258,5.723,13.444,9.309
+                      c-9.539,8.17-21.014,14.095-33.647,17.039C170.035,245.053,177.553,236.475,183.596,224.625z M203.869,227.297
+                      c-5.058-4.42-10.561-8.212-16.378-11.348c4.073-10.425,6.909-22.936,7.406-37.823h29.864
+                      C223.655,197.044,215.949,214.182,203.869,227.297z M276.563,271.875h-262.5c-2.583,0-4.688-2.105-4.688-4.688V145.978
+                      l49.444,6.595c-1.617,6.703-2.569,13.669-2.569,20.864c0,49.111,39.952,89.063,89.063,89.063s89.063-39.952,89.063-89.063
+                      c0-7.195-0.952-14.161-2.569-20.864l49.444-6.595v121.209C281.25,269.771,279.146,271.875,276.563,271.875z" />
+                    </svg></div>
             </div>
-            <h3>تعاون الفريق</h3>
+            <h3 class="fw-bold">تعاون الفريق</h3>
             <p>إعادة وساطة العمليات المتكاملة باستمرار من خلال رأس المال الفكري السليم من الناحية الفنية.</p>
         </div>
         <div class="col-md-3 text-center fade-in">
-            <div class="progress blue">
+            <div class="progress fourth">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
                 </span>
                 <span class="progress-right">
                     <span class="progress-bar"></span>
                 </span>
-                <div class="progress-value">THE BEST</div>
+                <div class="progress-value p-3 d-flex justify-content-center align-items-center"><svg id="Layer_1"
+                        data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                        <title>Business-Collection</title>
+                        <path id="XMLID_1866_" class="cls-2" d="M1968.5,1674.76v-101.369c0-21.255-9.402-41.692-26.16-55.181
+                      c-91.56-75.21-190.067-125.077-210.505-134.887c-2.452-1.227-3.679-3.27-3.679-6.131v-142.653
+                      c17.984-11.854,29.838-32.291,29.838-55.59v-147.966c0-73.575-59.677-133.252-133.251-133.252h-15.941h-15.94
+                      c-73.575,0-133.252,59.678-133.252,133.252v147.967c0,23.298,11.854,43.327,29.838,55.589v142.653
+                      c0,2.452-1.226,4.905-3.678,6.131c-20.029,9.81-118.946,59.677-210.506,134.887c-16.35,13.488-26.159,33.926-26.159,55.181
+                      v101.369" />
+                        <path class="cls-1"
+                            d="M643.659,1288.264c20.421,0,37.166-16.746,37.166-37.166v-100.471c0-10.209,4.492-19.604,12.252-26.139
+                      c87.81-72.289,182.97-120.072,200.939-129.059c14.703-7.352,24.505-22.463,24.505-39.207V814.912
+                      c0-12.252-6.126-24.097-16.336-30.631c-8.169-5.31-13.069-14.294-13.069-24.097V613.972c0-52.276,42.475-94.752,94.751-94.752
+                      h31.448c52.277,0,94.752,42.475,94.752,94.752v146.212c0,9.803-4.901,18.787-13.069,24.097
+                      c-10.21,6.943-16.336,18.379-16.336,30.631v141.311c0,16.744,9.802,31.855,24.504,39.207
+                      c18.379,8.986,113.539,56.77,200.939,129.059c7.76,6.535,12.253,15.93,12.253,26.139v100.471c0,20.42,16.745,37.166,37.165,37.166
+                      c20.421,0,37.166-16.746,37.166-37.166v-100.471c0-32.672-14.295-62.895-39.208-83.316
+                      c-77.599-64.121-160.914-110.271-198.488-129.875V832.064c18.787-19.195,29.405-44.925,29.405-72.289V613.972
+                      c0-93.118-75.965-169.083-169.083-169.083h-31.447c-93.118,0-169.083,75.557-169.083,169.083v146.212
+                      c0,27.364,10.618,53.094,29.405,72.289v105.371c-37.574,19.604-120.481,65.756-198.489,129.875
+                      c-24.913,20.422-39.207,51.053-39.207,83.316v100.471C606.902,1271.926,623.238,1288.264,643.659,1288.264z" />
+                        <path class="cls-1" d="M1451.501,1352.979c-37.574,19.604-120.482,65.755-198.489,129.875
+                      c-24.913,20.421-39.207,51.052-39.207,83.316v100.47c0,20.421,16.744,37.166,37.165,37.166s37.166-16.745,37.166-37.166v-100.47
+                      c0-10.21,4.492-19.604,12.252-26.139c87.81-72.289,182.97-120.073,200.939-129.059c15.111-7.351,24.505-22.462,24.505-39.207
+                      v-141.312c0-12.252-6.126-24.096-16.336-30.631c-8.169-5.31-13.07-14.295-13.07-24.097v-146.212
+                      c0-52.276,42.476-94.752,94.752-94.752h31.448c52.277,0,94.752,42.476,94.752,94.752v146.212c0,9.802-4.901,18.787-13.069,24.097
+                      c-10.21,6.943-16.336,18.379-16.336,30.631v141.312c0,16.745,9.393,31.856,24.504,39.207
+                      c18.379,8.985,113.539,56.77,200.939,129.059c7.76,6.535,12.253,15.929,12.253,26.139v100.47
+                      c0,20.421,16.745,37.166,37.165,37.166c20.422,0,37.166-16.745,37.166-37.166v-100.47c0-32.673-14.295-62.896-39.207-83.316
+                      c-78.008-64.12-160.915-110.271-198.489-129.875v-105.371c18.787-19.195,29.405-44.925,29.405-72.289v-146.212
+                      c0-93.118-75.965-169.083-169.082-169.083h-31.448c-93.118,0-169.083,75.965-169.083,169.083v146.212
+                      c0,27.364,10.618,53.094,29.405,72.289V1352.979L1451.501,1352.979z" />
+                        <path class="cls-1" d="M37.166,1703.398c20.421,0,37.166-16.745,37.166-37.166v-100.47c0-10.21,4.493-19.604,12.252-26.139
+                      c87.809-72.289,182.969-120.073,200.939-129.059c15.111-7.352,24.504-22.463,24.504-39.208v-141.311
+                      c0-12.252-6.126-24.097-16.336-30.631c-8.168-5.31-13.069-14.295-13.069-24.097v-146.212c0-52.276,42.475-94.752,94.752-94.752
+                      h31.448c52.276,0,94.751,42.475,94.751,94.752v146.212c0,9.802-4.9,18.787-13.069,24.097
+                      c-10.21,6.943-16.336,18.379-16.336,30.631v141.311c0,16.745,9.394,31.856,24.505,39.208
+                      c18.378,8.985,113.539,56.77,200.939,129.059c7.76,6.535,12.252,15.929,12.252,26.139v100.47
+                      c0,20.421,16.745,37.166,37.166,37.166s37.165-16.745,37.165-37.166v-100.47c0-32.673-14.294-62.896-39.207-83.316
+                      c-78.008-64.121-160.915-110.271-198.489-129.875V1247.2c18.787-19.195,29.406-44.925,29.406-72.289v-146.212
+                      c0-93.118-75.965-169.083-169.083-169.083h-31.448c-93.118,0-169.083,75.965-169.083,169.083v146.212
+                      c0,27.364,10.619,53.094,29.406,72.289v105.371c-37.574,19.604-120.482,65.754-198.489,129.875
+                      C14.294,1502.867,0,1533.498,0,1565.763v100.47C0,1687.062,16.745,1703.398,37.166,1703.398z" />
+                    </svg>
+                </div>
             </div>
-            <h3>مزيد من التفوق</h3>
+            <h3 class="fw-bold">مزيد من التفوق</h3>
             <p>نشر المقاييس الموحدة بشكل كبير بعد تغيير عمليات تسوية الموارد.</p>
         </div>
     </div>
 
+    <!-- solutions and services offers section -->
     <div class="my-5 w-100 backimg"
-        style="height: 500px; background-image: url(./images/background/img-blog-26-1280x1280.jpg);">
+        style="height: 500px; background-image: url(./images/background/bgn-quote.jpg);">
         <div class="d-flex align-items-center justify-content-center h-100">
-            <div class="w-100 mx-auto text-center fade-in" style="padding-top: 200px; padding-bottom: 200px;">
+            <div class="w-100 mx-auto text-center" style="padding-top: 200px; padding-bottom: 200px;">
                 <p>احصل على الحلول بسرعة</p>
                 <p> <strong class="fs-1 primarytext">بحاجة إلى </strong><strong class="fs-1 secondarytext">مستشاري
                         الموارد البشرية </strong><strong class="fs-1 primarytext">من الدرجة الاولى</strong></p>
@@ -385,23 +544,54 @@
             </div>
         </div>
     </div>
+
+    <!-- offers -->
     <div class="p-5 my-5 topsection">
         <p>وفر مع حزم التسعير لدينا</p>
-        <h1 class="primarytext">استشارات الموارد البشرية</h1>
-        <h1 class="secondarytext">اصبحت سهلة التكلفة</h1>
+        <h2 class="primarytext fs-1 fw-bold">استشارات الموارد البشرية</h2>
+        <h2 class="secondarytext fs-1 fw-bold">اصبحت سهلة التكلفة</h2>
         <p>ابتكار مصادر داخلية أو عضوية دقيقة بمصداقية مع الالتزام بمعايير عالية في الاستعداد للويب. توسيع نطاق الكفاءات
             الأساسية المقاومة للمستقبل بقوة في مواجهة التجارب المؤثرة.</p>
     </div>
 
+    <!-- subscripe cards -->
     <div class="row p-2 my-2  gx-2 align-items-center">
         <div class="p-2 col-md-4 fade-in">
             <div class="card bg-light shadow">
-                <div class="card-body icon text-center justify-content-center">
-                    <span class="p-1 btn-secondary rounded-circle"></span>
+                <div class="card-body row icon text-center justify-content-center">
+                    <span class="col-4 col-md-4 col-lg-12 btn-secondary rounded-circle">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                            <title>Business-Collection</title>
+                                <path class="cls-2" d="M1388.322,229.073H610.861c-26.949,0-48.999,22.05-48.999,49v538.179c0,26.949,22.05,48.999,48.999,48.999
+                                    h777.461c26.949,0,48.999-22.05,48.999-48.999V278.073C1437.321,251.123,1415.271,229.073,1388.322,229.073z M1194.365,669.661
+                                    H804.818c-20.416,0-37.158-16.741-37.158-37.158c0-20.416,16.742-37.158,37.158-37.158h389.547
+                                    c20.416,0,37.158,16.742,37.158,37.158C1231.523,652.92,1214.781,669.661,1194.365,669.661z M1194.365,498.571H804.818
+                                    c-20.416,0-37.158-16.742-37.158-37.158c0-20.417,16.742-37.158,37.158-37.158h389.547c20.416,0,37.158,16.741,37.158,37.158
+                                    C1231.523,481.829,1214.781,498.571,1194.365,498.571z"/>
+                                <path class="cls-1" d="M103.308,1807.677h372.396c57.167,0,103.308-46.55,103.308-103.308v-201.715
+                                    c0-57.166-46.55-103.308-103.308-103.308h-149.04V1224.99c0-30.625,24.908-55.941,55.941-55.941h580.236v230.298h-149.04
+                                    c-57.166,0-103.308,46.55-103.308,103.308v201.715c0,57.166,46.55,103.308,103.308,103.308h372.396
+                                    c57.167,0,103.308-46.55,103.308-103.308v-201.715c0-57.166-46.55-103.308-103.308-103.308h-149.04v-230.298h580.236
+                                    c30.625,0,55.941,24.908,55.941,55.941v174.356h-149.04c-57.166,0-103.308,46.55-103.308,103.308v201.715
+                                    c0,57.166,46.55,103.308,103.308,103.308h372.396c57.167,0,103.308-46.55,103.308-103.308v-201.715
+                                    c0-57.166-46.55-103.308-103.308-103.308h-149.04V1224.99c0-71.458-58.392-129.85-129.85-129.85H1036.75v-193.14h302.164
+                                    c74.725,0,135.565-60.841,135.565-135.565V327.889c0-74.724-60.841-135.565-135.565-135.565H660.678
+                                    c-74.725,0-135.565,60.841-135.565,135.565v438.547c0,74.725,60.841,135.565,135.565,135.565h302.164v192.731H382.605
+                                    c-71.458,0-129.849,58.392-129.849,129.85v174.356H103.308C46.141,1398.938,0,1445.488,0,1502.246v201.715
+                                    C0,1761.535,46.55,1807.677,103.308,1807.677z M1215.189,1502.654v201.715c0,16.333-13.066,29.4-29.399,29.4H813.394
+                                    c-16.333,0-29.4-13.067-29.4-29.4v-201.715c0-16.333,13.067-29.399,29.4-29.399h372.396
+                                    C1202.123,1473.255,1215.189,1486.729,1215.189,1502.654z M1925.275,1502.654v201.715c0,16.333-13.066,29.4-29.399,29.4h-372.397
+                                    c-16.333,0-29.399-13.067-29.399-29.4v-201.715c0-16.333,13.066-29.399,29.399-29.399h372.397
+                                    C1911.801,1473.255,1925.275,1486.729,1925.275,1502.654z M599.02,766.436V327.889c0-33.891,27.767-61.657,61.658-61.657h677.828
+                                    c33.891,0,61.657,27.766,61.657,61.657v438.547c0,33.892-27.767,61.658-61.657,61.658H660.678
+                                    C626.378,828.093,599.02,800.327,599.02,766.436z M73.908,1502.654c0-16.333,13.066-29.399,29.4-29.399h372.396
+                                    c16.333,0,29.4,13.066,29.4,29.399v201.715c0,16.333-13.067,29.4-29.4,29.4H103.308c-16.333,0-29.4-13.067-29.4-29.4V1502.654z"/>
+                        </svg>
+                    </span>
                     <hr>
-                    <h5 class="card-title">حزمة المبتدئين</h5>
+                    <h4 class="card-title">حزمة المبتدئين</h4>
                     <p>الوصول الاساسي للموارد البشرية</p>
-                    <h2 class="secondarytext fw-bold">2999$</h2>
+                    <h1 class="secondarytext fw-bold">2999$</h1>
                     <hr>
                     <ul class="list-group list-group-flush text-end">
                         <li class="list-group-item">&#10003; تحسين الموظفين الحاليين</li>
@@ -415,12 +605,50 @@
         </div>
         <div class="p-2 col-md-4 fade-in">
             <div class="card bg-white shadow">
-                <div class="card-body icon text-center justify-content-center">
-                    <span class="col-4 col-md-4 col-lg-12 p-1 btn-primary rounded-circle"></span>
+                <div class="card-body row icon text-center justify-content-center">
+                    <span class="col-4 col-md-4 col-lg-12 btn-primary rounded-circle">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                            <title>Business-Collection</title>
+                                <circle id="XMLID_496_" class="cls-2" cx="575.398" cy="990.192" r="113.2"/>
+                                <circle id="XMLID_495_" class="cls-2" cx="1000" cy="990.192" r="113.2"/>
+                                <circle id="XMLID_491_" class="cls-2" cx="1424.602" cy="990.192" r="113.2"/>
+                                <path class="cls-1" d="M150.388,1713.526c82.959,0,150.388-67.429,150.388-150.388c0-69.064-46.996-127.503-110.748-144.667
+                                    v-114.018h349.407v112.792c-65.794,15.938-114.834,75.193-114.834,145.893c0,82.959,67.43,150.388,150.389,150.388
+                                    c82.958,0,150.388-67.429,150.388-150.388c0-69.473-47.813-128.32-111.974-145.076v-282.386
+                                    c64.16-17.164,111.974-75.604,111.974-145.076s-47.813-128.32-111.974-145.075v-98.079h349.407v97.262
+                                    c-64.978,16.755-113.2,75.603-113.2,145.484c0,82.958,67.43,150.388,150.389,150.388s150.389-67.43,150.389-150.388
+                                    c0-70.29-48.223-129.138-113.2-145.484v-98.079h349.407v98.079c-64.16,17.164-111.974,75.603-111.974,145.075
+                                    s47.813,128.32,111.974,145.076v94.81H1000c-20.434,0-37.188,16.755-37.188,37.188v150.389
+                                    c-64.978,16.755-113.2,75.603-113.2,145.483c0,82.959,67.43,150.389,150.389,150.389s150.389-67.43,150.389-150.389
+                                    c0-70.29-48.223-129.138-113.2-145.483v-113.2h349.407v113.608c-64.16,17.164-111.974,75.603-111.974,145.075
+                                    c0,82.959,67.43,150.389,150.388,150.389c82.959,0,150.389-67.43,150.389-150.389c0-70.698-49.04-129.955-114.835-145.893
+                                    v-112.791h349.407v114.017c-63.751,17.573-110.747,75.604-110.747,144.667c0,82.959,67.429,150.389,150.388,150.389
+                                    S2000,1645.688,2000,1562.729c0-71.107-49.449-130.772-116.061-146.302v-149.57c0-20.434-16.756-37.188-37.188-37.188h-386.188
+                                    v-94.401c65.795-15.938,114.835-75.194,114.835-145.893c0-70.699-49.04-129.955-114.835-145.894V709.849
+                                    c0-20.433-16.755-37.188-37.188-37.188h-386.187v-90.314c64.978-16.755,113.199-75.603,113.199-145.484
+                                    c0-82.958-67.429-150.388-150.388-150.388s-150.389,67.43-150.389,150.388c0,70.29,48.223,129.138,113.2,145.484v90.314H576.624
+                                    c-20.433,0-37.188,16.756-37.188,37.188v134.45c-65.795,15.938-114.834,75.194-114.834,145.894
+                                    c0,70.698,49.039,129.955,114.834,145.893v94.401H153.249c-20.433,0-37.188,16.755-37.188,37.188v149.162
+                                    C49.857,1432.366,0,1492.031,0,1563.139C0,1646.098,67.43,1713.526,150.388,1713.526z M1076.42,990.192
+                                    c0,42.092-34.328,76.42-76.42,76.42s-76.42-34.328-76.42-76.42c0-42.093,34.328-76.421,76.42-76.421
+                                    S1076.42,948.1,1076.42,990.192z M1076.42,1563.139c0,42.092-34.328,76.42-76.42,76.42s-76.42-34.328-76.42-76.42
+                                    c0-42.093,34.328-76.42,76.42-76.42S1076.42,1521.046,1076.42,1563.139z M1925.623,1563.139c0,42.092-34.328,76.42-76.42,76.42
+                                    s-76.42-34.328-76.42-76.42c0-42.093,34.327-76.42,76.42-76.42C1891.704,1486.719,1925.623,1521.046,1925.623,1563.139z
+                                     M1501.021,1563.139c0,42.092-34.328,76.42-76.42,76.42c-42.093,0-76.42-34.328-76.42-76.42c0-42.093,34.327-76.42,76.42-76.42
+                                    C1466.693,1486.719,1501.021,1521.046,1501.021,1563.139z M1501.021,990.192c0,42.092-34.328,76.42-76.42,76.42
+                                    c-42.093,0-76.42-34.328-76.42-76.42c0-42.093,34.327-76.421,76.42-76.421C1466.693,913.771,1501.021,948.1,1501.021,990.192z
+                                     M923.58,436.861c0-42.092,34.328-76.42,76.42-76.42s76.42,34.328,76.42,76.42c0,42.093-34.328,76.42-76.42,76.42
+                                    S923.58,478.954,923.58,436.861z M651.41,1563.139c0,42.092-34.328,76.42-76.42,76.42c-42.093,0-76.421-34.328-76.421-76.42
+                                    c0-42.093,34.328-76.42,76.421-76.42C617.082,1486.719,651.41,1521.046,651.41,1563.139z M498.979,990.192
+                                    c0-42.093,34.328-76.421,76.42-76.421c42.093,0,76.42,34.328,76.42,76.421c0,42.092-34.327,76.42-76.42,76.42
+                                    C533.307,1066.203,498.979,1032.284,498.979,990.192z M150.388,1486.719c42.092,0,76.42,34.327,76.42,76.42
+                                    c0,42.092-34.328,76.42-76.42,76.42s-76.42-34.328-76.42-76.42C74.377,1521.046,108.296,1486.719,150.388,1486.719z"/>
+                        </svg>
+                    </span>
                     <hr>
-                    <h5 class="card-title">حزمة المحترفين</h5>
+                    <h4 class="card-title">حزمة المحترفين</h4>
                     <p>الوصول الشامل للموارد البشرية</p>
-                    <h2 class="primarytext fw-bold">4999$</h2>
+                    <h1 class="primarytext fw-bold">4999$</h1>
                     <hr>
                     <ul class="list-group list-group-flush text-end">
                         <li class="list-group-item">&#10003; تحسين الموظفين الحاليين</li>
@@ -437,12 +665,44 @@
         </div>
         <div class="p-2 col-md-4 fade-in">
             <div class="card bg-light shadow">
-                <div class="card-body icon text-center justify-content-center">
-                    <span class="col-4 col-md-4 col-lg-12 p-1 btn-secondary rounded-circle"></span>
+                <div class="card-body row icon text-center justify-content-center">
+                    <span class="col-4 col-md-4 col-lg-12 btn-secondary rounded-circle">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+                            <title>Business-Collection</title>
+                                <path id="XMLID_1979_" class="cls-2" d="M866.122,364.694h267.348c6.53,0,11.837,5.306,11.837,11.837V545.51
+                                    c0,6.531-5.307,11.837-11.837,11.837H866.123c-6.531,0-11.837-5.306-11.837-11.837V376.531
+                                    C854.693,370,860,364.694,866.122,364.694z"/>
+                                <path class="cls-1" d="M1939.184,1405.51h-84.898v-137.959c0-20.408-16.734-37.143-37.143-37.143h-371.836v-96.734h85.306
+                                    c33.47,0,60.816-27.348,60.816-60.816V927.551c0-33.469-27.347-60.816-60.816-60.816h-84.897V728.775
+                                    c0-20.408-16.735-37.143-37.144-37.143h-371.837v-97.959h84.898c33.469,0,60.816-27.348,60.816-60.408V387.959
+                                    c0-33.469-27.348-60.816-60.816-60.816H877.959c-33.469,0-60.816,27.347-60.816,60.816v145.307
+                                    c0,33.469,27.348,60.408,60.816,60.408h84.898v97.959H591.021c-20.408,0-37.144,16.734-37.144,37.143v137.959h-84.489
+                                    c-33.47,0-60.816,27.348-60.816,60.816v145.715c0,33.469,27.347,60.816,60.816,60.816h84.897v96.734H182.857
+                                    c-20.408,0-37.143,16.734-37.143,37.143v137.959H60.816c-33.47,0-60.816,27.348-60.816,60.816v145.307
+                                    c0,33.469,27.347,60.816,60.816,60.816H304.49c33.469,0,60.817-27.348,60.817-60.816v-145.307
+                                    c0-33.469-27.348-60.816-60.817-60.816h-84.898v-101.224h334.693v101.224h-84.897c-33.47,0-60.816,27.348-60.816,60.816v145.307
+                                    c0,33.469,27.347,60.816,60.816,60.816h243.674c33.469,0,60.815-27.348,60.815-60.816v-145.307
+                                    c0-33.469-27.347-60.816-60.815-60.816h-84.898v-271.836h84.898c33.469,0,60.815-27.348,60.815-60.816V927.959
+                                    c0-33.469-27.347-60.816-60.815-60.816h-84.898V765.918h334.694v101.225h-84.898c-33.469,0-60.816,27.348-60.816,60.816v145.307
+                                    c0,33.469,27.348,60.816,60.816,60.816h243.674c33.469,0,60.816-27.348,60.816-60.816V927.959
+                                    c0-33.469-27.348-60.816-60.816-60.816h-84.898V765.918h334.694v101.225h-84.898c-33.469,0-60.815,27.348-60.815,60.816v145.307
+                                    c0,33.469,27.347,60.816,60.815,60.816h84.898v96.734H1000c-20.408,0-37.143,16.734-37.143,37.143v137.959h-84.898
+                                    c-33.469,0-60.816,27.348-60.816,60.816v145.307c0,33.469,27.348,60.816,60.816,60.816h243.674
+                                    c33.469,0,60.816-27.348,60.816-60.816v-145.307c0-33.469-27.348-60.816-60.816-60.816h-84.898v-101.224h334.694v101.224h-84.898
+                                    c-33.469,0-60.815,27.348-60.815,60.816v145.307c0,33.469,27.347,60.816,60.815,60.816h244.082
+                                    c33.47,0,60.816-27.348,60.816-60.816v-145.307c0-33.469-27.347-60.816-60.816-60.816h-84.897v-101.224h334.693v101.224h-84.898
+                                    c-33.469,0-60.816,27.348-60.816,60.816v145.307c0,33.469,27.348,60.816,60.816,60.816h243.674
+                                    c33.47,0,60.816-27.348,60.816-60.816v-145.307C1999.592,1432.857,1972.652,1405.51,1939.184,1405.51z M891.429,401.429h216.734
+                                    v118.367H891.429V401.429z M291.021,1598.163H74.286v-118.367h216.735V1598.163z M699.592,1598.163H482.857v-118.367h216.734
+                                    V1598.163z M699.592,1059.796H482.857V941.429h216.734V1059.796z M1108.571,1059.796H891.837V941.429h216.734V1059.796z
+                                     M1300.408,941.429h216.734v118.367h-216.734V941.429z M1108.571,1598.163H891.837v-118.367h216.734V1598.163z M1517.143,1598.163
+                                    h-216.734v-118.367h216.734V1598.163z M1925.715,1598.163h-216.735v-118.367h216.735V1598.163z"/>
+                        </svg>
+                    </span>
                     <hr>
-                    <h5 class="card-title"> الحزمة الاساسية</h5>
+                    <h4 class="card-title"> الحزمة الاساسية</h4>
                     <p>الوصول لمعظم للموارد البشرية</p>
-                    <h2 class="secondarytext fw-bold">3999$</h2>
+                    <h1 class="secondarytext fw-bold">3999$</h1>
                     <hr>
                     <ul class="list-group list-group-flush text-end">
                         <li class="list-group-item">&#10003; تحسين الموظفين الحاليين</li>
@@ -457,73 +717,78 @@
 
 
     </div>
+
     <footer>
+        <!-- top part of footer -->
         <div class="row m-2 p-2 justify-content-center">
-            <div class="col-md-4 p-2">
+            <!-- contact information -->
+            <div class="col-md-3 p-2">
                 <h2 class="primarytext">مقرنا</h2>
                 <p>تنمية الرؤية العالمية الشاملة للابتكار المدمر بشكل عضوي من خلال التمكين</p>
                 <p><a href=""><i class="fa fa-phone"></i> 020 7946 0200</a></p>
                 <p><a href=""><i class="fa fa-envelope"></i> info@mailus.oc.ul</a></p>
                 <p><a href=""><i class="fa fa-globe"></i> avantage.co.uk</a></p>
             </div>
-            <div class="g-0 col-md-4 p-2">
+            <!-- location information -->
+            <div class="g-0 col-md-6 p-2">
                 <p>مواقعنا</p>
                 <h2>اين تجدنا</h2>
                 <div class="row">
                     <div class="col-md-6"><img loading="lazy" src="./images/background/img-footer-map.png"
                             class="img-fluid" alt=""></div>
                     <div class="col">
-                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
-                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
-                        <p><a href=""><i class="fa fa-map-marker"></i>  مدينة: 123 456 789</a></p>
+                        <p><a href=""><i class="fa fa-map-marker"></i> مدينة: 123 456 789</a></p>
+                        <p><a href=""><i class="fa fa-map-marker"></i> مدينة: 123 456 789</a></p>
+                        <p><a href=""><i class="fa fa-map-marker"></i> مدينة: 123 456 789</a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 p-2">
+            <!--  contact information -->
+            <div class="col-md-3 p-2">
                 <p>ابق على تواصل</p>
                 <h2>روابطنا الاجتماعية</h2>
                 <p>أخذ مؤشرات الأداء الرئيسية بسلاسة دون اتصال بالإنترنت لتحقيق أقصى قدر من الاطلاع الطويل</p>
+                <!-- social icons -->
                 <ul class="social-icons">
                     <li class="social-icon">
-                        <a href="#"><svg
-                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                                    viewBox="0 0 48 48">
-                                    <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
-                                    <path fill="#fff"
-                                        d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z">
-                                    </path>
-                                </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path>
+                                <path fill="#fff"
+                                    d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z">
+                                </path>
+                            </svg></a>
                     </li>
                     <li class="social-icon">
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                    width="100" height="100" viewBox="0 0 48 48">
-                                    <path fill="#03A9F4"
-                                        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
-                                    </path>
-                                </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <path fill="#03A9F4"
+                                    d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+                                </path>
+                            </svg></a>
                     </li>
                     <li class="social-icon">
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                    width="48" height="48" viewBox="0 0 48 48">
-                                    <path fill="#0288D1"
-                                        d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
-                                    </path>
-                                    <path fill="#FFF"
-                                        d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
-                                    </path>
-                                </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
+                                viewBox="0 0 48 48">
+                                <path fill="#0288D1"
+                                    d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
+                                </path>
+                                <path fill="#FFF"
+                                    d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
+                                </path>
+                            </svg></a>
                     </li>
                     <li class="social-icon">
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                    width="100" height="100" viewBox="0 0 48 48">
-                                    <circle cx="24" cy="24" r="20" fill="#E60023"></circle>
-                                    <path fill="#FFF"
-                                        d="M24.4439087,11.4161377c-8.6323242,0-13.2153931,5.7946167-13.2153931,12.1030884	c0,2.9338379,1.5615234,6.5853882,4.0599976,7.7484131c0.378418,0.1762085,0.581543,0.1000366,0.668457-0.2669067	c0.0668945-0.2784424,0.4038086-1.6369019,0.5553589-2.2684326c0.0484619-0.2015381,0.0246582-0.3746338-0.1384277-0.5731201	c-0.8269653-1.0030518-1.4884644-2.8461304-1.4884644-4.5645752c0-4.4115601,3.3399658-8.6799927,9.0299683-8.6799927	c4.9130859,0,8.3530884,3.3484497,8.3530884,8.1369019c0,5.4099731-2.7322998,9.1584473-6.2869263,9.1584473	c-1.9630737,0-3.4330444-1.6238403-2.9615479-3.6153564c0.5654297-2.3769531,1.6569214-4.9415283,1.6569214-6.6584473	c0-1.5354004-0.8230591-2.8169556-2.5299683-2.8169556c-2.006958,0-3.6184692,2.0753784-3.6184692,4.8569336	c0,1.7700195,0.5984497,2.9684448,0.5984497,2.9684448s-1.9822998,8.3815308-2.3453979,9.9415283	c-0.4019775,1.72229-0.2453003,4.1416016-0.0713501,5.7233887l0,0c0.4511108,0.1768799,0.9024048,0.3537598,1.3687744,0.4981079l0,0	c0.8168945-1.3278198,2.0349731-3.5056763,2.4864502-5.2422485c0.2438354-0.9361572,1.2468872-4.7546387,1.2468872-4.7546387	c0.6515503,1.2438965,2.5561523,2.296936,4.5831299,2.296936c6.0314941,0,10.378418-5.546936,10.378418-12.4400024	C36.7738647,16.3591919,31.3823242,11.4161377,24.4439087,11.4161377z">
-                                    </path>
-                                </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48">
+                                <circle cx="24" cy="24" r="20" fill="#E60023"></circle>
+                                <path fill="#FFF"
+                                    d="M24.4439087,11.4161377c-8.6323242,0-13.2153931,5.7946167-13.2153931,12.1030884	c0,2.9338379,1.5615234,6.5853882,4.0599976,7.7484131c0.378418,0.1762085,0.581543,0.1000366,0.668457-0.2669067	c0.0668945-0.2784424,0.4038086-1.6369019,0.5553589-2.2684326c0.0484619-0.2015381,0.0246582-0.3746338-0.1384277-0.5731201	c-0.8269653-1.0030518-1.4884644-2.8461304-1.4884644-4.5645752c0-4.4115601,3.3399658-8.6799927,9.0299683-8.6799927	c4.9130859,0,8.3530884,3.3484497,8.3530884,8.1369019c0,5.4099731-2.7322998,9.1584473-6.2869263,9.1584473	c-1.9630737,0-3.4330444-1.6238403-2.9615479-3.6153564c0.5654297-2.3769531,1.6569214-4.9415283,1.6569214-6.6584473	c0-1.5354004-0.8230591-2.8169556-2.5299683-2.8169556c-2.006958,0-3.6184692,2.0753784-3.6184692,4.8569336	c0,1.7700195,0.5984497,2.9684448,0.5984497,2.9684448s-1.9822998,8.3815308-2.3453979,9.9415283	c-0.4019775,1.72229-0.2453003,4.1416016-0.0713501,5.7233887l0,0c0.4511108,0.1768799,0.9024048,0.3537598,1.3687744,0.4981079l0,0	c0.8168945-1.3278198,2.0349731-3.5056763,2.4864502-5.2422485c0.2438354-0.9361572,1.2468872-4.7546387,1.2468872-4.7546387	c0.6515503,1.2438965,2.5561523,2.296936,4.5831299,2.296936c6.0314941,0,10.378418-5.546936,10.378418-12.4400024	C36.7738647,16.3591919,31.3823242,11.4161377,24.4439087,11.4161377z">
+                                </path>
+                            </svg></a>
                     </li>
                 </ul>
-    
+
             </div>
         </div>
         <hr>
@@ -542,7 +807,7 @@
                     <a class="nav-link" href="./services.html">خدماتنا</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">المدونة</a>
+                    <a class="nav-link" href="./blog.html">المدونة</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">معرضنا</a>
@@ -551,7 +816,7 @@
                     <a class="nav-link fw-bold" href="#header">^ العودة للاعلى ^</a>
                 </li>
             </ul>
-    
+
         </div>
     </footer>
     <script src="./script.js"></script>
