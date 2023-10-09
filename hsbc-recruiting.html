@@ -13,8 +13,8 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <style>
-        header .fa, footer .fa{
-            color:#b73235;
+        main .fa{
+            color:#0000;
         }
         main svg{
             width: 50px;
@@ -23,78 +23,84 @@
     </style>
 </head>
 <body>
-    <header class="w-100 mb-5 p-5 pt-0 backimg" id="header" style="background-image: url('./images/background/img-blog-19.jpg');">
-        <nav class="navbar navbar-expand-lg p-0">
+    <header class="w-100 mb-5 backimg" id="header" style="background-image: url('./images/background/img-blog-19.jpg');">
+        <nav class="navbar navbar-expand-md position-absolute w-100 top-0 end-0 p-0">
             <a class="navbar-brand justify-content-start" href="#"><img loading="lazy" src="./images/icons_and_logos/logo.png"
-                    alt="Logo"></a>
+                alt="Logo"></a>
             <!-- Collapsible Navbar Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Navbar Items -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h4 class="offcanvas-title primarytext" id="offcanvasNavbarLabel">Avantage</h4>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body justify-content-end">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./index.html" id="navbarDropdown">الصفحة الرئيسية</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="#">مستشار الاعمال</a>
-                            <a class="dropdown-item" href="#">مستشار التسويق</a>
-                            <a class="dropdown-item" href="./index.html">مستشار الموارد البشرية</a>
-                            <a class="dropdown-item" href="#">المستشار المالي</a>
-                            <a class="dropdown-item" href="#">مستشار الضرائب / محاسب</a>
-                            <a class="dropdown-item" href="#">مستشار الاستراتيجية</a>
-                            <a class="dropdown-item" href="#">مستشار دولي</a>
-                            <a class="dropdown-item" href="#">مستشار إداري</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./about-us.html" id="navbarDropdown">معلومات عنا</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="./about-us.html">عنّا</a>
-                            <a class="dropdown-item" href="./history.html">تاريخ الشركة</a>
-                            <a class="dropdown-item" href="./testimonials.html">التوصيات</a>
-                            <a class="dropdown-item" href="./contact.html">التواصل</a>
-                            <a class="dropdown-item" href="./clients.html">العملاء</a>
-                            <a class="dropdown-item" href="./404.html">404</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./services.html" id="navbarDropdown">الخدمات</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="./single-services.html">خدمة واحدة</a>
-                            <a class="dropdown-item" href="./our-process.html">عملياتنا</a>
-                            <a class="dropdown-item" href="./solutions.html">الحلول</a>
-                            <a class="dropdown-item" href="./faq.html">الحقائق</a>
-                            <a class="dropdown-item" href="#">التسعير</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active" href="./portfolio.html" id="navbarDropdown">معرض الاعمال</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item active" href="./hsbc-recruiting.html">المشاريع الواحدة</a>
-                            <a class="dropdown-item" href="#">قائمة المشاريع</a>
-                            <a class="dropdown-item" href="#">شبكة المشاريع</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="./blog.html" id="navbarDropdown">المدونة</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-arrow"></div>
-                            <a class="dropdown-item" href="./management-project.html">المنشورات الواحدة</a>
-                            <a class="dropdown-item" href="#">قائمة المدونة</a>
-                            <a class="dropdown-item" href="#">شبكة المدونة</a>
-                            <a class="dropdown-item" href="#">المنشورات الاخيرة</a>
-                        </div>
-                    </li>  
-                    <li><button class="btn-primary rounded-pill p-2 m-1">0 123 4567 890</button></li>       
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="./index.html" id="navbarDropdown">الصفحة الرئيسية</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <div class="dropdown-arrow"></div>
+                      <a class="dropdown-item" href="#">مستشار الاعمال</a>
+                      <a class="dropdown-item" href="#">مستشار التسويق</a>
+                      <a class="dropdown-item" href="./index.html">مستشار الموارد البشرية</a>
+                      <a class="dropdown-item" href="#">المستشار المالي</a>
+                      <a class="dropdown-item" href="#">مستشار الضرائب / محاسب</a>
+                      <a class="dropdown-item" href="#">مستشار الاستراتيجية</a>
+                      <a class="dropdown-item" href="#">مستشار دولي</a>
+                      <a class="dropdown-item" href="#">مستشار إداري</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="./about-us.html" id="navbarDropdown">معلومات عنا</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <div class="dropdown-arrow"></div>
+                      <a class="dropdown-item" href="./about-us.html">عنّا</a>
+                      <a class="dropdown-item" href="./history.html">تاريخ الشركة</a>
+                      <a class="dropdown-item" href="./testimonials.html">التوصيات</a>
+                      <a class="dropdown-item" href="./contact.html">التواصل</a>
+                      <a class="dropdown-item" href="./clients.html">العملاء</a>
+                      <a class="dropdown-item" href="./404.html">404</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="./services.html" id="navbarDropdown">الخدمات</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <div class="dropdown-arrow"></div>
+                      <a class="dropdown-item" href="./single-services.html">خدمة واحدة</a>
+                      <a class="dropdown-item" href="./our-process.html">عملياتنا</a>
+                      <a class="dropdown-item" href="./solutions.html">الحلول</a>
+                      <a class="dropdown-item" href="./faq.html">الحقائق</a>
+                      <a class="dropdown-item" href="#">التسعير</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link active" href="./portfolio.html" id="navbarDropdown">معرض الاعمال</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <div class="dropdown-arrow"></div>
+                      <a class="dropdown-item active" href="./hsbc-recruiting.html">المشاريع الواحدة</a>
+                      <a class="dropdown-item" href="#">قائمة المشاريع</a>
+                      <a class="dropdown-item" href="#">شبكة المشاريع</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="./blog.html" id="navbarDropdown">المدونة</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <div class="dropdown-arrow"></div>
+                      <a class="dropdown-item" href="./management-project.html">المنشورات الواحدة</a>
+                      <a class="dropdown-item" href="#">قائمة المدونة</a>
+                      <a class="dropdown-item" href="#">شبكة المدونة</a>
+                      <a class="dropdown-item" href="#">المنشورات الاخيرة</a>
+                    </div>
+                  </li>
+                  <li><button class="btn-primary rounded-pill p-2 m-1">0 123 4567 890</button></li>
                 </ul>
+              </div>
             </div>
-        </nav>
+          </nav>
         <div class="py-5 pb-3 topsection">
             <a href="" class="m-2"> <i class="fa fa-link"></i> الاستراتيجية</a> <a href="" class="m-2"> <i class="fa fa-link"></i> المالية</a><br>
             <h1>التوظيف في HSBS</h1>
@@ -106,12 +112,16 @@
             <p>استفد من الثمار المنخفضة لتحديد نشاط ذو قيمة مضافة في الملعب للاختبار التجريبي. تجاوز الفجوة الرقمية من خلال النقرات الإضافية من DevOps. إن الانغماس في تقنية النانو على طول طريق المعلومات السريع سوف يغلق حلقة التركيز فقط على النتيجة النهائية.</p>
             <p>بث إدارة التغيير التشغيلي داخل سير العمل لإنشاء إطار عمل. أخذ مؤشرات الأداء الرئيسية بسلاسة دون اتصال بالإنترنت لتحقيق أقصى قدر من الذيل الطويل. أبقِ عينك على الكرة أثناء إجراء بحث عميق في عقلية الشركة الناشئة لتحقيق التقارب في التكامل عبر الأنظمة الأساسية.</p>
             <p>إدارة الأسواق الممكّنة بشكل تعاوني عبر شبكات التوصيل والتشغيل. مماطلة مستخدمي B2C ديناميكيًا بعد تثبيت المزايا الأساسية. تصور بشكل كبير التقارب الموجه للعملاء دون عائد استثمار ثوري.</p>
-            <br><br>
-            <h3>أطلق العنان لمعلومات الوسائط المتعددة بكفاءة دون الحاجة إلى قيمة الوسائط المتعددة. قم بتعظيم التسليمات في الوقت المناسب بسرعة لمخططات الوقت الفعلي.</h3>
-            <br><br>
+            
+            <div class="position-relative my-3">
+                <div class="quote-icon"><i class="fa fa-quote-left"></i></div>
+                <h4>أطلق العنان لمعلومات الوسائط المتعددة بكفاءة دون الحاجة إلى قيمة الوسائط المتعددة. قم بتعظيم التسليمات في الوقت المناسب بسرعة لمخططات الوقت الفعلي.</h4>
+                <p class="text-muted">بونيو</p>
+            </div>
+            
             <p>تضافر علاقات فرض الضرائب على الموارد بشكل كامل عبر الأسواق المتخصصة الرائدة. تنمية خدمة العملاء الفردية بشكل احترافي بأفكار قوية. ابتكار خدمة عملاء لتسوية الموارد ديناميكيًا للحصول على أحدث خدمة عملاء.</p>
             <p>ابتكار المنتجات المصنعة الممكّنة بشكل موضوعي من خلال منصات متوازية. إجراءات الاختبار الموسعة السائدة بشكل كلي لسلاسل التوريد الموثوقة. قم بإشراك خدمات الويب عالية المستوى بشكل كبير مقابل التسليمات المتطورة.</p>
-            <ul>
+            <ul class="pe-4">
                 <li>تصور استباقي للخبرة القائمة على الوسائط المتعددة واستراتيجيات النمو عبر الوسائط.</li>
                 <li>تصور رأس المال الفكري عالي الجودة بسلاسة دون التعاون الفائق ومشاركة الأفكار.</li>
                 <li>البوابات الأساسية المثبتة بشكل شمولي بعد المنتجات القابلة للصيانة.</li>
@@ -119,11 +129,11 @@
             <p>تعمل تقنية الفلورسنت على إشراك المنهجيات العالمية باستخدام التكنولوجيا الممكّنة على الويب. تنسيق التجارة الإلكترونية الاستباقية بشكل تفاعلي من خلال التفكير "خارج الصندوق" الذي يركز على العمليات. متابعة خدمة العملاء القابلة للتطوير بشكل كامل من خلال الإمكانات المستدامة.</p>
         </div>
         <div class="col-4 p-3">
-            <h5>العميل: HSBS</h5>
-            <h5>السنة: 2018</h5>
-            <h5>الفئة: المالية والاستراتيجية</h5>
-            <h5>الموقع: هونج كونج</h5>
-            <h5>عائد الاستثمار: 45%</h5>
+            <p>العميل: <strong>HSBC</strong></p>
+            <p><strong>السنة: </strong> 2018</p>
+            <p><strong>الفئة: </strong> المالية والاستراتيجية</p>
+            <p><strong>الموقع</strong>: هونج كونج</p>
+            <p> <strong>عائد الاستثمار: </strong> 45%</p>
             <a href=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
                 <path fill="#03A9F4"
                     d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
@@ -142,14 +152,14 @@
             </div>
             <div class="form-group">
                 <label for="name"><span class="text-danger">الاسم*</span></label>
-                <input type="text" class="form-control rounded-pill" placeholder="اكتب اسمك" id="name" name="name" required>
+                <input type="text" class="form-control p-2 rounded-pill" placeholder="اكتب اسمك" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="email"><span class="text-danger">البريد الالكتروني*</span></label>
-                <input type="email" class="form-control rounded-pill" placeholder="اكتب بريدك الالكتروني" id="email" name="email" required>
+                <input type="email" class="form-control p-2 rounded-pill" placeholder="اكتب بريدك الالكتروني" id="email" name="email" required>
             </div>
             <div class="form-group py-2">
-                <input type="email" class="form-control rounded-pill" placeholder="موقع بريدك الالكتروني" id="subject" name="emailsite">
+                <input type="email" class="form-control p-2 rounded-pill" placeholder="موقع بريدك الالكتروني" id="subject" name="emailsite">
             </div>
             <div class="form-group">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -160,13 +170,13 @@
             <button type="submit" class="btn btn-primary m-2 rounded-pill p-3 fs-3fw-bold">  أضف تعليقا  <i class="fa fa-paper-plane"></i></button>
         </form>
         <hr>
-        <label href="#">
-        <button class= "btn-primary rounded-circle" type="button" style="width: 80px; height: 80px;">
+        <a href="#" class="d-flex my-2 me-2 align-items-center">
+        <button class= "btn-primary m-1 rounded-circle" type="button" style="width: 80px; height: 80px;">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-        <p>السابق <strong> تكنولوجيا المعلومات: ذيادة الوافدين</strong></p>
-        </label>
+        <p>السابق <br><strong> تكنولوجيا المعلومات: ذيادة الوافدين</strong></p>
+        </a>
     </main>
 
     <footer>

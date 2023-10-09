@@ -10,7 +10,7 @@ $(document).ready(function() {
             // Remove the scrolled class to make the navbar unfixed
             $(".navbar").addClass("fixed-top shadow bg-white position-absolute w-100");
             $(".navbar").removeClass("fixed-top shadow bg-white");
-            $('.navbar-brand img').width(200)
+            $('.navbar-brand img').width(230)
 
         }
     });
